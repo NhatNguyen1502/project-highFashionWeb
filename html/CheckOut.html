@@ -7,9 +7,70 @@
   <link rel="stylesheet" href="../css/">
   <!-- Bootstrap CSS (link to the external CSS file) -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
+    <script src="../bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/e1aaf64c7e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/hearder-footer.css">
 </head>
 <body>
-  <div class="container">
+  <div class="row on-top bg-dark text-center p-2">
+    <span class="text-white">Sign up and get 20% off to your first order. <a class=" text-white text-decoration-underline" href="">Sign Up Now</a></span>
+</div>
+<header class="header sticky-top bg-white">
+  <nav class="container-fluid">
+    <div class="row">
+      <!-- <div class="col-6 d-sm-none">
+
+      </div>
+      <div class="col-6 d-sm-none">
+
+      </div> -->
+      <div class="col-sm-2 p-0 d-sm-block d-none">
+        <img src="../image/Logo.png" alt="logo" class="w-75">
+      </div>
+      <div class="col-sm-8 d-sm-block d-none">
+        <div class="d-flex flex-column justify-content-center align-items-center h-100">
+          <div class="row w-100">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Search for anything" aria-label="Recipient's username" aria-describedby="button-addon2">
+              <button class="btn btn-outline-secondary bg-warning" type="button" id="button-addon2">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <ul class="menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">category<span class="arrow">&#129175;</span></a>
+                <ul class="sub-menu">
+                  <li><a href="#">Sản Phẩm 1</a></li>
+                  <li><a href="#">Sản Phẩm 2</a></li>
+                  <li><a href="#">Sản Phẩm 3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Brand<span class="arrow">&#129175;</span></a>
+                <ul class="sub-menu">
+                  <li><a href="#">Sản Phẩm 1</a></li>
+                  <li><a href="#">Sản Phẩm 2</a></li>
+                  <li><a href="#">Sản Phẩm 3</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2 d-flex ali">
+        <i class="fa-regular fa-circle-user fs-2 p-4 mt-1"></i>
+        <i class="fa-solid fa-bag-shopping fs-2 p-4 mt-1"></i>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md-6">
         <h1>Billing Details</h1>
@@ -48,7 +109,7 @@
             <input type="text" class="form-control" id="city" value="Your Address" required>
           </div>
           <div class="row">
-             <div class="col">
+            <div class="col">
                 <label for="city">City:</label>
                 <input type="text" class="form-control" id="city">
             </div>
@@ -71,7 +132,6 @@
             <input type="tel" class="form-control" id="phoneNumber" required>
           </div>
           <div class="form-group">
-            <h2></h2>
           </div>
           <div class="form-group">
             <label for="feedback">Order note (optional)</label>
@@ -82,75 +142,188 @@
       <div class="col-md-6">
         <h1>Your Order</h1>
         <form>
-          <div class="row">
-            <table class="table">
-                <tr>
-                  <td>Original Price</td>
-                  <td>$582.00</td>
-                </tr>
-                <tr>
-                  <td>Savings</td>
-                  <td>$82.00</td>
-                </tr>
-                <tr>
-                  <td>Shipping</td>
-                  <td>FREE</td>
-                </tr>
-                <tr>
-                  <td>Estimated Sales Tax</td>
-                  <td>$3.50</td>
-                </tr>
-                <tr>
-                  <td>Total</td>
-                  <td>$496.50</td>
-                </tr>
-            </table>
+          <div class="col-12 border rounded">
+            <h4>Order Summary</h4>
+            <form>
+              <div class="row">
+                <div class="col-8">
+                  <span>Original Price</span>
+                </div>
+                <div class="col-2"></div>
+                <div class="col-2">
+                  <span>$582.00</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-8">
+                  <span>Savings</span>
+                </div>
+                <div class="col-2"></div>
+                <div class="col-2">
+                  <span>$82.00</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-8">
+                  <span>Estimated Sales Tax</span>
+                </div>
+                <div class="col-2"></div>
+                <div class="col-2">
+                  <span>$3.50</span>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-8">
+                  <span>Total</span>
+                </div>
+                <div class="col-2"></div>
+                <div class="col-2">
+                  <span>$496.50</span>
+                </div>
+              </div>
+              <h2>Pay with</h2>
+              <div id="paymentOptions">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="paymentMethod" id="cardOption" value="card">
+                  <label class="form-check-label" for="cardOption">Card</label>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="cardNumber">Card number</label>
+                    <input type="text" class="form-control" id="cardNumber">
+                  </div>
+                  <div class="col">
+                    <label for="securityCode">Security code</label>
+                    <input type="text" class="form-control" id="securityCode">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="firstName">First name</label>
+                    <input type="text" class="form-control" id="firstName">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="lastName">Last name</label>
+                    <input type="text" class="form-control" id="lastName">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="expirationDate">Expiration date</label>
+                    <input type="text" class="form-control" id="expirationDate">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check mt-5">
+                      <input type="checkbox" class="form-check-input" id="rememberCard">
+                      <label class="form-check-label" for="rememberCard">Remember this card for future orders</label>
+                    </div>
+                    <div class="row mt-4">
+                      <div class="col">
+                        <button class="btn btn-success">Done</button>
+                        <button class="btn btn-danger">Cancel</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check mt-4">
+                      <input class="form-check-input" type="radio" name="paymentMethod" id="paypalOption" value="paypal">
+                      <label class="form-check-label" for="paypalOption">Paypal</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <div class="col">
+                    <button class="btn btn-primary btn-block">Place Order</button>
+                  </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+              </div>
+            </form>
           </div>
-          <h2>Pay with</h2>
-          <div id="paymentOptions">
-            <div class="form-check">
-            <input class="form-check-input" type="radio" name="paymentMethod" id="cardOption" value="card">
-            <label class="form-check-label" for="cardOption">Card</label>
+        </form>
+      </div>
+      <footer class="footer pt-5 position-relative">
+        <div class="container-fluid pb-5">
+          <div class="subcribe bg-dark align-content-center rounded-4 position-absolute top-0 start-50 translate-middle me-sm-0 me-5">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-sm-5 col-12 p-4 me-sm-5 ">
+                <span class="text-white fw-bold fs-1 lh-1 w-50">STAY UPTO DATE ABOUT OUR LATEST OFFERS</span>
+              </div>
+              <div class="col-sm-4 col-12 p-4 pt-sm-4 pt-0 p-0 ms-sm-5 ">
+                <div class="row">
+                  <input type="text" class="fs-sm-4 w-sm-75 rounded-5 text-center" placeholder="&#9993; Enter your email" id="letter-mail">
+                </div>
+                <div class="row mt-3">
+                  <button class="btn btn-light fs-sm-4 w-sm-75 rounded-5 mt-2" id="subcribe">Subcribe to Newletter</button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="row">
-          <div class="col-md-6">
-            <label for=" Card number">Card number:</label>
-            <input type="text" class="form-control" id="first name">
-         </div>
-         <div class="col">
-            <label for="Expiration date">Expiration date:</label>
-            <input type="text" class="form-control" id="last name">
-         </div>
-         <div class="col-md-6">
-          <label for=" First name">First name:</label>
-          <input type="text" class="form-control" id="first name">
-       </div>
-       <div class="col">
-          <label for="Security code">Security code:</label>
-          <input type="text" class="form-control" id="last name">
-       </div>
-       <div class="form-check mt-4">
-        <input type="checkbox" class="form-check-input" id="rememberCard">
-       <label class="form-check-label" for="rememberCard">Remember this card for future orders</label>
-       <div class="row mt-4">
-        <div class="col">
-          <button class="btn btn-primary" id="doneBtn">Done</button>
+          <div class="row mt-sm-0 mt-5">
+            <div class="col-sm-4 col-12 m-sm-5 mt-5">
+              <img src="../image/Logo.png" alt="logo" class="mt-sm-0 mt-5" style="width: 150px;" > <br>
+              <div class="fw-bold mt-2 mb-2">Contact</div>
+              <div class="mb-3">
+                Address: 562 Wellington Road, Street 32, San Francisco <br>
+                Phone: +01 2222 365 <br>
+                Hours: 10:00-18:00 <br>
+              </div>
+              <div class="d-flex">
+                <div class="icon d-flex justify-content-center align-items-center"><i class="fa-brands fa-twitter"></i></div>
+                <div class="icon d-flex justify-content-center align-items-center"><i class="fa-brands fa-facebook-f"></i></div>
+                <div class="icon d-flex justify-content-center align-items-center"><i class="fa-brands fa-instagram"></i></div>
+                <div class="icon d-flex justify-content-center align-items-center"><i class="fa-brands fa-github"></i></div>
+              </div>
+            </div>
+            <div class="col-sm-2 col-6 mt-sm-5 mt-3">
+              <div class="fw-bold mt-sm-5 mb-2">About </div>
+              <div class="mb-3">
+                <a href="#">About us</a> <br>
+                Delivery information <br>
+                Privacy Policy <br>
+                Term & Conditions <br>
+                Contact Us
+              </div>
+            </div>
+            <div class="col-sm-2 col-6 mt-sm-5 mt-3">
+              <div class="fw-bold mt-sm-5 mb-2">My Account</div>
+              <div class="mb-3">
+                <a href="#">Sign in</a> <br>
+                <a href="#">View Cart</a> <br>
+                Track My Order <br>
+                Help <br>
+              </div>
+            </div>
+            <div class="col-sm-2 col-12 mt-sm-5 mt-3">
+              <div class="fw-bold mt-sm-5 mb-2">Install App</div>
+              <div class="mb-3">
+                From App Store or Google Play <br>
+                <div class="row pt-3 pb-3">
+                  <div class="col ps-0">
+                    <!-- <div class="p-3 border bg-light padding-0"> -->
+                      <img src="../image/AppStore.png" alt="AppStore" style="width: 100%;">
+                    <!-- </div> -->
+                  </div>
+                  <div class="col ps-0">
+                    <!-- <div class="p-3 border bg-light"> -->
+                      <img src="../image/CHplay.png" alt="CHplay" style="width: 100%;">
+                    <!-- </div> -->
+                  </div>
+                </div>
+                Secured Payment Gateways<br>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <p>&copy; 2023 FashionShop.com</p>
         </div>
-        <div class="col">
-          <button class="btn btn-secondary" id="cancelBtn">Cancel</button>
-        </div>
-      </div>
-      <div id="paymentOptions">
-        <div class="form-check">
-        <input class="form-check-input" type="radio" name="paymentMethod" id="cardOption" value="card">
-        <label class="form-check-label" for="cardOption">Paypal</label>
-      </div>
-      <div class="order">
-      <button class="btn btn-primary">Place Order</button>
-      </form>
-      </div>
-    </div>
-  </div>
-  
+      </footer>
 </body>
 </html>

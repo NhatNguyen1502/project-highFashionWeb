@@ -1,15 +1,12 @@
-.container {
+ .container {
   font-family: Arial, sans-serif;
   font-size: 20px;
 }
- .col-3 {
-    line-height: 30px;
-  }
   .icon{
-    margin-left: 130px;
+    margin-left: 100px;
   }
   .nut{
-    margin-top: 230px;
+    margin-top: 100px;
     display: flex;
   }
   .col-3 input {
@@ -17,6 +14,8 @@
     height:40px;
     text-align: center;
   }
+
+
 
 
  

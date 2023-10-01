@@ -1,10 +1,12 @@
 body {
     font-family: Arial, sans-serif;
-    font-size: 20px;
   }
-.row{
-  padding-top: 80px;
+
+.content{
+  margin-top: 50px;
+  font-size: 20px;
 }
-p{
-  margin-top: 70px;
+
+.heading{
+  font-size: 50px;
 }
