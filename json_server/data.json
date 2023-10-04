@@ -1,0 +1,64 @@
+{
+    "products": [
+        { 
+            "id": 1,
+            "name": "T-shirt", 
+            "price": 120, 
+            "discountAmount": 40, 
+            "stock": 10, 
+            "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+            "brand": "Gucci", 
+            "category": "T-shirt", 
+            "img": {"url": "../image/2.png", "color": "red"},
+            "size": ["m", "l", "xl"]
+        },
+        { 
+            "id": 2,
+            "name": "T-shirt", 
+            "price": 220, 
+            "discountAmount": 40, 
+            "stock": 10, 
+            "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+            "brand": "Gucci", 
+            "category": "T-shirt", 
+            "img": {"url": "../image/2.png", "color": "red"},
+            "size": ["m", "l", "xl"]
+        },
+        { 
+            "id": 3,
+            "name": "T-shirt", 
+            "price": 320, 
+            "discountAmount": 40, 
+            "stock": 10, 
+            "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+            "brand": "Gucci", 
+            "category": "T-shirt", 
+            "img": {"url": "../image/2.png", "color": "red"},
+            "size": ["m", "l", "xl"]
+        },
+        { 
+            "id": 4,
+            "name": "T-shirt", 
+            "price": 420, 
+            "discountAmount": 40, 
+            "stock": 10, 
+            "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+            "brand": "Gucci", 
+            "category": "T-shirt", 
+            "img": {"url": "../image/2.png", "color": "red"},
+            "size": ["m", "l", "xl"]
+        },
+        { 
+            "id": 5,
+            "name": "T-shirt", 
+            "price": 520, 
+            "discountAmount": 40, 
+            "stock": 10, 
+            "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+            "brand": "Gucci", 
+            "category": "T-shirt", 
+            "img": {"url": "../image/2.png", "color": "red"},
+            "size": ["m", "l", "xl"]
+        }
+    ]
+  }
