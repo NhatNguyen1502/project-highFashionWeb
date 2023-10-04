@@ -67,8 +67,8 @@
                     </div>
                 </div>
                 <div class="col-sm-2 d-flex ali">
-                    <i class="fa-regular fa-circle-user fs-2 p-4 mt-1"></i>
-                    <i class="fa-solid fa-bag-shopping fs-2 p-4 mt-1"></i>
+                    <i class="fa-regular fa-circle-user fs-2 p-3 mt-1"></i>
+                    <i class="fa-solid fa-bag-shopping fs-2 p-3 mt-1"></i>
                 </div>
             </div>
         </nav>
@@ -77,12 +77,20 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col-sm-4 col-12">
-                <img class="image1" src="../image/image 1.png" alt="image">
+                <div class="image-container d-flex justify-content-center">
+                    <img class="image1" src="../image/image 1.png" alt="image" id="main-image">
+                </div>
             </div>
             <div class="col-sm-2 col-12">
-                <img class="image" src="../image/image 5.png" alt="image">
-                <img class="image" src="../image/image 2.png" alt="image">
-                <img class="image" src="../image/image 5.png" alt="image">
+                <div>
+                    <img src="../image/image 5.png" alt="image"  class="small-image">
+                </div>
+                <div>
+                    <img src="../image/img2_productDetal.png" alt="image" class="small-image">
+                </div>
+                <div>
+                    <img src="../image/image 5.png" alt="image" class="small-image">
+                </div>
             </div>
             <div class="col-sm-6 col-12 heading">
                 <h1 class="fw-bold">ONE LIFE GRAPHIC T-SHIRT</h1>
@@ -109,32 +117,24 @@
                 </div>
                 <hr>
                 <p class="sentence">Choose Size</p>
-                <div class="row size_option">
-                    <span class="size small col-sm-2" id="sm">
-                        Small
-                    </span>
-                    <span class="size medium col-sm-2" id="md">
-                        Medium
-                    </span>
-                    <span class="size large col-sm-2" id="lg">
-                        Large
-                    </span>
-                    <span class="size xlarge col-sm-2" id="xl">
-                        X-Large
-                    </span>
+                <div class="sizeOption">
+                    <select name="cars" id="cars">
+                        <option value="volvo">Select size</option>
+                        <option value="volvo">S</option>
+                        <option value="saab">M</option>
+                        <option value="opel">L</option>
+                        <option value="audi">XL</option>
+                    </select>
                 </div>
                 <hr>
-                <!-- <div class="row">
-                    <div class="col-sm-1 col-2">
-                        <input class="plus is-form" type="button" value="+">
-                    </div>
-                    <div class="col-sm-1 col-2">
-                        <input aria-label="quantity" class="input-qty" max="max-number" min="min-number" name="" type="number" value="1">
-                    </div>
-                    <div class="col-sm-1 col-2">
-                        <input class="minus is-form" type="button" value="-">
-                    </div>
-                </div> -->
+                <p class="sentence">Quantity option</p>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <input aria-label="quantity" class="input-qty" max="Số tối đa" min="Số tối thiểu" name="" type="number" value="1">
+                   </div>
+                </div>
+                <hr>
+                <button type="button" class="btn btn-primary">Add to cart</button>
             </div>
         </div>
     </div>
@@ -222,4 +222,17 @@
             <p>&copy; 2023 FashionShop.com</p>
         </div>
     </footer>
+    <script>
+        var mainImg = document.getElementById("main-image");
+        var smallImg = document.getElementsByClassName("small-image")
+        smallImg[0].onclick = function(){
+            mainImg.src = smallImg[0].src;
+        }
+        smallImg[1].onclick = function () {
+            mainImg.src = smallImg[1].src;
+        }
+        smallImg[2].onclick = function () {
+            mainImg.src = smallImg[2].src;
+        }
+    </script>
 </html>

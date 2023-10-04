@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="../css/homePage.css">
     <link rel="stylesheet" href="../css/hearder-footer.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </head>
 <body>
         <div class="row on-top bg-dark text-center p-2">
@@ -46,8 +51,8 @@
                             </div>
                             <div class="row justify-content-center">
                                 <ul class="menu">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">category<span class="arrow">&#129175;</span></a>
+                                    <li><a class="active">Home</a></li>
+                                    <li><a href="../html/category.html">Category<span class="arrow">&#129175;</span></a>
                                         <ul class="sub-menu">
                                             <li><a href="#">Sản Phẩm 1</a></li>
                                             <li><a href="#">Sản Phẩm 2</a></li>
@@ -62,14 +67,16 @@
                                         </ul>
                                     </li>
                                     <li><a href="#">Products</a></li>
-                                    <li><a href="#">About</a></li>
+                                    <li><a href="../html/AboutUs.html">About</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-2 d-flex ali">
-                        <i class="fa-regular fa-circle-user fs-2 p-4 mt-1"></i>
-                        <i class="fa-solid fa-bag-shopping fs-2 p-4 mt-1"></i>
+                        <i class="fa-regular fa-circle-user fs-2 p-2 mt-1"></i>
+                        <a href="../html/Cart.html">
+                            <i class="fa-solid fa-bag-shopping fs-2 p-2 mt-1"></i>
+                        </a>
                     </div>
                 </div>
             </nav>
@@ -121,14 +128,18 @@
     </div>
     <div class="container">
         <h1 class="fw-bold text-center mt-4">NEW ARRIVALS</h1>
-        <div class="row mt-4">
-                <div class="col-sm-3 col-12 text-center">
-                    <img class="image" src="../image/Frame 32.png" alt="image">
+        <div class="row mt-4 text-center">
+                <div class="col-sm-3 col-12">
+                    <div class="container-image">
+                        <img class="image" src="../image/Frame 32.png" alt="image">
+                    </div>
                     <p class="fw-bold mt-2">T-SHIRT WITH TAPE DETAILS</p>
-                    <img src="../image/Frame 35.png" alt="image">
+                    <div class="container-image">
+                        <img src="../image/Frame 35.png" alt="image">
+                    </div>
                     <p class="fw-bold fs-4">$120</p>
                 </div>
-                <div class="col-sm-3 col-12 text-center">
+                <div class="col-sm-3 col-12">
                     <img class="image" src="../image/Frame 33 (1).png" alt="image">
                     <p class="fw-bold mt-2">SKINNY FIT JEANS</p>
                     <img src="../image/Frame 35.png" alt="image">
@@ -138,13 +149,13 @@
                     </p>
                     
                 </div>
-                <div class="col-sm-3 col-12 text-center">
+                <div class="col-sm-3 col-12">
                     <img class="image" src="../image/Frame 65.png" alt="image">
                     <p class="fw-bold mt-2">CHECKERED SHIRT</p>
                     <img src="../image/Frame 35.png" alt="image">
                     <p class="fw-bold fs-4">$180</p>
                 </div>
-                <div class="col-sm-3 col-12 text-center">
+                <div class="col-sm-3 col-12">
                     <img class="image" src="../image/Frame 38.png" alt="image">
                     <p class="fw-bold mt-2">SLEEVE STRIPED T-SHIRT</p>
                     <img src="../image/Frame 35.png" alt="image">
@@ -154,35 +165,47 @@
                     </p>
                 </div>
         </div>
-        <div class="row mt-4">
-            <div class="col-sm-3 col-12 text-center">
-                <img class="image" src="../image/Frame 33 (2).png" alt="image">
+        <div class="row mt-4 text-center">
+            <div class="col-sm-3 col-12">
+                <div class="container-image">
+                    <a href="../html/product_detail.html">
+                        <img class="image" src="../image/image 1.png" alt="image">
+                    </a>
+                </div>
                 <p class="fw-bold mt-2">COURAGE GRAPHIC T-SHIRT</p>
-                <img src="../image/Frame 35.png" alt="image">
+                <div class="container-image">
+                    <img src="../image/Frame 35.png" alt="image">
+                </div>
                 <p class="fw-bold fs-4">$145</p>
             </div>
-            <div class="col-sm-3 col-12 text-center">
+            <div class="col-sm-3 col-12">
                 <img class="image" src="../image/Frame 66.png" alt="image">
                 <p class="fw-bold mt-2">LOOSE FIT BERMUDA SHORTS</p>
                 <img src="../image/Frame 35.png" alt="image">
                 <p class="fw-bold fs-4">$80</p>
             </div>
-            <div class="col-sm-3 col-12 text-center">
+            <div class="col-sm-3 col-12">
                 <img class="image" src="../image/Frame 127.png" alt="image">
                 <p class="fw-bold mt-2">FADED SKINNY JEANS</p>
                 <img src="../image/Frame 35.png" alt="image">
                 <p class="fw-bold fs-4">$210</p>
             </div>
-            <div class="col-sm-3 col-12 text-center">
+            <div class="col-sm-3 col-12">
                 <img class="image" src="../image/Frame 126.png" alt="image">
                 <p class="fw-bold mt-2">FADED SKINNY JEANS</p>
-                <img src="../html/Frame 35.png" alt="image">
+                <img src="../image/Frame 35.png" alt="image">
                 <p class="fw-bold fs-4">$210</p>
             </div>
         </div>
         <hr>
-        <div class="btn">
-            <button type="button" class="btn btn-outline-dark view_button fw-boldS">View all</button>
+        <div class="row text-center pagination">
+            <div col-sm-2>
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
         </div>
     </div> 
     <!-- footer -->
