@@ -1,14 +1,26 @@
 const newProducts = document.querySelector('#newProducts');
 const productApi = 'http://localhost:3000/products'
+<<<<<<< HEAD
 const userApi = 'http://localhost:3000/users'
 
 
+=======
+
+
+
+start();
+function start() {
+    getProducts(renderProducts);
+}
+
+>>>>>>> 741293a57181da8dabd9566b1892bc5bb7e378a5
 function getProducts(callback) {
     fetch(productApi)
         .then((response) => response.json())
         .then(callback)
 }
 
+<<<<<<< HEAD
 function getUsers(callback) {
     fetch(userApi)
         .then((response) => response.json())
@@ -18,6 +30,12 @@ function getUsers(callback) {
 function renderProducts(products) {
     const newProducts = document.querySelector('#newProducts');
     let items ='';
+=======
+function renderProducts(products) {
+    const newProducts = document.querySelector('#newProducts');
+    let items ='';
+    console.log(products);
+>>>>>>> 741293a57181da8dabd9566b1892bc5bb7e378a5
     products.forEach((item) => {
         items += `
                 <div class="col-sm-3 col-12 text-center">
@@ -29,6 +47,7 @@ function renderProducts(products) {
             `;
     })
     newProducts.innerHTML = items;
+<<<<<<< HEAD
 }
 
 //management function
@@ -278,4 +297,6 @@ function createProduct(data,callback){
 
 function createUser(){
 
+=======
+>>>>>>> 741293a57181da8dabd9566b1892bc5bb7e378a5
 }
