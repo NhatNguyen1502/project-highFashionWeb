@@ -10,6 +10,8 @@
     <script src="https://kit.fontawesome.com/e1aaf64c7e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/Category.css">
     <link rel="stylesheet" href="../css/hearder-footer.css">
+    <link rel="stylesheet" href="../html/product_detail.html">
+    <link rel="stylesheet" href="../css/product_detai.css">
 
 </head>
 <body>
@@ -19,12 +21,6 @@
   <header class="header sticky-top bg-light">
     <nav class="container-fluid">
       <div class="row">
-        <!-- <div class="col-6 d-sm-none">
-
-        </div>
-        <div class="col-6 d-sm-none">
-
-        </div> -->
         <div class="col-sm-2 p-0 d-sm-block d-none">
           <img src="../image/Logo.png" alt="logo" class="w-75">
         </div>
@@ -72,47 +68,47 @@
     <div class="container-sm bg-white">
         <div class="row justify-content-center">
             <div class="col-2 d-sm-block d-none">
-                <h2 >Filters</h2>
+                <h2 class="fw-bold mt-3">Filters</h2>
                 <hr>
                 <ul class="list-unstyled">
-                    <li class="mb-3"><a href="#" class="text-decoration-none">T-Shirts</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none">Shorts</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none">Shirts</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none">Hoodie</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none">Jeans</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none dropdown-toggle">T-Shirts</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none dropdown-toggle">Shorts</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none dropdown-toggle">Shirts</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none dropdown-toggle">Hoodie</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none dropdown-toggle">Jeans</a></li>
                 </ul>
                 <hr>
-                <h2 >Price</h2>
+                <h2 class="fw-bold">Price</h2>
                 <hr>
 
-                <h2 >Colors</h2>
+                <h2 class="fw-bold">Colors</h2>
                 <div class="form-check mb-3">
-                    <input class="form-check-input" type="radio" name="color" id="color-red" value="red">
+                    <input class="form-check-input bg-danger" type="radio" name="color" id="color-red" value="red">
                     <label class="form-check-label" for="color-red">
                       Red
                     </label>
                   </div>
                   <div class="form-check mb-3">
-                    <input class="form-check-input" type="radio" name="color" id="color-blue" value="blue">
+                    <input class="form-check-input bg-primary" type="radio" name="color" id="color-blue" value="blue">
                     <label class="form-check-label" for="color-blue">
                       Blue
                     </label>
                   </div>
                   <div class="form-check mb-3">
-                    <input class="form-check-input" type="radio" name="color" id="color-green" value="green">
+                    <input class="form-check-input bg-success" type="radio" name="color" id="color-green" value="green">
                     <label class="form-check-label" for="color-green">
                       Green
                     </label>
                   </div>
                   <div class="form-check mb-3">
-                    <input class="form-check-input" type="radio" name="color" id="color-white" value="white">
+                    <input class="form-check-input bg-light" type="radio" name="color" id="color-white" value="white">
                     <label class="form-check-label" for="color-white">
                       White
                     </label>
                   </div>
                   <hr>
 
-                  <h2 >Size</h2>
+                  <h2 class="fw-bold">Size</h2>
                   <div class="form-check mb-3">
                     <input class="form-check-input" type="checkbox" name="size" id="size-xl" value="xl">
                     <label class="form-check-label" for="size-xl">S</label>
@@ -137,68 +133,99 @@
             </div>
             <div class="col-10 ">
                 <div class="row">
-                  <div class="col-11"><h1 class="text-center">Casual</h1></div>
-                  <!-- <div class="col-1"><button type="button" class="menu-button">Menu</button></div> -->
+                  <div class="col-11"><h2 class="text-center fw-bold mt-3">Casual</h2></div>
+                  <div class="col-1">
+                    <li class="nav-item dropdown list-unstyled justify-content-center">
+                      <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-bars"></i>
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Filters</a></li>
+                        <li><a class="dropdown-item" href="#">Price</a></li>
+                        <li><a class="dropdown-item" href="#">Color</a></li>
+                        <li><a class="dropdown-item" href="#">Size</a></li>
+                      </ul>
+                    </li>
+                  </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-4">
-                        <img src="../image/Frame 33.png" alt="">
-                        <p>Gradient Graphic T-shirt</p>
+                    <div class="col-sm-3">
+                        <img class="mb-3" src="../image/Frame 33.png" alt="">
+                        <p class="mb-1">Gradient Graphic T-shirt</p>
                         <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                         <p>$145</p>
                     </div>
-                    <div class="col-sm-4">
-                        <img src="../image/2.png" alt="">
-                        <p>Gradient Graphic T-shirt</p>
+                    <div class="col-sm-3">
+                        <img class="mb-3" src="../image/2.png" alt="">
+                        <p class="mb-1">Gradient Graphic T-shirt</p>
                         <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                         <p>$145</p>
                     </div>
-                    <div class="col-sm-4">
-                        <img src="../image/Frame 19.png" alt="">
-                        <p>Gradient Graphic T-shirt</p>
+                    <div class="col-sm-3">
+                        <img class="mb-3" src="../image/Frame 19.png" alt="">
+                        <p class="mb-1">Gradient Graphic T-shirt</p>
                         <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                         <p>$145</p>
                     </div>
+                    <div class="col-sm-3">
+                      <img class="mb-3" src="../image/Frame 19.png" alt="">
+                      <p class="mb-1">Gradient Graphic T-shirt</p>
+                      <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                      <p>$145</p>
+                  </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-4">
-                        <img src="../image/Frame 20.png" alt="">
-                        <p>Gradient Graphic T-shirt</p>
+                    <div class="col-sm-3">
+                        <img class="mb-3" src="../image/Frame 20.png" alt="">
+                        <p class="mb-1">Gradient Graphic T-shirt</p>
                         <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                         <p>$145</p>
                     </div>
-                    <div class="col-sm-4">
-                        <img src="../image/Frame 32.png" alt="">
-                        <p>Gradient Graphic T-shirt</p>
+                    <div class="col-sm-3">
+                        <img class="mb-3" src="../image/Frame 32.png" alt="">
+                        <p class="mb-1">Gradient Graphic T-shirt</p>
                         <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                         <p>$145</p>
                     </div>
-                    <div class="col-sm-4">
-                        <img src="../image/image 8.png" alt="">
-                        <p>Gradient Graphic T-shirt</p>
+                    <div class="col-sm-3">
+                        <img class="mb-3" src="../image/image 8.png" alt="">
+                        <p class="mb-1">Gradient Graphic T-shirt</p>
                         <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                         <p>$145</p>
                     </div>  
+                    <div class="col-sm-3">
+                      <img class="mb-3" src="../image/Frame 20.png" alt="">
+                      <p class="mb-1">Gradient Graphic T-shirt</p>
+                      <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                      <p>$145</p>
+                  </div>
                 </div>
+
                 <div class="row">
-                    <div class="col-sm-4">
-                        <img src="../image/image 10.png" alt="">
-                        <p>Gradient Graphic T-shirt</p>
+                    <div class="col-sm-3">
+                        <img class="mb-3" src="../image/image 10.png" alt="">
+                        <p class="mb-1">Gradient Graphic T-shirt</p>
                         <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                         <p>$145</p>
                     </div>
-                    <div class="col-sm-4">
-                        <img src="../image/image 9.png" alt="">
-                        <p>Gradient Graphic T-shirt</p>
+                    <div class="col-sm-3">
+                        <img class="mb-3" src="../image/image 9.png" alt="">
+                        <p class="mb-1">Gradient Graphic T-shirt</p>
                         <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                         <p>$145</p>
                     </div>
-                    <div class="col-sm-4">
-                        <img src="../image/Frame 17.png" alt="">
-                        <p>Gradient Graphic T-shirt</p>
+                    <div class="col-sm-3">
+                        <img class="mb-3" src="../image/Frame 17.png" alt="">
+                        <p class="mb-1">Gradient Graphic T-shirt</p>
                         <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                         <p>$145</p>
                     </div>
+                    <div class="col-sm-3">
+                      <img class="mb-3" src="../image/image 10.png" alt="">
+                      <p class="mb-1">Gradient Graphic T-shirt</p>
+                      <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                      <p>$145</p>
+                  </div>
                 </div>
                 </div>
             </div>
