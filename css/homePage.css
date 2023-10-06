@@ -19,6 +19,22 @@
     left: 20px;
 }
 
+.menu li{
+    position: relative;
+}
+.menu li a.active{
+    color: darkgreen;
+}
+.menu li a.active::after{
+    content: "";
+    background: darkgreen;
+    position: absolute;
+    width: 40%;
+    height: 2px;
+    bottom: -4px;
+    left: 20px;
+}
+
 .heading{
     margin-top: 70px;
     font-family: 'Alfa Slab One', cursive;
@@ -33,6 +49,7 @@
     width: 210px;
     height: 52px;
     background-color: black;
+    color: white !important;
     color: white !important;
     border-radius: 62px;
 }
@@ -57,6 +74,9 @@
     margin-left: 40px;
 }
 .image{
+    width: 236px;
+    height: 238px;
+    /* width: 95%; */
     width: 236px;
     height: 238px;
     /* width: 95%; */
