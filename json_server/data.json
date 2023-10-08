@@ -1,0 +1,212 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "T-shirt",
+      "price": 120,
+      "discountAmount": 40,
+      "stock": 10,
+      "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+      "brand": "Gucci",
+      "category": "T-shirt",
+      "img": {
+        "url": "../image/2.png",
+        "color": "red"
+      },
+      "size": [
+        "m",
+        "l",
+        "xl"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "T-shirt",
+      "price": 220,
+      "discountAmount": 40,
+      "stock": 10,
+      "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+      "brand": "Gucci",
+      "category": "T-shirt",
+      "img": {
+        "url": "../image/2.png",
+        "color": "red"
+      },
+      "size": [
+        "m",
+        "l",
+        "xl"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "T-shirt",
+      "price": 320,
+      "discountAmount": 40,
+      "stock": 10,
+      "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+      "brand": "Gucci",
+      "category": "T-shirt",
+      "img": {
+        "url": "../image/2.png",
+        "color": "red"
+      },
+      "size": [
+        "m",
+        "l",
+        "xl"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "T-shirt",
+      "price": 420,
+      "discountAmount": 40,
+      "stock": 10,
+      "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+      "brand": "Gucci",
+      "category": "T-shirt",
+      "img": {
+        "url": "../image/2.png",
+        "color": "red"
+      },
+      "size": [
+        "m",
+        "l",
+        "xl"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "T-shirt",
+      "price": 520,
+      "discountAmount": 40,
+      "stock": 10,
+      "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+      "brand": "Gucci",
+      "category": "T-shirt",
+      "img": {
+        "url": "../image/2.png",
+        "color": "red"
+      },
+      "size": [
+        "m",
+        "l",
+        "xl"
+      ]
+    },
+    {
+      "name": "a",
+      "price": "12",
+      "discountAmount": "1",
+      "stock": "5",
+      "description": "beautiful clothe",
+      "brand": "zira",
+      "category": "t-shirts",
+      "img": {
+        "url": "https://i.ibb.co/phC7sjf/Frame-32.png",
+        "color": "black"
+      },
+      "size": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "id": 8
+    },
+    {
+      "name": "shirt",
+      "price": "12213",
+      "discountAmount": "21",
+      "stock": "123",
+      "description": "123",
+      "brand": "zira",
+      "category": "Category: *",
+      "img": {
+        "url": "https://i.ibb.co/phC7sjf/Frame-32.png",
+        "color": "red"
+      },
+      "size": [
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "id": 9
+    },
+    {
+      "name": "shirt",
+      "price": "23",
+      "discountAmount": "123",
+      "stock": "1",
+      "description": "beautiful clothe",
+      "brand": "Brand: *",
+      "category": "Category: *",
+      "img": {
+        "url": "https://i.ibb.co/phC7sjf/Frame-32.png",
+        "color": "red"
+      },
+      "size": [
+        "XL"
+      ],
+      "id": 10
+    },
+    {
+      "name": "a",
+      "price": "11",
+      "discountAmount": "11",
+      "stock": "1",
+      "description": "beautiful clothe",
+      "brand": "gucci",
+      "category": "t-shirts",
+      "img": {
+        "url": "https://i.ibb.co/phC7sjf/Frame-32.png",
+        "color": "black"
+      },
+      "size": [
+        "M",
+        "XXL"
+      ],
+      "id": 11
+    },
+    {
+      "name": "T-shirt model",
+      "price": "11",
+      "discountAmount": "11",
+      "stock": "11",
+      "description": "beautiful clothe",
+      "brand": "Brand: *",
+      "category": "Category: *",
+      "img": {
+        "url": "https://i.ibb.co/phC7sjf/Frame-32.png",
+        "color": "black"
+      },
+      "size": [
+        "S",
+        "XL"
+      ],
+      "id": 12
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "userName": "Shin",
+      "email": "Shin@gmail.com",
+      "address": "Texas, USA",
+      "phone": "09999999",
+      "password": "123456",
+      "status": "active"
+    },
+    {
+      "id": "2",
+      "userName": "Sun",
+      "email": "sun@gmail.com",
+      "address": "Texas, USA",
+      "phone": "09999999",
+      "password": "123456",
+      "status": "unactive"
+    }
+  ]
+}
