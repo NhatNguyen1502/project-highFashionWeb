@@ -1,0 +1,340 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "T-shirt",
+      "price": 120,
+      "discountAmount": 40,
+      "stock": 10,
+      "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+      "brand": "Gucci",
+      "category": "T-shirt",
+      "status": "Enabled",
+      "img": {
+        "url": "https://i.postimg.cc/nLHQWmyR/Frame-19.png",
+        "color": "red"
+      },
+      "size": [
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "T-shirt",
+      "price": 220,
+      "discountAmount": 40,
+      "stock": 10,
+      "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+      "brand": "Gucci",
+      "category": "T-shirt",
+      "status": "Disabled",
+      "img": {
+        "url": "https://i.postimg.cc/90xx4VGV/Frame-17.png",
+        "color": "red"
+      },
+      "size": [
+        "M",
+        "L",
+        "XL"
+      ]
+    },
+    {
+      "name": "hoodies green",
+      "price": "120",
+      "discountAmount": "10",
+      "stock": "10",
+      "description": "beautiful clothe",
+      "brand": "prada",
+      "category": "t-shirts",
+      "img": {
+        "url": "https://i.ibb.co/yFbhty9/image-1.png",
+        "color": "black",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "S",
+        "M"
+      ],
+      "status": "Enabled",
+      "id": 3
+    },
+    {
+      "name": "chân váy",
+      "price": "70",
+      "discountAmount": "0",
+      "stock": "10",
+      "description": "chan váy",
+      "brand": "zira",
+      "category": "t-shirts",
+      "img": {
+        "url": "https://i.postimg.cc/TwMpnDRY/2.png",
+        "color": "blue",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "M",
+        "XL"
+      ],
+      "status": "Enabled",
+      "id": 4
+    },
+    {
+      "name": "chân váy",
+      "price": "70",
+      "discountAmount": "0",
+      "stock": "10",
+      "description": "chan váy",
+      "brand": "zira",
+      "category": "t-shirts",
+      "img": {
+        "url": "https://i.postimg.cc/TPpWGxPg/Frame-20.png",
+        "color": "blue",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "M",
+        "XL"
+      ],
+      "status": "Enabled",
+      "id": 5
+    },
+    {
+      "name": "chân váy",
+      "price": "70",
+      "discountAmount": "0",
+      "stock": "10",
+      "description": "chan váy",
+      "brand": "zira",
+      "category": "t-shirts",
+      "img": {
+        "url": "https://i.postimg.cc/mDVxSvQp/Frame-33-1.png",
+        "color": "blue",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "M",
+        "XL"
+      ],
+      "status": "Enabled",
+      "id": 6
+    },
+    {
+      "name": "chân váy",
+      "price": "70",
+      "discountAmount": "0",
+      "stock": "10",
+      "description": "chan váy",
+      "brand": "zira",
+      "category": "t-shirts",
+      "img": {
+        "url": "https://i.postimg.cc/Sx4wwQD1/Frame-38.png",
+        "color": "blue",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "M",
+        "XL"
+      ],
+      "status": "Enabled",
+      "id": 7
+    },
+    {
+      "name": "chân váy",
+      "price": "70",
+      "discountAmount": "0",
+      "stock": "10",
+      "description": "chan váy",
+      "brand": "zira",
+      "category": "t-shirts",
+      "img": {
+        "url": "https://i.postimg.cc/7ZPK35B4/Frame-126.png",
+        "color": "blue",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "M",
+        "XL"
+      ],
+      "status": "Enabled",
+      "id": 8
+    },
+    {
+      "name": "pants",
+      "price": "150",
+      "discountAmount": "10",
+      "stock": "13",
+      "description": "beautiful clothe",
+      "brand": "gucci",
+      "category": "shorts",
+      "img": {
+        "url": "https://i.postimg.cc/Sxwzy5YP/Frame-127.png",
+        "color": "blue",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "M",
+        "XL"
+      ],
+      "status": "Enabled",
+      "id": 9
+    },
+    {
+      "name": "T-shirt",
+      "price": "40",
+      "discountAmount": "0",
+      "stock": "10",
+      "description": "beautiful clothe",
+      "brand": "zira",
+      "category": "t-shirts",
+      "img": {
+        "url": "https://i.postimg.cc/tTLXPQp0/image-1.png",
+        "color": "red",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "M",
+        "L"
+      ],
+      "status": "Enabled",
+      "id": 10
+    },
+    {
+      "name": "shirt",
+      "price": "170",
+      "discountAmount": "10",
+      "stock": "12",
+      "description": "beautiful clothe",
+      "brand": "gucci",
+      "category": "t-shirts",
+      "img": {
+        "url": "https://i.postimg.cc/PrbtLR7c/image-2.png",
+        "color": "red",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "M",
+        "XL"
+      ],
+      "status": "Enabled",
+      "id": 11
+    },
+    {
+      "name": "shirt",
+      "price": "430",
+      "discountAmount": "20",
+      "stock": "14",
+      "description": "beautiful clothe",
+      "brand": "prada",
+      "category": "shorts",
+      "img": {
+        "url": "https://i.postimg.cc/5937653g/image-9.png",
+        "color": "blue",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "L"
+      ],
+      "status": "Enabled",
+      "id": 12
+    },
+    {
+      "name": "shirt",
+      "price": "210",
+      "discountAmount": "120",
+      "stock": "121",
+      "description": "beautiful clothe",
+      "brand": "zira",
+      "category": "shorts",
+      "img": {
+        "url": "https://i.postimg.cc/TYKSy7Px/image-10.png",
+        "color": "blue",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "M",
+        "XL"
+      ],
+      "status": "Enabled",
+      "id": 13
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "userName": "Shin",
+      "email": "Shin@gmail.com",
+      "address": "Texas, USA",
+      "phone": "09999999",
+      "password": "123456",
+      "status": "active",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "userName": "Sun",
+      "email": "sun@gmail.com",
+      "address": "Texas, USA",
+      "phone": "09999999",
+      "password": "123456",
+      "status": "unactive",
+      "role": "admin"
+    }
+  ]
+}
