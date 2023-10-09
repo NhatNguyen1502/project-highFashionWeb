@@ -7,7 +7,7 @@
     width: 100%;
     
 }
-.image{
+.small-image{
     margin-bottom: 10px;
     height: 133px;
 }
@@ -79,13 +79,21 @@
     background-color: black;
     color: white;
 }
-
-
+.input-qty{
+    width: 50px;
+    height: 30px;
+}
 
 @media screen and (max-width: 575px) {
-    .image{
+    .image-container {
+        align-items: center;
+    }
+    .image1{
+        width: 90%;
+    }
+    .small-image{
         margin-top: 10px;
-        width: 107px;
+        width: 100px;
         height: 106px;
     }
     .size{
