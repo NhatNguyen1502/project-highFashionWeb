@@ -14,7 +14,7 @@
     <title>High fashion</title>
     <link rel="stylesheet" href="../css/homePage.css">
     <link rel="stylesheet" href="../css/hearder-footer.css">
-
+    <script src="../js/homePage.js"></script>
 </head>
 <body>
         <div class="row on-top bg-dark text-center p-2">
@@ -114,7 +114,7 @@
                                                 <li><a href="#">Prada</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="../html/product_detail.html">Products</a></li>
+                                        <li><a href="#">Products</a></li>
                                         <li><a href="AboutUs.html">About</a></li>
                                     </ul>
                                 </div>
@@ -241,19 +241,16 @@
             </div>
         </div>
         <hr>
-        <div class="row text-center pagination">
-            <div col-sm-2>
-                <a href="#">1</a>
-                <a href="#
-                ">2</a>
-                <a href="#">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
+        <div class="row">
+            <div class="col text-center">
+                <button class="button" id="view" type="button" class="btn btn-dark" onclick="showAll()">View all</button>
             </div>
         </div>
+    </div>
+    <div id="product">
     </div> 
     <!-- footer -->
-    <footer class="footer pt-5 position-relative">
+    <footer class="footer pt-2 position-relative">
         <div class="container-fluid pb-5">
             <div
                 class="subcribe bg-dark align-content-center rounded-4 position-absolute top-0 start-50 translate-middle me-sm-0 me-5">
@@ -338,6 +335,6 @@
         </div>
     </footer>
     <script src="../bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/function.js"></script>
+    <!-- <script src="../js/function.js"></script> -->
 </body>
 </html>

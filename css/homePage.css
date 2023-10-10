@@ -66,26 +66,16 @@
     text-decoration: line-through;
 }
 .view_button{
-    width: 18%;
-    height: 40px;
-    border-radius: 60px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .btn{
     display: flex;
     justify-content: center;
     align-items: center; 
 }
-.pagination a{
-    text-decoration: none;
-    background-color: black;
-    padding: 15px 20px;
-    border-radius: 4px;
-    color: #fff;
-    font-weight: 600;
-}
-.pagination {
-    padding-top: 20px;
-}
+
 @media screen and (max-width: 575px){
     .button{
         background-color: black;
