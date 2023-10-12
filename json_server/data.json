@@ -1,53 +1,62 @@
 {
   "products": [
     {
-      "id": 1,
       "name": "T-shirt",
-      "price": 120,
-      "discountAmount": 40,
-      "stock": 10,
+      "price": "120",
+      "discountAmount": "40",
+      "stock": "10",
       "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
-      "brand": "Gucci",
-      "category": "T-shirt",
-      "status": "Enabled",
+      "brand": "gucci",
+      "category": "t-shirts",
+      "status": "Disabled",
       "img": {
         "url": "https://i.postimg.cc/nLHQWmyR/Frame-19.png",
-        "color": "red"
+        "color": "red",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
       },
       "size": [
-        "M",
-        "L",
-        "XL"
-      ]
+        "XXL"
+      ],
+      "id": 1
     },
     {
-      "id": 2,
       "name": "T-shirt",
-      "price": 220,
-      "discountAmount": 40,
-      "stock": 10,
+      "price": "220",
+      "discountAmount": "40",
+      "stock": "10",
       "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
-      "brand": "Gucci",
-      "category": "T-shirt",
+      "brand": "gucci",
+      "category": "t-shirts",
       "status": "Disabled",
       "img": {
         "url": "https://i.postimg.cc/90xx4VGV/Frame-17.png",
-        "color": "red"
+        "color": "red",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
       },
       "size": [
-        "M",
-        "L",
-        "XL"
-      ]
+        "XXL"
+      ],
+      "id": 2
     },
     {
-      "name": "hoodies green",
+      "name": "hoodies gree",
       "price": "120",
       "discountAmount": "10",
       "stock": "10",
       "description": "beautiful clothe",
       "brand": "prada",
-      "category": "t-shirts",
+      "category": "hoodies",
+      "status": "Enabled",
       "img": {
         "url": "https://i.ibb.co/yFbhty9/image-1.png",
         "color": "black",
@@ -59,10 +68,9 @@
         "color4": ""
       },
       "size": [
-        "S",
-        "M"
+        "M",
+        "XL"
       ],
-      "status": "Enabled",
       "id": 3
     },
     {
@@ -141,7 +149,7 @@
       "id": 6
     },
     {
-      "name": "chân váy",
+      "name": "t-shirt",
       "price": "70",
       "discountAmount": "0",
       "stock": "10",
@@ -313,28 +321,141 @@
       ],
       "status": "Enabled",
       "id": 13
+    },
+    {
+      "name": "shirt",
+      "price": "12",
+      "discountAmount": "1",
+      "stock": "12",
+      "description": "luxury ladylike",
+      "brand": "zira",
+      "category": "t-shirts",
+      "img": {
+        "url": "https://i.postimg.cc/5937653g/image-9.png",
+        "color": "red",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "M"
+      ],
+      "status": "Enabled",
+      "id": 14
+    },
+    {
+      "name": "shirt",
+      "price": "12",
+      "discountAmount": "12",
+      "stock": "12",
+      "description": "luxury ladylike",
+      "brand": "zira",
+      "category": "t-shirts",
+      "img": {
+        "url": "https://i.postimg.cc/5937653g/image-9.png",
+        "color": "red",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "M",
+        "XXL"
+      ],
+      "status": "Enabled",
+      "id": 15
+    },
+    {
+      "name": "shirt",
+      "price": "120",
+      "discountAmount": "12",
+      "stock": "1",
+      "description": "123",
+      "brand": "zira",
+      "category": "t-shirts",
+      "img": {
+        "url": "https://i.postimg.cc/5937653g/image-9.png",
+        "color": "red",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "XL",
+        "XXL"
+      ],
+      "status": "Enabled",
+      "id": 16
     }
   ],
   "users": [
     {
-      "id": "1",
+      "id": 1,
       "userName": "Shin",
       "email": "Shin@gmail.com",
       "address": "Texas, USA",
       "phone": "09999999",
       "password": "123456",
-      "status": "active",
-      "role": "admin"
+      "status": "Active",
+      "role": "user"
     },
     {
-      "id": "2",
+      "id": 2,
       "userName": "Sun",
       "email": "sun@gmail.com",
       "address": "Texas, USA",
       "phone": "09999999",
       "password": "123456",
-      "status": "unactive",
+      "status": "Active",
       "role": "admin"
+    },
+    {
+      "userName": "Nhat",
+      "email": "nhatnguyen@gmal.com",
+      "address": "sontra",
+      "phone": "0397123237",
+      "role": "user",
+      "status": "Active",
+      "id": 3
+    },
+    {
+      "userName": "Quyen",
+      "email": "quyenle@gmail.com",
+      "address": "BinhDinh",
+      "phone": "03971826823",
+      "role": "user",
+      "status": "Active",
+      "password": "123123",
+      "id": 4
+    },
+    {
+      "userName": "Hi",
+      "email": "hipham@gmail.com",
+      "address": "quangngai",
+      "phone": "095934872397",
+      "role": "user",
+      "status": "Active",
+      "password": "123123",
+      "id": 5
+    },
+    {
+      "userName": "Le",
+      "email": "leho@gmail.com",
+      "address": "quangtri",
+      "phone": "095934872397",
+      "role": "user",
+      "status": "Active",
+      "password": "123123",
+      "id": 6
     }
   ]
 }
