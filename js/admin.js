@@ -86,7 +86,7 @@ function renderProductManagement(products) {
                     <option value="shorts">Shorts</option>
                     <option value="shirts">Shirts</option>
                     <option value="hoodies">hoodies</option>
-                    <option value="jean">Jean</option>
+                    <option value="jeans">Jean</option>
                 </select>
             </div>
             <div class="mb-3">
@@ -365,7 +365,7 @@ function renderUserManagement(users) {
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h1 class="modal-title fs-5" id="exampleModalLabel">Update user</h1>
-                                        <b 56-------------utton type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <div class="mb-3">
