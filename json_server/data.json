@@ -489,5 +489,18 @@
       "password": "123123",
       "id": 9
     }
+  ],
+  "carts": [
+    {
+      "id": 1,
+      "productsCart": [
+        {
+          "productId": 1,
+          "size": "M",
+          "color": "red",
+          "quantity": 1
+        }
+      ]
+    }
   ]
 }

@@ -20,29 +20,11 @@
   <header class="header sticky-top bg-white">
     <nav class="container-fluid">
       <div class="row">
-
         <div class="col-7 d-sm-none d-block text-start">
-            <nav class="navbar">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <nav class="navbar justify-content-start">
+                <button class="navbar-toggler p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="homePage.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Brand
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Zira</a></li>
-                        <li><a class="dropdown-item" href="#">Gucci</a></li>
-                        <li><a class="dropdown-item" href="#">Prada</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
                 <a href="homePage.html"><img src="../image/Logo.png" alt="logo" class="ms-2" style="width: 100px;"></a>
             </nav>
         </div>
@@ -53,14 +35,14 @@
         </div>
 
         <div class="col-sm-2 p-0 d-sm-block d-none">
-          <a href="homePage.html"><img src="../image/Logo.png" alt="logo" class="w-75"></a>
+          <img src="../image/Logo.png" alt="logo" class="w-75">
         </div>
         <div class="col-sm-10 d-sm-block d-none ">
           <div class="d-flex flex-column justify-content-center h-100">
             <div class="row w-100 align-items-center">
               <div class="col-9 d-flex align-items-center">
                 <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Search for anything"
+                  <input type="text" class="form-control" id="search-inp" placeholder="Search for anything"
                     aria-label="Recipient's username" aria-describedby="button-addon2">
                   <button class="btn btn-outline-secondary bg-warning" type="button" id="button-addon2">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -68,38 +50,7 @@
                 </div>
               </div>
               <div class="col-3 text-center">
-                  <button type="button" class="btn m-5 p-0" data-bs-toggle="modal" data-bs-target="#modal1"><i
-        class="fa-regular fa-circle-user fs-2 m-0" id="user-icon"></i></button>
-    <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header  align-items-center">
-                    <h5 class="modal-title">Login</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>This is the content of Modal 1.</p>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal"
-                        data-bs-target="#modal2">Sign up</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modal2Label">Modal 2</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>This is the content of Modal 2.</p>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal"
-                        data-bs-target="#modal1">Open Modal 1</button>
-                </div>
-            </div>
-        </div>
-    </div>
+                  <i class="fa-regular fa-circle-user fs-2 pe-5" id="user-icon"></i>
                   <a href="Cart.html" class="text-dark"><i class="fa-solid fa-bag-shopping fs-2 ms-3" id="cart-icon"></i></a>
               </div>
             </div>
@@ -114,7 +65,6 @@
                       <li><a href="#">Shirts</a></li>
                       <li><a href="#">Hoodies</a></li>
                       <li><a href="#">Jeans</a></li>
-
                     </ul>
                   </li>
                   <li><a href="#">Brand<span class="arrow">&#129175;</span></a>
@@ -124,12 +74,47 @@
                       <li><a href="#">Prada</a></li>
                     </ul>
                   </li>
-                  <li><a href="product_detail.html">Products</a></li>
+                  <li><a href="category.html">Products</a></li>
                   <li><a href="AboutUs.html">About</a></li>
                 </ul>
               </div>
             </div>
           </div>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="homePage.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Category
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">T-shirts</a></li>
+                <li><a class="dropdown-item" href="#">Shorts</a></li>
+                <li><a class="dropdown-item" href="#">Shirts</a></li>
+                <li><a class="dropdown-item" href="#">Hoodies</a></li>
+                <li><a class="dropdown-item" href="#">Jeans</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Brand
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Zira</a></li>
+                <li><a class="dropdown-item" href="#">Gucci</a></li>
+                <li><a class="dropdown-item" href="#">Prada</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="category.html">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="AboutUs.html">About</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
