@@ -1,14 +1,16 @@
 // Show dữ liệu
 const productsApi = 'http://localhost:3000/products';
+let productsData;
 fetch(productsApi)
     .then(response => response.json()) 
     .then((products) => {
+        productsData = products;
         console.log(products);
         var container = document.getElementById('body');
         var htmls = '';
         products.forEach((element) => {
             htmls += `
-            <div class="col-sm-3">
+            <div class="col-sm-3" id="item-${element.id}" onclick="transferPage(${element.id})">
                 <img class="mb-3" id="" src="${element.img.url}" alt="">
                 <p class="mb-1">${element.name}</p>
                 <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
@@ -18,6 +20,11 @@ fetch(productsApi)
         });
         container.innerHTML = htmls;
     });
+
+function transferPage(id) {
+  
+}
+
 
 // Show lựa chọn sản phẩm
  function filterByCategory(categoryName){
@@ -66,6 +73,8 @@ colorRadios.forEach((radio) => {
       });
   });
 });
+
+
 
 // Show product_detail
 
