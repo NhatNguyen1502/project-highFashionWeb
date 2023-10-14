@@ -71,11 +71,11 @@
                 <h2 class="fw-bold mt-3">Filters</h2>
                 <hr>
                 <ul class="list-unstyled">
-                    <li class="mb-3"><a href="#" class="text-decoration-none dropdown-toggle">T-Shirts</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none dropdown-toggle">Shorts</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none dropdown-toggle">Shirts</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none dropdown-toggle">Hoodie</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none dropdown-toggle">Jeans</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none dropdown-toggle" onclick="filterByCategory('t-shirts')">T-Shirts</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none dropdown-toggle" onclick="filterByCategory('shorts')" >Shorts</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none dropdown-toggle" onclick="filterByCategory('Shirts')">Shirts</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none dropdown-toggle" onclick="filterByCategory('Hoodie')">Hoodie</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none dropdown-toggle" onclick="filterByCategory('Jeans')">Jeans</a></li>
                 </ul>
                 <hr>
                 <h2 class="fw-bold">Price</h2>
@@ -148,84 +148,8 @@
                     </li>
                   </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-3">
-                        <img class="mb-3" src="../image/Frame 33.png" alt="">
-                        <p class="mb-1">Gradient Graphic T-shirt</p>
-                        <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                        <p>$145</p>
-                    </div>
-                    <div class="col-sm-3">
-                        <img class="mb-3" src="../image/2.png" alt="">
-                        <p class="mb-1">Gradient Graphic T-shirt</p>
-                        <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                        <p>$145</p>
-                    </div>
-                    <div class="col-sm-3">
-                        <img class="mb-3" src="../image/Frame 19.png" alt="">
-                        <p class="mb-1">Gradient Graphic T-shirt</p>
-                        <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                        <p>$145</p>
-                    </div>
-                    <div class="col-sm-3">
-                      <img class="mb-3" src="../image/Frame 19.png" alt="">
-                      <p class="mb-1">Gradient Graphic T-shirt</p>
-                      <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                      <p>$145</p>
-                  </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-3">
-                        <img class="mb-3" src="../image/Frame 20.png" alt="">
-                        <p class="mb-1">Gradient Graphic T-shirt</p>
-                        <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                        <p>$145</p>
-                    </div>
-                    <div class="col-sm-3">
-                        <img class="mb-3" src="../image/Frame 32.png" alt="">
-                        <p class="mb-1">Gradient Graphic T-shirt</p>
-                        <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                        <p>$145</p>
-                    </div>
-                    <div class="col-sm-3">
-                        <img class="mb-3" src="../image/image 8.png" alt="">
-                        <p class="mb-1">Gradient Graphic T-shirt</p>
-                        <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                        <p>$145</p>
-                    </div>  
-                    <div class="col-sm-3">
-                      <img class="mb-3" src="../image/Frame 20.png" alt="">
-                      <p class="mb-1">Gradient Graphic T-shirt</p>
-                      <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                      <p>$145</p>
-                  </div>
-                </div>
+                <div class="row" id="body">
 
-                <div class="row">
-                    <div class="col-sm-3">
-                        <img class="mb-3" src="../image/image 10.png" alt="">
-                        <p class="mb-1">Gradient Graphic T-shirt</p>
-                        <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                        <p>$145</p>
-                    </div>
-                    <div class="col-sm-3">
-                        <img class="mb-3" src="../image/image 9.png" alt="">
-                        <p class="mb-1">Gradient Graphic T-shirt</p>
-                        <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                        <p>$145</p>
-                    </div>
-                    <div class="col-sm-3">
-                        <img class="mb-3" src="../image/Frame 17.png" alt="">
-                        <p class="mb-1">Gradient Graphic T-shirt</p>
-                        <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                        <p>$145</p>
-                    </div>
-                    <div class="col-sm-3">
-                      <img class="mb-3" src="../image/image 10.png" alt="">
-                      <p class="mb-1">Gradient Graphic T-shirt</p>
-                      <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                      <p>$145</p>
-                  </div>
                 </div>
                 </div>
             </div>
@@ -309,5 +233,6 @@
         <p>&copy; 2023 FashionShop.com</p>
       </div>
     </footer>
+    <script src="../js/category.js"></script>
 </body>
 </html>
