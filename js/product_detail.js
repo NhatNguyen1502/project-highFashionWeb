@@ -1,11 +1,17 @@
 var productApi = 'http://localhost:3000/products';
 var productDetail = document.getElementById('productDetail');
-// Lấy ID sản phẩm từ địa chỉ URL
-var urlParams = new URLSearchParams(window.location.search);
-var productId = urlParams.get('id');
-fetch(productApi + '/' + productId)
+
+fetch(productApi)
     .then(res => res.json())
-    .then(product => {
+    .then(products => {
+        let id = window.localStorage.getItem('itemID');
+        let product = products.find(item => item.id == id);
+        console.log(id, products)
+        
+        var sizeOptions = Array.isArray(product.size) ? product.size : []; // Check if product.size is an array, otherwise use an empty array
+
+        // Generate HTML for size options if sizeOptions is an array
+        var sizeOptionsHTML = Array.isArray(sizeOptions) ? sizeOptions.map(size => `<option value="${size}">${size}</option>`).join('') : '';
         productDetail.innerHTML = `
     <div class="container">
         <div class="row mt-5">
@@ -18,10 +24,10 @@ fetch(productApi + '/' + productId)
                 <h1 class="fw-bold">ONE LIFE GRAPHIC T-SHIRT</h1>
                 <img src="../image/Frame 35.png" alt="image">
                 <p class="fs-2 price">${product.price}
-                    // <span class="fs-2 dis">$300</span>
-                    // <img src="../image/Frame 42.png" alt="image">
+                    <span class="fs-2 dis">$300</span>
+                    <img src="../image/Frame 42.png" alt="image">
                 </p>
-                <p class="sentence">This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.</p>
+                <p class="sentence">${product.description}</p>
                 <hr>
                 <p class="sentence">Select Colors</p>
                 <div class="row">
@@ -42,10 +48,11 @@ fetch(productApi + '/' + productId)
                 <div class="sizeOption">
                     <select name="size" id="sizeOptions">
                         <option value="">Select size</option>
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                        <option value="XL">XL</option>
+                        // <option value="S">S</option>
+                        // <option value="M">M</option>
+                        // <option value="L">L</option>
+                        // <option value="XL">XL</option>
+                        ${sizeOptionsHTML};
                     </select>
                 </div>
                 <hr>

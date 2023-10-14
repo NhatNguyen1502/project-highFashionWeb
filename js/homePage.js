@@ -5,10 +5,9 @@ fetch(productApi)
     .then(products => {
         var htmls = '';
         var newArrival = products.slice(-8);
-        console.log(newArrival);
         newArrival.forEach(e => {
             htmls += `
-                <div class="col-sm-3 col-12">
+                <div class="col-sm-3 col-12" onclick="handleTransferToDetail(${e.id})">
                     <div class="container-image">
                         <img class="image" src="${e.img["url"]}" alt="image">
                     </div>
@@ -32,7 +31,7 @@ function showAll() {
             var html = '';
             products.forEach(element => {
                 html += `
-                        <div class="col-sm-3 col-12">
+                        <div class="col-sm-3 col-12" onclick="handleTransferToDetail(${element.id})">
                             <div class="container-image">
                                 <img class="image" src="${element.img["url"]}" alt="image">
                             </div>
@@ -42,8 +41,13 @@ function showAll() {
                         </div>
                 `;
             });
-            productContainer.innerHTML += html;
+            productContainer.innerHTML = html;
         });
 }
 
 var productDetail = document.getElementById('productDetail');
+
+function handleTransferToDetail(id) {
+    window.location.href = 'http://127.0.0.1:5500/html/product_detail.html'
+    window.localStorage.setItem('itemID', id);
+}
