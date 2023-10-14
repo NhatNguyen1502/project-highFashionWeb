@@ -6,8 +6,6 @@ fetch(productApi)
     .then(products => {
         let id = window.localStorage.getItem('itemID');
         let product = products.find(item => item.id == id);
-        console.log(id, products)
-        
         var sizeOptions = Array.isArray(product.size) ? product.size : []; // Check if product.size is an array, otherwise use an empty array
 
         // Generate HTML for size options if sizeOptions is an array
