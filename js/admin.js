@@ -21,33 +21,26 @@ function start() {
     }
 }
 
-// Lấy products
 function getProducts(callback) {
     fetch(productApi)
         .then((response) => response.json())
         .then(callback)
 }
 
-// Lấy Users
 function getUsers(callback) {
     fetch(userApi)
         .then((response) => response.json())
         .then(callback)
 }
 
-
-// Định nghĩa hàm xử lý sự kiện khi click
 function handleCheckboxManagementClick(event) {
     if (event.target === productOption) {
-        // Xử lý khi click vào sản phẩm (Products)
         getProducts(renderProductManagement) 
     } else if (event.target === userOption) {
-        // Xử lý khi click vào người dùng (Users)
         getUsers(renderUserManagement);
     }
 }
 
-// In ra các mục của quản lí sản phẩm
 function renderProductManagement(products) {
     localStorage.setItem('option','product');
     productsData = products;
@@ -79,16 +72,16 @@ function renderProductManagement(products) {
                 <input type="text" class="form-control" id="description-inp" required>
             </div>
             <div class="mb-3">
+                <lable for="brand-inp" class="col-form-label">Brand: <span class="text-danger">*</span> </lable>
                 <select class="form-select" id="brand-inp" aria-label="Default select example" required>
-                    <option selected>Brand <span class="text-danger">*</span></option>
                     <option value="zira">Zira</option>
                     <option value="gucci">Gucci</option>
                     <option value="prada">Prada</option>
                 </select>
             </div>
             <div class="mb-3">
+                <lable for="category-inp" class="col-form-label">Brand: <span class="text-danger">*</span> </lable>
                 <select class="form-select" id="category-inp" aria-label="Default select example" requird>
-                    <option selected>Category <span class="text-danger">*</span></option>
                     <option value="t-shirts">T-shirts</option>
                     <option value="shorts">Shorts</option>
                     <option value="shirts">Shirts</option>
@@ -176,7 +169,9 @@ function renderProductManagement(products) {
                     <td>${item.discountAmount}</td>
                     <td>${item.stock}</td>
                     <td>${item.brand}</td>
-                    <td><img src="${item.img.url}" alt="img" width="50px"></td>
+                    <td>
+                        <img src="${item.img.url}" alt="img" width="50px">
+                    </td>
                     <td>${item.status}</td>
                     <td>
                         <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#update${id}" onclick="passDataProductsBeforeUpdate(${id})">Update</button>
@@ -184,104 +179,111 @@ function renderProductManagement(products) {
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Update product</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="mb-3">
-                                        <label for="pName-update-${item.id}" class="col-form-label">Product name: <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="pName-update-${item.id}" required>
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Update product</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="price-update-${item.id}" class="col-form-label">Price: <span class="text-danger">*</span></label>
-                                        <input type="number" class="form-control" id="price-update-${item.id}" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="discountAmount-update-${item.id}" class="col-form-label">Discount amount: <span class="text-danger">*</span></label>
-                                        <input type="number" class="form-control" id="discountAmount-update-${item.id}" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="stock-update-${item.id}" class="col-form-label">Stock: <span class="text-danger">*</span></label>
-                                        <input type="number" class="form-control" id="stock-update-${item.id}" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="description-update-${item.id}" class="col-form-label">Description: <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="description-update-${item.id}" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <select class="form-select" id="brand-update-${item.id}" aria-label="Default select example" required>
-                                            <option selected>Brand <span class="text-danger">*</span></option>
-                                            <option value="zira">Zira</option>
-                                            <option value="gucci">Gucci</option>
-                                            <option value="prada">Prada</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-3">
-                                        <select class="form-select" id="category-update-${item.id}" aria-label="Default select example" requird>
-                                            <option selected>Category <span class="text-danger">*</span></option>
-                                            <option value="t-shirts">T-shirts</option>
-                                            <option value="shorts">Shorts</option>
-                                            <option value="shirts">Shirts</option>
-                                            <option value="hoodies">hoodies</option>
-                                            <option value="jean">Jean</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="img1-update-${item.id}" class="col-form-label">Image 1: <span class="text-danger">*</span></label>
-                                        <input type="url" class="form-control" id="img1-update-${item.id}" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="color1-update-${item.id}" class="col-form-label">Color 1: <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control" id="color1-update-${item.id}" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="img2-update-${item.id}" class="col-form-label">Image 2:</label>
-                                        <input type="url" class="form-control" id="img2-update-${item.id}">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="color2-update-${item.id}" class="col-form-label">Color 2:</label>
-                                        <input type="text" class="form-control" id="color2-update-${item.id}">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="img3-update-${item.id}" class="col-form-label">Image 3:</label>
-                                        <input type="url" class="form-control" id="img3-update-${item.id}">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="color3-update-${item.id}" class="col-form-label">Color 3:</label>
-                                        <input type="text" class="form-control" id="color3-update-${item.id}">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="img4-update-${item.id}" class="col-form-label">Image 4:</label>
-                                        <input type="url" class="form-control" id="img4-update-${item.id}">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="color4-update-${item.id}" class="col-form-label">Color 4:</label>
-                                        <input type="text" class="form-control" id="color4-update-${item.id}">
-                                    </div>
-                                    <div class="mb-3">
-                                        Size: <span class="text-danger">*</span><br>
-                                        <div class="btn-group">
-                                            <input type="checkbox" class="btn-check" name="size-update-${item.id}" id="S-update-${item.id}" value="S">
-                                            <label class="btn btn-outline-primary" for="S-update-${item.id}">S</label>
-                                        
-                                            <input type="checkbox" class="btn-check" name="size-update-${item.id}" id="M-update-${item.id}" value="M">
-                                            <label class="btn btn-outline-primary" for="M-update-${item.id}">M</label>
-                                        
-                                            <input type="checkbox" class="btn-check" name="size-update-${item.id}" id="L-update-${item.id}" value="L">
-                                            <label class="btn btn-outline-primary" for="L-update-${item.id}">L</label>
-                                
-                                            <input type="checkbox" class="btn-check" name="size-update-${item.id}" id="XL-update-${item.id}" value="XL">
-                                            <label class="btn btn-outline-primary" for="XL-update-${item.id}">XL</label>
-                        
-                                            <input type="checkbox" class="btn-check" name="size-update-${item.id}" id="XXL-update-${item.id}" value="XXL">
-                                            <label class="btn btn-outline-primary" for="XXL-update-${item.id}">XXL</label>
+                                    <div class="modal-body">
+                                        <div class="mb-3">
+                                            <label for="pName-update-${item.id}" class="col-form-label">Product name: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="pName-update-${item.id}" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="price-update-${item.id}" class="col-form-label">Price: <span class="text-danger">*</span></label>
+                                            <input type="number" class="form-control" id="price-update-${item.id}" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="discountAmount-update-${item.id}" class="col-form-label">Discount amount: <span class="text-danger">*</span></label>
+                                            <input type="number" class="form-control" id="discountAmount-update-${item.id}" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="stock-update-${item.id}" class="col-form-label">Stock: <span class="text-danger">*</span></label>
+                                            <input type="number" class="form-control" id="stock-update-${item.id}" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="description-update-${item.id}" class="col-form-label">Description: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="description-update-${item.id}" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <lable for="status-update-${item.id} " class="col-form-label">Status: <span class="text-danger">*</span> </lable>
+                                            <select class="form-select" id="status-update-${item.id}" aria-label="Default select example" required>
+                                                <option value="Enabled">Enabled</option>
+                                                <option value="Disabled">Disabled</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <lable for="brand-update-${item.id} " class="col-form-label">Brand: <span class="text-danger">*</span> </lable>
+                                            <select class="form-select" id="brand-update-${item.id}" aria-label="Default select example" required>
+                                                <option value="zira">Zira</option>
+                                                <option value="gucci">Gucci</option>
+                                                <option value="prada">Prada</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <lable for="category-update-${item.id} " class="col-form-label">Category: <span class="text-danger">*</span> </lable>
+                                            <select class="form-select" id="category-update-${item.id}" aria-label="Default select example" requird>
+                                                <option value="t-shirts">T-shirts</option>
+                                                <option value="shorts">Shorts</option>
+                                                <option value="shirts">Shirts</option>
+                                                <option value="hoodies">hoodies</option>
+                                                <option value="jean">Jean</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="img1-update-${item.id}" class="col-form-label">Image 1: <span class="text-danger">*</span></label>
+                                            <input type="url" class="form-control" id="img1-update-${item.id}" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="color1-update-${item.id}" class="col-form-label">Color 1: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="color1-update-${item.id}" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="img2-update-${item.id}" class="col-form-label">Image 2:</label>
+                                            <input type="url" class="form-control" id="img2-update-${item.id}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="color2-update-${item.id}" class="col-form-label">Color 2:</label>
+                                            <input type="text" class="form-control" id="color2-update-${item.id}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="img3-update-${item.id}" class="col-form-label">Image 3:</label>
+                                            <input type="url" class="form-control" id="img3-update-${item.id}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="color3-update-${item.id}" class="col-form-label">Color 3:</label>
+                                            <input type="text" class="form-control" id="color3-update-${item.id}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="img4-update-${item.id}" class="col-form-label">Image 4:</label>
+                                            <input type="url" class="form-control" id="img4-update-${item.id}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="color4-update-${item.id}" class="col-form-label">Color 4:</label>
+                                            <input type="text" class="form-control" id="color4-update-${item.id}">
+                                        </div>
+                                        <div class="mb-3">
+                                            Size: <span class="text-danger">*</span><br>
+                                            <div class="btn-group">
+                                                <input type="checkbox" class="btn-check" name="size-update-${item.id}" id="S-update-${item.id}" value="S">
+                                                <label class="btn btn-outline-primary" for="S-update-${item.id}">S</label>
+                                            
+                                                <input type="checkbox" class="btn-check" name="size-update-${item.id}" id="M-update-${item.id}" value="M">
+                                                <label class="btn btn-outline-primary" for="M-update-${item.id}">M</label>
+                                            
+                                                <input type="checkbox" class="btn-check" name="size-update-${item.id}" id="L-update-${item.id}" value="L">
+                                                <label class="btn btn-outline-primary" for="L-update-${item.id}">L</label>
+                                    
+                                                <input type="checkbox" class="btn-check" name="size-update-${item.id}" id="XL-update-${item.id}" value="XL">
+                                                <label class="btn btn-outline-primary" for="XL-update-${item.id}">XL</label>
+                            
+                                                <input type="checkbox" class="btn-check" name="size-update-${item.id}" id="XXL-update-${item.id}" value="XXL">
+                                                <label class="btn btn-outline-primary" for="XXL-update-${item.id}">XXL</label>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary" id="updateProduct" data-bs-dismiss="modal" onclick="checkAndHandleProductData(${id})">Accept</button>
-                                </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" id="updateProduct" data-bs-dismiss="modal" onclick="checkAndHandleProductData(${id})">Accept</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -293,10 +295,8 @@ function renderProductManagement(products) {
     handleCreatProduct();
 }
 
-// In ra các mục của quản lí user
 function renderUserManagement(users) {
     localStorage.setItem('option','user');
-
     usersData = users;
     document.querySelector('h1').innerHTML = 'User Management';
     document.querySelector('.modal-content').innerHTML = `
@@ -322,12 +322,12 @@ function renderUserManagement(users) {
                 <input type="tel" class="form-control" id="phone-inp" required>
             </div>
             <div class="mb-3">
-                Status:
+                Role: <span class="text-danger">*</span>
                 <div class="btn-group">
-                    <input type="radio" class="btn-check" name="status" id="action" value="action">
-                    <label class="btn btn-outline-primary" for="action">Action</label>
-                    <input type="radio" class="btn-check" name="status" id="unaction" value="unaction">
-                    <label class="btn btn-outline-primary" for="unaction">Unaction</label>
+                    <input type="radio" class="btn-check" name="role-inp" id="admin" value="admin">
+                    <label class="btn btn-outline-primary" for="admin">Admin</label>
+                    <input type="radio" class="btn-check" name="role-inp" id="user" value="user">
+                    <label class="btn btn-outline-primary" for="user">User</label>
                 </div>
             </div>
         </div>
@@ -343,6 +343,7 @@ function renderUserManagement(users) {
             <th>Email</th>
             <th>Address</th>
             <th>Phone</th>
+            <th>Role</th>
             <th>Status</th>
             <th>Action</th>
         </tr>`;
@@ -355,15 +356,66 @@ function renderUserManagement(users) {
                     <td>${item.email}</td>
                     <td>${item.address}</td>
                     <td>${item.phone}</td>
+                    <td>${item.role}</td>
                     <td>${item.status}</td>
                     <td>
-                        <button type="button" class="btn btn-outline-success">Update</button>
-                        <button type="button" class="btn btn-outline-danger">Delete</button>
+                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#update${item.id}" onclick="passDataUsersBeforeUpdate(${item.id})">Update</button>
+                        <div class="modal fade" id="update${item.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Update user</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="mb-3">
+                                            <label for="uName-update-${item.id}" class="col-form-label">User name: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="uName-update-${item.id}" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email-update-${item.id}" class="col-form-label">Email: <span class="text-danger">*</span></label>
+                                            <input type="email" class="form-control" id="email-update-${item.id}" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="address-update-${item.id}" class="col-form-label">Address: <span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" id="address-update-${item.id}" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="phone-update-${item.id}" class="col-form-label">Phone: <span class="text-danger">*</span></label>
+                                            <input type="tel" class="form-control" id="phone-update-${item.id}" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            Role: <span class="text-danger">*</span>
+                                            <div class="btn-group">
+                                                <input type="radio" class="btn-check" name="role-update-${item.id}" id="admin-update-${item.id}" value="admin">
+                                                <label class="btn btn-outline-primary" for="admin-update-${item.id}">Admin</label>
+                                                <input type="radio" class="btn-check" name="role-update-${item.id}" id="user-update-${item.id}" value="user">
+                                                <label class="btn btn-outline-primary" for="user-update-${item.id}">User</label>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            Status: <span class="text-danger">*</span>
+                                            <div class="btn-group">
+                                                <input type="radio" class="btn-check" name="status-update-${item.id}" id="active-update-${item.id}" value="Active">
+                                                <label class="btn btn-outline-primary" for="active-update-${item.id}">Active</label>
+                                                <input type="radio" class="btn-check" name="status-update-${item.id}" id="unactive-update-${item.id}" value="Unactive">
+                                                <label class="btn btn-outline-primary" for="unactive-update-${item.id}">Unactive</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" id="updateUser" data-bs-dismiss="modal" onclick="checkAndHandleUserData(${item.id})">Accept</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </td>
                 </tr>
             `;
     })
     tbody.innerHTML = items;
+    handleCreatUser();
 }
 
 function handleCreatProduct(){
@@ -420,8 +472,8 @@ function handleCreatProduct(){
                 status: "Enabled"
             }
             document.querySelector('tbody').innerHTML += `
-                <tr class="item-id-${item.id}">
-                    <td>${item.id}</td>
+                <tr class="item-id-${productsData.length+1}">
+                    <td>${productsData.length+1}</td>
                     <td>${item.name}</td>
                     <td>${item.price}</td>
                     <td>${item.discountAmount}</td>
@@ -435,10 +487,81 @@ function handleCreatProduct(){
                 </tr>
             `;
             createProduct(item);
-            
-            // document.querySelector('#add').modal('hide');
         }
     }
+}
+
+function handleCreatUser(){
+    let createbtn = document.getElementById("addUser");
+    let item;
+    createbtn.onclick = () => {
+        let userName = document.querySelector('input[id="uName-inp"]').value;
+        let email = document.querySelector('input[id="email-inp"]').value;
+        let address = document.querySelector('input[id="address-inp"]').value;
+        let phone = document.querySelector('input[id="phone-inp"]').value;
+        let roleRadio = document.querySelectorAll(`input[name="role-inp"]`);
+        let role = '';
+        if(
+            userName.trim() === "" || 
+            email.trim() === "" ||
+            address.trim() === "" ||
+            phone.trim() === "" ||
+            (roleRadio[0].checked == false && roleRadio[1].checked == false)
+        ) {
+            alert("Please complete all required information!");
+        } else {
+            if(roleRadio[0].checked == true) {role = roleRadio[0].value}
+                else {role = roleRadio[1].value}
+            item = {
+                userName: userName,
+                email: email,
+                address: address,
+                phone: phone,
+                role: role,
+                status: "Active",
+                password: "123123"
+            }
+            // document.querySelector('tbody').innerHTML += `
+            //     <tr class="item-id-${usersData.length+1}">
+            //         <td>${usersData.length+1}</td>
+            //         <td>${item.userName}</td>
+            //         <td>${item.email}</td>
+            //         <td>${item.address}</td>
+            //         <td>${item.phone}</td>
+            //         <td>${item.role}</td>
+            //         <td>${item.status}</td>
+            //         <td>
+            //         <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#update${item.id}" onclick="passDataUsersBeforeUpdate(${item.id})">Update</button>
+            //         </td>
+            //     </tr>
+            // `;
+            createUser(item);
+        }
+    }
+}
+
+function createProduct(data){
+    let option ={
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data)
+    }
+    fetch(productApi,option)
+        .then((response) => response.json())
+}
+
+function createUser(data){
+    let option ={
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data)
+    }
+    fetch(userApi,option)
+        .then((response) => response.json())
 }
 
 function passDataProductsBeforeUpdate(itemId) {
@@ -448,12 +571,37 @@ function passDataProductsBeforeUpdate(itemId) {
     document.querySelector(`input[id="discountAmount-update-${itemId}"]`).value = item.discountAmount;
     document.querySelector(`input[id="stock-update-${itemId}"]`).value = item.stock;
     document.querySelector(`input[id="description-update-${itemId}"]`).value = item.description;
-    document.querySelector(`#brand-update-${itemId}`).value = item.brand;
     document.querySelector(`#category-update-${itemId}`).value = item.category;
+    document.querySelector(`#status-update-${item.id}`).value = item.status;
+    document.querySelector(`#brand-update-${itemId}`).value = item.brand;
     document.querySelector(`#img1-update-${itemId}`).value = item.img.url;
     document.querySelector(`#color1-update-${itemId}`).value = item.img.color;
-    let size = document.querySelectorAll(`input[name="size-${itemId}"]`);
-    
+    document.querySelector(`#img2-update-${itemId}`).value = item.img.url2;
+    document.querySelector(`#color2-update-${itemId}`).value = item.img.color2;
+    document.querySelector(`#img3-update-${itemId}`).value = item.img.url3;
+    document.querySelector(`#color3-update-${itemId}`).value = item.img.color3;
+    document.querySelector(`#img4-update-${itemId}`).value = item.img.url4;
+    document.querySelector(`#color4-update-${itemId}`).value = item.img.color4;
+    let size = document.querySelectorAll(`input[name="size-update-${itemId}"]`);
+    size.forEach(attribute => {
+        if (item.size.some(element => element === attribute.value)){attribute.checked = true};
+    });
+}
+
+function passDataUsersBeforeUpdate(itemId) {
+    let item = usersData.find(element => element.id ==  itemId);
+    document.querySelector(`input[id="uName-update-${itemId}"]`).value = item.userName;
+    document.querySelector(`input[id="email-update-${itemId}"]`).value = item.email;
+    document.querySelector(`input[id="phone-update-${itemId}"]`).value = item.phone;
+    document.querySelector(`input[id="address-update-${itemId}"]`).value = item.address;
+    let role = document.querySelectorAll(`input[name="role-update-${itemId}"]`);
+    let status = document.querySelectorAll(`input[name="status-update-${itemId}"]`);
+    if(item.role === "admin") {
+        role[0].checked = true;
+    } else role[1].checked = true;
+    if(item.status === "active") {
+        status[0].checked = true;
+    } else status[1].checked = true;
 }
 
 function checkAndHandleProductData(itemId) {
@@ -466,6 +614,7 @@ function checkAndHandleProductData(itemId) {
     let category = document.querySelector(`#category-update-${itemId}`).value;
     let url = document.querySelector(`#img1-update-${itemId}`).value;
     let color = document.querySelector(`#color1-update-${itemId}`).value;
+    let status = document.querySelector(`#status-update-${itemId}`).value;
     let sizeItem = [];
         let checkboxes = document.querySelectorAll(`input[name="size-update-${itemId}"]`);
         for (let i=0 ; i<checkboxes.length; i++){
@@ -484,16 +633,6 @@ function checkAndHandleProductData(itemId) {
         sizeItem.length == 0
     ) {
         alert("Please complete all required information!");
-        console.log(name.trim() === "" ,
-        price.trim() === "" ,
-        discountAmount.trim() === "" ,
-        stock.trim() === "" ,
-        description.trim() === "" ,
-        brand.trim() === "Brand" ,
-        category.trim() === "Category" ,
-        url.trim() === "" ,
-        color.trim() === "" ,
-        sizeItem.length == 0)
     } else {
         product = {
             name: name,
@@ -503,6 +642,7 @@ function checkAndHandleProductData(itemId) {
             description: description,
             brand: brand,
             category: category,
+            status: status,
             img: {
                 url: url,
                 color: color,
@@ -514,9 +654,23 @@ function checkAndHandleProductData(itemId) {
                 color4: document.querySelector(`#color4-update-${itemId}`).value,
             },
             size:sizeItem,
-            status: "Enabled",
             id: itemId
         }
+        // document.querySelector(`.item-id-${itemId}`).innerHTML = `
+        //         <tr class="item-id-${itemId}">
+        //             <td>${itemId}</td>
+        //             <td>${product.name}</td>
+        //             <td>${product.price}</td>
+        //             <td>${product.discountAmount}</td>
+        //             <td>${product.stock}</td>
+        //             <td>${product.brand}</td>
+        //             <td><img src="${product.img.url}" alt="img" width="50px"></td>
+        //             <td>${product.status}</td>
+        //             <td>
+        //                 <button type="button" class="btn btn-outline-success" id="update">Update</button>
+        //             </td>
+        //         </tr>
+        //     `;
         updateProduct(product);
         // document.querySelector('tbody').innerHTML += `
         //     <tr class="item-id-${item.id}">
@@ -533,7 +687,38 @@ function checkAndHandleProductData(itemId) {
         //         </td>
         //     </tr>
         // `;
-        // document.querySelector('#add').modal('hide');
+    }
+}
+
+function checkAndHandleUserData(itemId) {
+    let item = usersData.find(element => element.id ==  itemId);
+    let name = document.querySelector(`input[id="uName-update-${itemId}"]`).value;
+    let email = document.querySelector(`input[id="email-update-${itemId}"]`).value;
+    let address = document.querySelector(`input[id="address-update-${itemId}"]`).value;
+    let phone = document.querySelector(`input[id="phone-update-${itemId}"]`).value;
+    let roleRadio = document.querySelectorAll(`input[name="role-update-${itemId}"]`);
+    let statusRadio = document.querySelectorAll(`input[name="status-update-${itemId}"]`);
+    let role='';
+    let status='';
+    if(roleRadio[0].checked == true) {role = roleRadio[0].value}
+        else {role = roleRadio[1].value};
+    if(statusRadio[0].checked == true) {status = statusRadio[0].value}
+        else {status = statusRadio[1].value}
+    if (
+        name.trim() === "" ||
+        email.trim() === "" ||
+        address.trim() === "" ||
+        phone.trim() === "" 
+    ) {
+        alert("Please complete all required information!");
+    } else {
+        item.userName = name;
+        item.email = email;
+        item.address = address;
+        item.phone = phone;
+        item.role = role;
+        item.status = status;
+        updateUser(item);
     }
 }
 
@@ -549,18 +734,16 @@ function updateProduct(data){
     .then((response) => response.json())
 }
 
-function createProduct(data,id){
+function updateUser(data){
+    console.log(data.id);
     let option ={
-        method: 'POST',
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data)
+    method: 'PUT',
+    headers: {
+        "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data)
     }
-    fetch(productApi,option)
-        .then((response) => response.json())
+    fetch(userApi+`/${data.id}`,option)
+    .then((response) => response.json())
 }
 
-function createUser(){
-    let createbtn = document.getElementById("addUser");
-}
