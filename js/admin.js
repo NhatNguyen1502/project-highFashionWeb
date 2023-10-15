@@ -493,7 +493,7 @@ function handleCreatProduct(){
 
 function handleCreatUser(){
     let createbtn = document.getElementById("addUser");
-    let item;
+    let user;
     createbtn.onclick = () => {
         let userName = document.querySelector('input[id="uName-inp"]').value;
         let email = document.querySelector('input[id="email-inp"]').value;
@@ -512,7 +512,7 @@ function handleCreatUser(){
         } else {
             if(roleRadio[0].checked == true) {role = roleRadio[0].value}
                 else {role = roleRadio[1].value}
-            item = {
+            user = {
                 userName: userName,
                 email: email,
                 address: address,
@@ -522,20 +522,20 @@ function handleCreatUser(){
                 password: "123123"
             }
             // document.querySelector('tbody').innerHTML += `
-            //     <tr class="item-id-${usersData.length+1}">
+            //     <tr class="user-id-${usersData.length+1}">
             //         <td>${usersData.length+1}</td>
-            //         <td>${item.userName}</td>
-            //         <td>${item.email}</td>
-            //         <td>${item.address}</td>
-            //         <td>${item.phone}</td>
-            //         <td>${item.role}</td>
-            //         <td>${item.status}</td>
+            //         <td>${user.userName}</td>
+            //         <td>${user.email}</td>
+            //         <td>${user.address}</td>
+            //         <td>${user.phone}</td>
+            //         <td>${user.role}</td>
+            //         <td>${user.status}</td>
             //         <td>
-            //         <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#update${item.id}" onclick="passDataUsersBeforeUpdate(${item.id})">Update</button>
+            //         <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#update${user.id}" onclick="passDataUsersBeforeUpdate(${user.id})">Update</button>
             //         </td>
             //     </tr>
             // `;
-            createUser(item);
+            createUser(user);
         }
     }
 }
