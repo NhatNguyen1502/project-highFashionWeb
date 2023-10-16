@@ -62,12 +62,10 @@ function checkSignUp(){
         window.localStorage.setItem('userID',usersData.length+1);
     }
 }
-
 function logOut(){
     localStorage.removeItem('userId');
     window.location.href = 'homePage.html';
 }
-
 function createUser(data){
     let option ={
         method: 'POST',
@@ -79,7 +77,6 @@ function createUser(data){
     fetch(userApi,option)
         .then((response) => response.json())
 }
-
 function updateUser(data){
     console.log(data.id);
     let option ={
