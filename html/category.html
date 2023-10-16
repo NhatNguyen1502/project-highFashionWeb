@@ -71,14 +71,12 @@
                 <h2 class="fw-bold mt-3">Filters</h2>
                 <hr>
                 <ul class="list-unstyled">
-                    <li class="mb-3"><a href="#" class="text-decoration-none dropdown-toggle" onclick="filterByCategory('t-shirts')">T-Shirts</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none dropdown-toggle" onclick="filterByCategory('shorts')" >Shorts</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none dropdown-toggle" onclick="filterByCategory('Shirts')">Shirts</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none dropdown-toggle" onclick="filterByCategory('Hoodie')">Hoodie</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none dropdown-toggle" onclick="filterByCategory('Jeans')">Jeans</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByCategory('t-shirts')">T-Shirts</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByCategory('shorts')" >Shorts</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByCategory('Shirts')">Shirts</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByCategory('Hoodie')">Hoodie</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByCategory('Jeans')">Jeans</a></li>
                 </ul>
-                <hr>
-                <h2 class="fw-bold">Price</h2>
                 <hr>
 
                 <h2 class="fw-bold">Colors</h2>
@@ -108,28 +106,41 @@
                   </div>
                   <hr>
 
-                  <h2 class="fw-bold">Size</h2>
-                  <div class="form-check mb-3">
-                    <input class="form-check-input" type="checkbox" name="size" id="size-xl" value="xl">
+
+                  <h2 class="fw-bold">Brand</h2>
+                  <ul class="list-unstyled">
+                    <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByBrand('gucci')">Gucci</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByBrand('prada')">Prada</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByBrand('zira')">Zira</a></li>
+                </ul>
+                <hr>
+
+                  <h2 class="fw-bold" >Size</h2>
+                  <div class="form-check mb-3"id="sizes" onclick="filterBySize('S')">
+                    <input class="form-check-input" type="checkbox" name="size" id="size-xl" value="xl" >
                     <label class="form-check-label" for="size-xl">S</label>
                   </div>
                   
-                  <div class="form-check mb-3">
+                  <div class="form-check mb-3" onclick="filterBySize('M')">
                     <input class="form-check-input" type="checkbox" name="size" id="size-xxl" value="xxl">
                     <label class="form-check-label" for="size-xxl">M</label>
                   </div>
-                  <div class="form-check mb-3">
+                  <div class="form-check mb-3" onclick="filterBySize('L')">
                     <input class="form-check-input" type="checkbox" name="size" id="size-xxl" value="xxl">
                     <label class="form-check-label" for="size-xxl">L</label>
                   </div>
-                  <div class="form-check mb-3">
+                  <div class="form-check mb-3" onclick="filterBySize('XL')">
                     <input class="form-check-input" type="checkbox" name="size" id="size-xxl" value="xxl">
                     <label class="form-check-label" for="size-xxl">XL</label>
                   </div>
-                  <div class="form-check mb-3">
+                  <div class="form-check mb-3" onclick="filterBySize('XXL')">
                     <input class="form-check-input" type="checkbox" name="size" id="size-xxl" value="xxl">
                     <label class="form-check-label" for="size-xxl">XXL</label>
                   </div>
+                  <div>
+                    <button type="button" class="btn btn-primary" >Submit</button>
+                  </div>
+
             </div>
             <div class="col-10 ">
                 <div class="row">
