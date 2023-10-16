@@ -27,7 +27,7 @@ function renderCart(){
         </div>
       </div>
       <hr>`
-
+          
     }
     )
     tbody.innerHTML=htmls.toString();
