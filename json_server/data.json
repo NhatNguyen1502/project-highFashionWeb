@@ -20,6 +20,8 @@
         "color4": ""
       },
       "size": [
+        "S",
+        "XL",
         "XXL"
       ],
       "id": 1
@@ -409,23 +411,13 @@
       "role": "user"
     },
     {
-      "id": 2,
-      "userName": "Sun",
-      "email": "sun@gmail.com",
-      "address": "Texas, USA",
-      "phone": "09999999",
-      "password": "123456",
-      "status": "Active",
-      "role": "admin"
-    },
-    {
       "userName": "Nhat",
-      "email": "nhatnguyen@gmal.com",
-      "address": "sontra",
-      "phone": "0397123237",
+      "email": "sun@gmail.com",
+      "phone": "09999999",
+      "address": "Texas, USA",
+      "password": "123456",
       "role": "user",
-      "status": "Active",
-      "id": 3
+      "id": 2
     },
     {
       "userName": "Quyen",
@@ -435,7 +427,7 @@
       "role": "user",
       "status": "Active",
       "password": "123123",
-      "id": 4
+      "id": 3
     },
     {
       "userName": "Hi",
@@ -445,7 +437,7 @@
       "role": "user",
       "status": "Active",
       "password": "123123",
-      "id": 5
+      "id": 4
     },
     {
       "userName": "Le",
@@ -455,37 +447,30 @@
       "role": "user",
       "status": "Active",
       "password": "123123",
-      "id": 6
+      "id": 5
     },
     {
-      "userName": "Quy",
-      "email": "Quy@gmail.com",
-      "address": "DaNang",
-      "phone": "039823746",
-      "role": "admin",
-      "status": "Active",
-      "password": "123123",
-      "id": 7
-    },
-    {
-      "userName": "Luan ",
-      "email": "luan@gmail.com",
-      "address": "Binh",
-      "phone": "0494758",
+      "userName": "nhat",
+      "email": "nhat@gmail.com",
+      "address": "123",
+      "phone": "123",
       "role": "user",
       "status": "Active",
-      "password": "123123",
-      "id": 8
-    },
+      "password": "123",
+      "id": 6
+    }
+  ],
+  "carts": [
     {
-      "userName": "ngan",
-      "email": "ngannguyen@gmail.com",
-      "address": "quangngai",
-      "phone": "039842678",
-      "role": "admin",
-      "status": "Active",
-      "password": "123123",
-      "id": 9
+      "id": 1,
+      "productsCart": [
+        {
+          "productId": 1,
+          "size": "M",
+          "color": "red",
+          "quantity": 1
+        }
+      ]
     }
   ]
 }
