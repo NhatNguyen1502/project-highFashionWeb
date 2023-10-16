@@ -46,6 +46,6 @@ function showAll() {
 var productDetail = document.getElementById('productDetail');
 
 function handleTransferToDetail(id) {
-    window.location.href = 'http://127.0.0.1:5500/html/product_detail.html'
+    window.location.href = 'product_detail.html'
     window.localStorage.setItem('itemID', id);
 }
