@@ -3,8 +3,8 @@ const userApi = 'http://localhost:3000/users';
 let usersData = [];
 let productsData = [];
 fetch(userApi)
-            .then(res => res.json())  
-            .then(data => {usersData = data});
+    .then(res => res.json())  
+    .then(data => {usersData = data});
 function handleUserButton(){
     let isLogin = window.localStorage.getItem('userId');
     if(isLogin) window.location.href = 'http://127.0.0.1:5500/project-hightFashionWeb/html/userInformation.html';
@@ -59,6 +59,7 @@ function checkSignUp(){
         }
         createUser(user);
         $('#modal1').modal('hide');
+        window.localStorage.setItem('userID',usersData.length+1);
     }
 }
 
@@ -77,4 +78,17 @@ function createUser(data){
     }
     fetch(userApi,option)
         .then((response) => response.json())
+}
+
+function updateUser(data){
+    console.log(data.id);
+    let option ={
+    method: 'PUT',
+    headers: {
+        "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data)
+    }
+    fetch(userApi+`/${data.id}`,option)
+    .then((response) => response.json())
 }

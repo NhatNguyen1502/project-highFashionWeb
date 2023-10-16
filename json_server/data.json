@@ -20,6 +20,8 @@
         "color4": ""
       },
       "size": [
+        "S",
+        "XL",
         "XXL"
       ],
       "id": 1
@@ -409,14 +411,13 @@
       "role": "user"
     },
     {
-      "id": 2,
-      "userName": "Sun",
+      "userName": "Nhat",
       "email": "sun@gmail.com",
-      "address": "Texas, USA",
       "phone": "09999999",
+      "address": "Texas, USA",
       "password": "123456",
-      "status": "Active",
-      "role": "admin"
+      "role": "user",
+      "id": 2
     },
     {
       "userName": "Quyen",
@@ -457,6 +458,19 @@
       "status": "Active",
       "password": "123",
       "id": 6
+    }
+  ],
+  "carts": [
+    {
+      "id": 1,
+      "productsCart": [
+        {
+          "productId": 1,
+          "size": "M",
+          "color": "red",
+          "quantity": 1
+        }
+      ]
     }
   ]
 }

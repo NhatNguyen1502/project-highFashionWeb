@@ -1,11 +1,6 @@
-const productApi = 'http://localhost:3000/products';
-const userApi = 'http://localhost:3000/users';
 const tbody = document.querySelector('#tbody');
 let productOption = document.getElementById("product-option");
 let userOption = document.getElementById("user-option");
-let usersData = [];
-let productsData = [];
-
 start();
 function start() {
     // Gắn sự kiện click cho các input radio 
@@ -86,7 +81,7 @@ function renderProductManagement(products) {
                     <option value="shorts">Shorts</option>
                     <option value="shirts">Shirts</option>
                     <option value="hoodies">hoodies</option>
-                    <option value="jean">Jean</option>
+                    <option value="jeans">Jean</option>
                 </select>
             </div>
             <div class="mb-3">
@@ -150,6 +145,7 @@ function renderProductManagement(products) {
         <tr class="table-dark">
             <th>ID</th>
             <th>Name</th>
+            <th>Category</th>
             <th>Price</th>
             <th>Discount</th>
             <th>Stock</th>
@@ -165,6 +161,7 @@ function renderProductManagement(products) {
                 <tr class="item-id-${item.id}">
                     <td>${item.id}</td>
                     <td>${item.name}</td>
+                    <td>${item.category}</td>
                     <td>${item.price}</td>
                     <td>${item.discountAmount}</td>
                     <td>${item.stock}</td>
@@ -552,18 +549,6 @@ function createProduct(data){
         .then((response) => response.json())
 }
 
-function createUser(data){
-    let option ={
-        method: 'POST',
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data)
-    }
-    fetch(userApi,option)
-        .then((response) => response.json())
-}
-
 function passDataProductsBeforeUpdate(itemId) {
     let item = productsData.find(element => element.id ===  itemId);
     document.querySelector(`input[id="pName-update-${itemId}"]`).value = item.name;
@@ -734,16 +719,5 @@ function updateProduct(data){
     .then((response) => response.json())
 }
 
-function updateUser(data){
-    console.log(data.id);
-    let option ={
-    method: 'PUT',
-    headers: {
-        "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data)
-    }
-    fetch(userApi+`/${data.id}`,option)
-    .then((response) => response.json())
-}
+
 
