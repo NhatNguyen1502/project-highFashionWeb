@@ -1,11 +1,6 @@
-const productApi = 'http://localhost:3000/products';
-const userApi = 'http://localhost:3000/users';
 const tbody = document.querySelector('#tbody');
 let productOption = document.getElementById("product-option");
 let userOption = document.getElementById("user-option");
-let usersData = [];
-let productsData = [];
-
 start();
 function start() {
     // Gắn sự kiện click cho các input radio 
@@ -74,7 +69,7 @@ function renderProductManagement(products) {
             <div class="mb-3">
                 <lable for="brand-inp" class="col-form-label">Brand: <span class="text-danger">*</span> </lable>
                 <select class="form-select" id="brand-inp" aria-label="Default select example" required>
-                    <option value="zira">Zira</option>
+                    <option value="zara">Zara</option>
                     <option value="gucci">Gucci</option>
                     <option value="prada">Prada</option>
                 </select>
@@ -86,7 +81,7 @@ function renderProductManagement(products) {
                     <option value="shorts">Shorts</option>
                     <option value="shirts">Shirts</option>
                     <option value="hoodies">hoodies</option>
-                    <option value="jean">Jean</option>
+                    <option value="jeans">Jean</option>
                 </select>
             </div>
             <div class="mb-3">
@@ -150,6 +145,7 @@ function renderProductManagement(products) {
         <tr class="table-dark">
             <th>ID</th>
             <th>Name</th>
+            <th>Category</th>
             <th>Price</th>
             <th>Discount</th>
             <th>Stock</th>
@@ -165,6 +161,7 @@ function renderProductManagement(products) {
                 <tr class="item-id-${item.id}">
                     <td>${item.id}</td>
                     <td>${item.name}</td>
+                    <td>${item.category}</td>
                     <td>${item.price}</td>
                     <td>${item.discountAmount}</td>
                     <td>${item.stock}</td>
@@ -213,7 +210,7 @@ function renderProductManagement(products) {
                                         <div class="mb-3">
                                             <lable for="brand-update-${item.id} " class="col-form-label">Brand: <span class="text-danger">*</span> </lable>
                                             <select class="form-select" id="brand-update-${item.id}" aria-label="Default select example" required>
-                                                <option value="zira">Zira</option>
+                                                <option value="zara">Zara</option>
                                                 <option value="gucci">Gucci</option>
                                                 <option value="prada">Prada</option>
                                             </select>
@@ -226,6 +223,7 @@ function renderProductManagement(products) {
                                                 <option value="shirts">Shirts</option>
                                                 <option value="hoodies">hoodies</option>
                                                 <option value="jean">Jean</option>
+                                                <option value="others">Others</option>
                                             </select>
                                         </div>
                                         <div class="mb-3">
@@ -493,7 +491,7 @@ function handleCreatProduct(){
 
 function handleCreatUser(){
     let createbtn = document.getElementById("addUser");
-    let item;
+    let user;
     createbtn.onclick = () => {
         let userName = document.querySelector('input[id="uName-inp"]').value;
         let email = document.querySelector('input[id="email-inp"]').value;
@@ -512,7 +510,7 @@ function handleCreatUser(){
         } else {
             if(roleRadio[0].checked == true) {role = roleRadio[0].value}
                 else {role = roleRadio[1].value}
-            item = {
+            user = {
                 userName: userName,
                 email: email,
                 address: address,
@@ -522,20 +520,20 @@ function handleCreatUser(){
                 password: "123123"
             }
             // document.querySelector('tbody').innerHTML += `
-            //     <tr class="item-id-${usersData.length+1}">
+            //     <tr class="user-id-${usersData.length+1}">
             //         <td>${usersData.length+1}</td>
-            //         <td>${item.userName}</td>
-            //         <td>${item.email}</td>
-            //         <td>${item.address}</td>
-            //         <td>${item.phone}</td>
-            //         <td>${item.role}</td>
-            //         <td>${item.status}</td>
+            //         <td>${user.userName}</td>
+            //         <td>${user.email}</td>
+            //         <td>${user.address}</td>
+            //         <td>${user.phone}</td>
+            //         <td>${user.role}</td>
+            //         <td>${user.status}</td>
             //         <td>
-            //         <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#update${item.id}" onclick="passDataUsersBeforeUpdate(${item.id})">Update</button>
+            //         <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#update${user.id}" onclick="passDataUsersBeforeUpdate(${user.id})">Update</button>
             //         </td>
             //     </tr>
             // `;
-            createUser(item);
+            createUser(user);
         }
     }
 }
@@ -549,18 +547,6 @@ function createProduct(data){
         body: JSON.stringify(data)
     }
     fetch(productApi,option)
-        .then((response) => response.json())
-}
-
-function createUser(data){
-    let option ={
-        method: 'POST',
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data)
-    }
-    fetch(userApi,option)
         .then((response) => response.json())
 }
 
@@ -734,16 +720,5 @@ function updateProduct(data){
     .then((response) => response.json())
 }
 
-function updateUser(data){
-    console.log(data.id);
-    let option ={
-    method: 'PUT',
-    headers: {
-        "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data)
-    }
-    fetch(userApi+`/${data.id}`,option)
-    .then((response) => response.json())
-}
+
 

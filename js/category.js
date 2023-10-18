@@ -1,11 +1,9 @@
-// Show dữ liệu
-const productsApi = 'http://localhost:3000/products';
-let productsData;
-fetch(productsApi)
+
+// let productsData;
+fetch(productApi)
     .then(response => response.json()) 
     .then((products) => {
-        productsData = products;
-        // console.log(products);
+        productData = products;
         var container = document.getElementById('body');
         var htmls = '';
         products.forEach((element) => {
@@ -40,7 +38,7 @@ function checkBrand(){
 
 // Lọc sản phẩm
  function filterByCategory(categoryName){
-    fetch(productsApi)
+    fetch(productApi)
     .then(response => response.json()) 
     .then((products) => {
         var container = document.getElementById('body');
@@ -64,10 +62,10 @@ function checkBrand(){
 
  // Lọc Brand
 function filterByBrand(categoryBrand){
-  fetch(productsApi)
+  fetch(productApi)
   .then(response => response.json()) 
   .then((products) => {
-      console.log(products);
+    
       var container = document.getElementById('body');
       var htmls = '';
       products.filter((element)=>element.brand===categoryBrand).forEach((element) => {
@@ -91,10 +89,9 @@ var colorRadios = document.querySelectorAll('input[name="color"]');
 colorRadios.forEach((radio) => {
   radio.addEventListener('change', function() {
     var selectedColor = this.value;
-    fetch(productsApi)
+    fetch(productApi)
       .then(response => response.json())
       .then((products) => {
-        console.log(products);
         var container = document.getElementById('body');
         var htmls = '';
         products.filter((element) => element.img.color === selectedColor).forEach((element) => {
@@ -115,14 +112,29 @@ colorRadios.forEach((radio) => {
 
 
 // Lọc Size
-function filterBySize(categoryBySize) {
-  fetch(productsApi)
+function filterBySize() {
+  var checkboxes = document.getElementsByName("size");
+  var selectedSizes = [];
+
+  // Nhận kích thước đã chọn
+  checkboxes.forEach(checkbox => {
+    if (checkbox.checked) {
+      selectedSizes.push(checkbox.value);
+    }
+  });
+
+  fetch(productApi)
     .then(response => response.json())
     .then((products) => {
-      console.log(products);
       var container = document.getElementById('body');
       var htmls = '';
-      products.filter((element) => element.size.includes(categoryBySize)).forEach((element) => {
+
+      // Lọc sản phẩm dựa trên kích thước đã chọn hoặc hiển thị tất cả sản phẩm nếu không chọn kích thước
+      var filteredProducts = selectedSizes.length > 0 ? products.filter((element) =>element.size.join('').includes(selectedSizes.join(''))) : products;
+      console.log(products[0].size.includes(["S"]));
+      // console.log(products[0].size,[""]);
+      // Tạo HTML cho các sản phẩm được lọc
+      filteredProducts.forEach((element) => {
         htmls += `
           <div class="col-sm-3" id="item-${element.id}" onclick="transferPage(${element.id})">
             <img class="mb-3 img" src="${element.img.url}" alt="">
@@ -132,6 +144,7 @@ function filterBySize(categoryBySize) {
           </div>
         `;
       });
+
       container.innerHTML = htmls;
     });
 }
