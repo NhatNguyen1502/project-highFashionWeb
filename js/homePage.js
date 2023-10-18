@@ -1,6 +1,5 @@
-var productApi = 'http://localhost:3000/products';
 var listNew = document.getElementById('newProduct');
-let productsData;
+// let productsData;
 fetch(productApi)
     .then(res => res.json())
     .then(products => {
@@ -15,7 +14,7 @@ fetch(productApi)
                     </div>
                     <p class="fw-bold mt-2">${e.name}</p>
                     <img src="../image/Frame 35.png" alt="image">
-                    <p class="fw-bold fs-4">${e.price}</p>
+                    <p class="fw-bold fs-4">${e.price}$</p>
                 </div>`;
         })
         listNew.innerHTML = htmls;
@@ -36,7 +35,7 @@ function showAll() {
                     </div>
                     <p class="fw-bold mt-2">${element.name}</p>
                     <img src="../image/Frame 35.png" alt="image">
-                    <p class="fw-bold fs-4">${element.price}</p>
+                    <p class="fw-bold fs-4">${element.price}$</p>
                 </div>
         `;
     });
@@ -46,6 +45,13 @@ function showAll() {
 var productDetail = document.getElementById('productDetail');
 
 function handleTransferToDetail(id) {
-    window.location.href = 'http://127.0.0.1:5500/project-hightFashionWeb/html/product_detail.html'
+    window.location.href = 'product_detail.html';
     window.localStorage.setItem('itemID', id);
+}
+function searchFunction() {
+    // Lấy giá trị từ khóa tìm kiếm từ phần tử HTML
+    var searchInput = document.getElementById('search-inp').value;
+
+    // Chuyển hướng đến trang danh mục (category) với tham số tìm kiếm
+    window.location.href = 'category.html?search=' + encodeURIComponent(searchInput);
 }

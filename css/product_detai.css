@@ -83,6 +83,14 @@
     width: 50px;
     height: 30px;
 }
+.addToCart{
+    width: 40%;
+}
+.addCart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media screen and (max-width: 575px) {
     .image-container {
@@ -98,6 +106,9 @@
     }
     .size{
         font-size: small;
+    }
+    .qty{
+        padding-top: 10px;
     }
     
 }
