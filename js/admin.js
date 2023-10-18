@@ -69,7 +69,7 @@ function renderProductManagement(products) {
             <div class="mb-3">
                 <lable for="brand-inp" class="col-form-label">Brand: <span class="text-danger">*</span> </lable>
                 <select class="form-select" id="brand-inp" aria-label="Default select example" required>
-                    <option value="zira">Zira</option>
+                    <option value="zara">Zara</option>
                     <option value="gucci">Gucci</option>
                     <option value="prada">Prada</option>
                 </select>
@@ -210,7 +210,7 @@ function renderProductManagement(products) {
                                         <div class="mb-3">
                                             <lable for="brand-update-${item.id} " class="col-form-label">Brand: <span class="text-danger">*</span> </lable>
                                             <select class="form-select" id="brand-update-${item.id}" aria-label="Default select example" required>
-                                                <option value="zira">Zira</option>
+                                                <option value="zara">Zara</option>
                                                 <option value="gucci">Gucci</option>
                                                 <option value="prada">Prada</option>
                                             </select>
@@ -223,6 +223,7 @@ function renderProductManagement(products) {
                                                 <option value="shirts">Shirts</option>
                                                 <option value="hoodies">hoodies</option>
                                                 <option value="jean">Jean</option>
+                                                <option value="others">Others</option>
                                             </select>
                                         </div>
                                         <div class="mb-3">
