@@ -463,13 +463,19 @@
   ],
   "carts": [
     {
-      "id": 1,
+      "id": 5,
       "productsCart": [
         {
           "productId": 1,
           "size": "M",
           "color": "red",
           "quantity": 1
+        },
+        {
+          "productId": 2,
+          "size": "M",
+          "color": "red",
+          "quantity": 2
         }
       ]
     }
