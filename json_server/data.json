@@ -487,6 +487,34 @@
           "quantity": 2
         }
       ]
+    },
+    {
+      "id": "3",
+      "productsCart": [
+        {
+          "productId": "5",
+          "size": "M",
+          "color": "brown",
+          "quantity": "1"
+        },
+        {
+          "productId": "3",
+          "size": "M",
+          "color": "brown",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "productsCart": [
+        {
+          "productId": "3",
+          "size": "S",
+          "color": "brown",
+          "quantity": "1"
+        }
+      ]
     }
   ]
 }
