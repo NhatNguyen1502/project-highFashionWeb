@@ -8,11 +8,11 @@ fetch(productApi)
         var htmls = '';
         products.forEach((element) => {
             htmls += `
-            <div class="col-sm-3" id="item-${element.id}" onclick="transferPage(${element.id})" >
+            <div class="col-sm-3" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
             <img class="mb-3" src="${element.img.url}" alt="">
-            <p class="mb-1">${element.name}</p>
+            <p class="mb-1 font-weight-bold">${element.name}</p>
             <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <p>${element.price}</p>
+            <p class="font-weight-bold">${element.price}</p>
           </div>
         `;
         });
@@ -30,9 +30,9 @@ function checkFilter(){
 }
 checkBrand();
 function checkBrand(){
-  let category = window.localStorage.getItem('category');
-  if (category) {
-    filterByBrand(category)
+  let brand = window.localStorage.getItem('category');
+  if (brand) {
+    filterByBrand(brand)
   }
 }
 
@@ -45,12 +45,12 @@ function checkBrand(){
         var htmls = '';
         products.filter((element)=>element.category===categoryName).forEach((element) => {
             htmls += `
-            <div class="col-sm-3" id="item-${element.id}" onclick="transferPage(${element.id})">
-                <img class="mb-3" src="${element.img.url}" alt="">
-                <p class="mb-1">${element.name}</p>
-                <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                <p>${element.price}</p>
-            </div>
+            <div class="col-sm-3" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
+            <img class="mb-3" src="${element.img.url}" alt="">
+            <p class="mb-1 font-weight-bold">${element.name}</p>
+            <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <p class="font-weight-bold">${element.price}</p>
+          </div>
         `;
         });
         container.innerHTML = htmls;
@@ -70,12 +70,12 @@ function filterByBrand(categoryBrand){
       var htmls = '';
       products.filter((element)=>element.brand===categoryBrand).forEach((element) => {
           htmls += `
-          <div class="col-sm-3" id="item-${element.id}" onclick="transferPage(${element.id})">
-              <img class="mb-3" src="${element.img.url}" alt="">
-              <p class="mb-1">${element.name}</p>
-              <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              <p>${element.price}</p>
-          </div>
+          <div class="col-sm-3" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
+          <img class="mb-3" src="${element.img.url}" alt="">
+          <p class="mb-1 font-weight-bold">${element.name}</p>
+          <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p class="font-weight-bold">${element.price}</p>
+        </div>
       `;
       });
       container.innerHTML = htmls;
@@ -96,12 +96,12 @@ colorRadios.forEach((radio) => {
         var htmls = '';
         products.filter((element) => element.img.color === selectedColor).forEach((element) => {
           htmls += `
-            <div class="col-sm-3" id="item-${element.id}" onclick="transferPage(${element.id})">
-              <img class="mb-3" src="${element.img.url}" alt="">
-              <p class="mb-1">${element.name}</p>
-              <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              <p>${element.price}</p>
-            </div>
+          <div class="col-sm-3" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
+          <img class="mb-3" src="${element.img.url}" alt="">
+          <p class="mb-1 font-weight-bold">${element.name}</p>
+          <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p class="font-weight-bold">${element.price}</p>
+        </div>
           `;
         });
         container.innerHTML = htmls;
@@ -136,12 +136,12 @@ function filterBySize() {
       // Tạo HTML cho các sản phẩm được lọc
       filteredProducts.forEach((element) => {
         htmls += `
-          <div class="col-sm-3" id="item-${element.id}" onclick="transferPage(${element.id})">
-            <img class="mb-3 img" src="${element.img.url}" alt="">
-            <p class="mb-1">${element.name}</p>
-            <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <p>${element.price}</p>
-          </div>
+        <div class="col-sm-3" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
+        <img class="mb-3" src="${element.img.url}" alt="">
+        <p class="mb-1 font-weight-bold">${element.name}</p>
+        <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p class="font-weight-bold">${element.price}</p>
+      </div>
         `;
       });
 
@@ -156,7 +156,13 @@ function transferPage(id) {
     window.localStorage.setItem('itemID', id);
 }
 
+function addHoverEffect(element) {
+  element.classList.add("hover-effect");
+}
 
+function removeHoverEffect(element) {
+  element.classList.remove("hover-effect");
+}
 // function animateImage(event) {
 //   event.currentTarget.querySelector('img').classList.add('image-animation');
 // }
