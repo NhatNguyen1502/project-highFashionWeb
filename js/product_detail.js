@@ -10,7 +10,6 @@ fetch(productApi)
 
         var sizeOptionsHTML = Array.isArray(product.size) ? product.size.map(size =>
             `<option value="${size}">${size}</option>`).join('') : '';
-
         productDetail.innerHTML = `
     <div class="container">
         <div class="row mt-5">
@@ -76,7 +75,6 @@ function AddToCart() {
             .then(res => res.json())
             .then(data => {
                 let carts = data;
-
                 const userID = window.localStorage.getItem('userId');
                 let productId;
                 let size = '';
@@ -98,6 +96,7 @@ function AddToCart() {
 
                 let userCart = carts.find(user => user.id === userID);
                 if (userCart) {
+
                     const newProductCart = {
                         productId: productId,
                         size: size,
@@ -143,5 +142,4 @@ function AddToCart() {
                 alert('Add to cart successful!');
             });
     }
-
 }
