@@ -31,7 +31,7 @@
       "price": "220",
       "discountAmount": "40",
       "stock": "10",
-      "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+      "description": "This stylish t-shirt is perfect for any occasion. Made from a soft and breathable fabric, it offers both comfort and a fashionable look.",
       "brand": "zara",
       "category": "t-shirts",
       "status": "Enabled",
@@ -46,18 +46,19 @@
         "color4": ""
       },
       "size": [
+        "XL",
         "XXL"
       ],
       "id": 2
     },
     {
-      "name": "hoodies gree",
+      "name": "Shirt",
       "price": "120",
       "discountAmount": "10",
       "stock": "10",
       "description": "beautiful clothe",
       "brand": "prada",
-      "category": "hoodies",
+      "category": "shirts",
       "status": "Enabled",
       "img": {
         "url": "https://i.ibb.co/yFbhty9/image-1.png",
@@ -70,19 +71,20 @@
         "color4": ""
       },
       "size": [
+        "S",
         "M",
         "XL"
       ],
       "id": 3
     },
     {
-      "name": "chân váy",
+      "name": "Jean skirt",
       "price": "70",
       "discountAmount": "0",
       "stock": "10",
-      "description": "chan váy",
+      "description": "This elegant skirt is suitable for any event. Made from a lightweight and flowy fabric, it ensures both comfort and style.",
       "brand": "gucci",
-      "category": "others",
+      "category": "dresses",
       "status": "Enabled",
       "img": {
         "url": "https://i.postimg.cc/TwMpnDRY/2.png",
@@ -95,19 +97,20 @@
         "color4": ""
       },
       "size": [
+        "S",
         "M",
         "XL"
       ],
       "id": 4
     },
     {
-      "name": "chân váy",
+      "name": "Pleated skirt",
       "price": "70",
       "discountAmount": "0",
       "stock": "10",
-      "description": "chan váy",
+      "description": "Our collection features a stunning range of dresses, crafted with high-quality materials for a luxurious look and feel.",
       "brand": "gucci",
-      "category": "others",
+      "category": "dresses",
       "status": "Enabled",
       "img": {
         "url": "https://i.postimg.cc/TPpWGxPg/Frame-20.png",
@@ -120,17 +123,18 @@
         "color4": ""
       },
       "size": [
+        "S",
         "M",
         "XL"
       ],
       "id": 5
     },
     {
-      "name": "chân váy",
+      "name": "Crop-top shirt",
       "price": "70",
       "discountAmount": "0",
       "stock": "10",
-      "description": "chan váy",
+      "description": "Stay comfortable and stylish with this casual shirt. The soft fabric and relaxed fit make it ideal for everyday wear.",
       "brand": "zira",
       "category": "t-shirts",
       "img": {
@@ -144,6 +148,7 @@
         "color4": ""
       },
       "size": [
+        "S",
         "M",
         "XL"
       ],
@@ -151,11 +156,11 @@
       "id": 6
     },
     {
-      "name": "t-shirt",
+      "name": "T-shirt",
       "price": "70",
       "discountAmount": "0",
       "stock": "10",
-      "description": "chan váy",
+      "description": "Our collection features a wide range of t-shirts, each crafted with attention to detail and quality materials for a superior fit and style.",
       "brand": "zira",
       "category": "t-shirts",
       "img": {
@@ -169,6 +174,7 @@
         "color4": ""
       },
       "size": [
+        "S",
         "M",
         "XL"
       ],
@@ -176,13 +182,13 @@
       "id": 7
     },
     {
-      "name": "chân váy",
+      "name": "Kaki shorts",
       "price": "70",
       "discountAmount": "0",
       "stock": "10",
-      "description": "chan váy",
+      "description": "Our collection features a variety of shorts, each designed with attention to detail and quality materials for a comfortable and stylish fit.",
       "brand": "zira",
-      "category": "t-shirts",
+      "category": "shorts",
       "img": {
         "url": "https://i.postimg.cc/7ZPK35B4/Frame-126.png",
         "color": "blue",
@@ -194,6 +200,7 @@
         "color4": ""
       },
       "size": [
+        "S",
         "M",
         "XL"
       ],
@@ -201,13 +208,13 @@
       "id": 8
     },
     {
-      "name": "pants",
+      "name": "Jeans",
       "price": "150",
       "discountAmount": "10",
       "stock": "13",
-      "description": "beautiful clothe",
+      "description": "Stay comfortable and on-trend with these trendy jeans. Their flattering cut and stretchy fabric provide both style and ease of movement.",
       "brand": "gucci",
-      "category": "jean",
+      "category": "jeans",
       "status": "Enabled",
       "img": {
         "url": "https://i.postimg.cc/Sxwzy5YP/Frame-127.png",
@@ -220,6 +227,7 @@
         "color4": ""
       },
       "size": [
+        "S",
         "M",
         "XL"
       ],
@@ -230,7 +238,7 @@
       "price": "40",
       "discountAmount": "0",
       "stock": "10",
-      "description": "beautiful clothe",
+      "description": "Make a bold statement with this graphic t-shirt. Its vibrant print and bold typography make it a standout piece for expressing your individuality.",
       "brand": "gucci",
       "category": "t-shirts",
       "status": "Enabled",
@@ -245,17 +253,18 @@
         "color4": ""
       },
       "size": [
+        "S",
         "M",
         "L"
       ],
       "id": 10
     },
     {
-      "name": "shirt",
+      "name": "Shirt",
       "price": "170",
       "discountAmount": "10",
       "stock": "12",
-      "description": "beautiful clothe",
+      "description": "Elevate your outfit with this versatile shirt. Its impeccable tailoring and refined details bring sophistication to any ensemble.",
       "brand": "gucci",
       "category": "shirts",
       "status": "Enabled",
@@ -277,11 +286,11 @@
       "id": 11
     },
     {
-      "name": "shirt",
+      "name": "Shirt",
       "price": "430",
       "discountAmount": "20",
       "stock": "14",
-      "description": "beautiful clothe",
+      "description": "This classic shirt is a wardrobe staple. Constructed from a premium cotton blend, it offers a timeless style and exceptional durability.",
       "brand": "prada",
       "category": "shirts",
       "status": "Enabled",
@@ -301,15 +310,15 @@
       "id": 12
     },
     {
-      "name": "shirt",
+      "name": "Shorts",
       "price": "210",
       "discountAmount": "120",
       "stock": "121",
-      "description": "beautiful clothe",
+      "description": "Whether you're going for a run or running errands, these versatile shorts are perfect for any active lifestyle. Their durable construction and functional pockets make them a practical choice",
       "brand": "zira",
       "category": "shorts",
       "img": {
-        "url": "https://i.postimg.cc/TYKSy7Px/image-10.png",
+        "url": "https://i.postimg.cc/3x0LNgDw/short1.png",
         "color": "blue",
         "url2": "",
         "color2": "",
@@ -326,16 +335,16 @@
       "id": 13
     },
     {
-      "name": "shirt",
+      "name": "Black shorts",
       "price": "12",
       "discountAmount": "1",
       "stock": "12",
-      "description": "luxury ladylike",
+      "description": "Make a fashion statement with these high-waisted jeans. Their figure-flattering silhouette and modern design are sure to turn heads.",
       "brand": "zara",
-      "category": "shirts",
+      "category": "shorts",
       "status": "Disabled",
       "img": {
-        "url": "https://i.postimg.cc/5937653g/image-9.png",
+        "url": "https://i.postimg.cc/fW8yTPXM/image-9.png",
         "color": "red",
         "url2": "",
         "color2": "",
@@ -350,16 +359,16 @@
       "id": 14
     },
     {
-      "name": "shirt",
+      "name": "Shirt",
       "price": "12",
       "discountAmount": "12",
       "stock": "12",
-      "description": "luxury ladylike",
+      "description": "Elevate your outfit with this versatile shirt. Its impeccable tailoring and refined details bring sophistication to any ensemble.",
       "brand": "gucci",
       "category": "shirts",
       "status": "Disabled",
       "img": {
-        "url": "https://i.postimg.cc/5937653g/image-9.png",
+        "url": "https://i.postimg.cc/prYBzZJf/shirt1.png",
         "color": "red",
         "url2": "",
         "color2": "",
@@ -375,16 +384,16 @@
       "id": 15
     },
     {
-      "name": "shirt",
+      "name": "White shirt",
       "price": "120",
       "discountAmount": "12",
       "stock": "1",
-      "description": "123",
+      "description": "This classic shirt is a wardrobe staple. Constructed from a premium cotton blend, it offers a timeless style and exceptional durability.",
       "brand": "prada",
       "category": "shirts",
       "status": "Disabled",
       "img": {
-        "url": "https://i.postimg.cc/5937653g/image-9.png",
+        "url": "https://i.postimg.cc/CxXwfTLV/image-12.png",
         "color": "red",
         "url2": "",
         "color2": "",

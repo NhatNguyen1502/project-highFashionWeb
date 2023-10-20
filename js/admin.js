@@ -81,7 +81,7 @@ function renderProductManagement(products) {
                     <option value="shorts">Shorts</option>
                     <option value="shirts">Shirts</option>
                     <option value="hoodies">hoodies</option>
-                    <option value="jeans">Jean</option>
+                    <option value="jeans">Jeans</option>
                 </select>
             </div>
             <div class="mb-3">
@@ -222,7 +222,7 @@ function renderProductManagement(products) {
                                                 <option value="shorts">Shorts</option>
                                                 <option value="shirts">Shirts</option>
                                                 <option value="hoodies">hoodies</option>
-                                                <option value="jean">Jean</option>
+                                                <option value="jeans">Jeans</option>
                                                 <option value="others">Others</option>
                                             </select>
                                         </div>
