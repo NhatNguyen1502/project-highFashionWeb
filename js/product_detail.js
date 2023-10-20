@@ -10,7 +10,6 @@ fetch(productApi)
 
         var sizeOptionsHTML = Array.isArray(product.size) ? product.size.map(size =>
             `<option value="${size}">${size}</option>`).join('') : '';
-        
         productDetail.innerHTML = `
     <div class="container">
         <div class="row mt-5">
@@ -75,8 +74,8 @@ function AddToCart() {
         fetch(cartsApi)
             .then(res => res.json())
             .then(data => {
-                var carts = data;
-                var userID = window.localStorage.getItem('userId');
+                let carts = data;
+                const userID = window.localStorage.getItem('userId');
                 let productId;
                 let size = '';
                 let color = '';
@@ -97,15 +96,28 @@ function AddToCart() {
 
                 let userCart = carts.find(user => user.id === userID);
                 if (userCart) {
-                    let arr = userCart.productsCart;
-                    arr.push({
+
+                    const newProductCart = {
                         productId: productId,
                         size: size,
                         color: color,
                         quantity: quantity
-                    });
+                    }
+                    let arr = userCart.productsCart;
+                    console.log('param', arr);
+                    arr.push(newProductCart);
+                    let option = {
+                        method: 'PUT',
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(userCart)
+                    }
+                    fetch(cartsApi + '/' + userID, option)
+                        .then((response) => response.json())
                 } else {
-                    carts.push({
+                    console.log('arg', carts)
+                    const newCart = {
                         id: userID,
                         productsCart: [{
                             productId: productId,
@@ -113,12 +125,21 @@ function AddToCart() {
                             color: color,
                             quantity: quantity
                         }]
-                    });
+                    }
+
+                    carts.push(newCart);
+                    let option = {
+                        method: 'POST',
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify(newCart)
+                    }
+                    fetch(cartsApi, option)
+                        .then((response) => response.json())
                 }
-                localStorage.setItem('carts', carts); //Lưu thông tin giỏ hàng vào local storage
                 console.log(carts);
                 alert('Add to cart successful!');
             });
     }
-    
 }
