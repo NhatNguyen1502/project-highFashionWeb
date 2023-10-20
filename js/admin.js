@@ -7,12 +7,12 @@ function start() {
     productOption.addEventListener("click", handleCheckboxManagementClick);
     userOption.addEventListener("click", handleCheckboxManagementClick);
     let option = localStorage.getItem('option');
-    if (option === "product") {
-        getProducts(renderProductManagement);
-        productOption.checked = true;
-    } else {
+    if (option === "user") {
         getUsers(renderUserManagement);
         userOption.checked = true;
+    } else {
+        getProducts(renderProductManagement);
+        productOption.checked = true;
     }
 }
 

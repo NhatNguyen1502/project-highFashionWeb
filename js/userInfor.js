@@ -20,6 +20,7 @@ function updateUserInf(){
         phone: document.querySelector(`input[id="phone-mod"]`).value,
         address: document.querySelector(`input[id="address-mod"]`).value,
         password: document.querySelector(`input[id="password-mod"]`).value,
+        status: "Active",
         role: 'user',
         id: window.localStorage.getItem('userID')
     }

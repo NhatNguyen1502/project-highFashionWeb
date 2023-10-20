@@ -7,20 +7,22 @@ fetch(userApi)
     .then(data => {usersData = data});
 function handleUserButton(){
     let isLogin = window.localStorage.getItem('userId');
-    if(isLogin) window.location.href = 'http://127.0.0.1:5500/project-hightFashionWeb/html/userInformation.html';
+    if(isLogin) window.location.href = 'userInformation.html';
 }
 function checkLogIn(){
     let userEmail = document.querySelector('input[id="userEmail-inp"]').value;
     let password = document.querySelector('input[id="pword-inp"]').value;
     let user = usersData.find(item => item.email === userEmail)
     if(user){
-        if(password === user.password) {
-            window.localStorage.setItem('userId',user.id)
-            if(user.role === "admin") {
-                window.location.href = 'http://127.0.0.1:5500/project-hightFashionWeb/html/admin.html'
-            }else $('#modal1').modal('hide');
-        } else alert('Wrong password!'); 
-    } else alert('User is not exist!')
+        if (user.status === "Unactive") {
+            alert("Your account is locked!")
+        } else if(password === user.password) {
+                window.localStorage.setItem('userId',user.id)
+                if(user.role === "admin") {
+                    window.location.href = 'html/admin.html'
+                } else $('#modal1').modal('hide');
+            } else alert('Wrong password!'); 
+        } else alert('User is not exist!')
 }
 function checkSignUp(){
     let user;
@@ -78,7 +80,6 @@ function createUser(data){
         .then((response) => response.json())
 }
 function updateUser(data){
-    console.log(data.id);
     let option ={
     method: 'PUT',
     headers: {
