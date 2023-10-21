@@ -11,9 +11,9 @@ fetch(productApi)
         htmls += `
               <div class="col-sm-3" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
               <img class="mb-3" src="${element.img.url}" alt="">
-              <p class="mb-1 font-weight-bold">${element.name}</p>
-              <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-              <p class="font-weight-bold">${element.price}</p>
+              <p class="mb-1 font-weight-bold title text-center">${element.name} </p>
+              <span class="star item-start">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <p class="font-weight-bold text-center">${element.price} $</p>
             </div>
           `;
       }
@@ -84,9 +84,9 @@ function filterByCategory(categoryName) {
             htmls += `
             <div class="col-sm-3" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
             <img class="mb-3" src="${element.img.url}" alt="">
-            <p class="mb-1 font-weight-bold">${element.name}</p>
-            <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <p class="font-weight-bold">${element.price}</p>
+            <p class="mb-1 font-weight-bold title text-center">${element.name }</p>
+            <span class="star item-start">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <p class="font-weight-bold text-center">${element.price} $</p>
           </div>
         `;
           }
@@ -110,9 +110,9 @@ function filterByBrand(categoryBrand) {
             htmls += `
             <div class="col-sm-3" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
             <img class="mb-3" src="${element.img.url}" alt="">
-            <p class="mb-1 font-weight-bold">${element.name}</p>
-            <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <p class="font-weight-bold">${element.price}</p>
+            <p class="mb-1 font-weight-bold title text-center">${element.name}</p>
+            <span class="star item-start">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <p class="font-weight-bold text-center">${element.price} $</p>
           </div>
         `;
           }
@@ -139,9 +139,9 @@ colorRadios.forEach((radio) => {
               htmls += `
             <div class="col-sm-3" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
             <img class="mb-3" src="${element.img.url}" alt="">
-            <p class="mb-1 font-weight-bold">${element.name}</p>
-            <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <p class="font-weight-bold">${element.price}</p>
+            <p class="mb-1 font-weight-bold title text-center">${element.name}</p>
+            <span class="star item-start">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <p class="font-weight-bold text-center">${element.price} $</p>
           </div>
             `;
             }
@@ -182,9 +182,9 @@ function filterBySize() {
           htmls += `
           <div class="col-sm-3" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
           <img class="mb-3" src="${element.img.url}" alt="">
-          <p class="mb-1 font-weight-bold">${element.name}</p>
-          <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <p class="font-weight-bold">${element.price}</p>
+          <p class="mb-1 font-weight-bold title text-center">${element.name}</p>
+          <span class="star item-start">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p class="font-weight-bold text-center">${element.price} $</p>
         </div>
           `;
         }
