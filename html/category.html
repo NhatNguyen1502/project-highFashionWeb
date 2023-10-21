@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CategoryHighFashion</title>
     <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
     <script src="../bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -143,14 +143,14 @@
                       <li><a href="category.html" onclick="window.localStorage.setItem('category','shirts')">Shirts</a>
                       </li>
                       <li><a href="category.html"
-                          onclick="window.localStorage.setItem('category','hoodies')">Hoodies</a></li>
+                          onclick="window.localStorage.setItem('category','dresses')">Dress</a></li>
                       <li><a href="category.html" onclick="window.localStorage.setItem('category','jeans')">Jeans</a>
                       </li>
                     </ul>
                   </li>
-                  <li><a href="#">Brand<span class="arrow">&#129175;</span></a>
+                  <li><a href="category.html">Brand<span class="arrow">&#129175;</span></a>
                     <ul class="sub-menu">
-                      <li><a href="category.html" onclick="window.localStorage.setItem('brand','zira')">Zara</a></li>
+                      <li><a href="category.html" onclick="window.localStorage.setItem('brand','zara')">Zara</a></li>
                       <li><a href="category.html" onclick="window.localStorage.setItem('brand','gucci')">Gucci</a></li>
                       <li><a href="category.html" onclick="window.localStorage.setItem('brand','prada')">Prada</a></li>
                     </ul>
@@ -180,13 +180,13 @@
                 <li><a class="dropdown-item" href="category.html"
                     onclick="window.localStorage.setItem('category','shirts')">Shirts</a></li>
                 <li><a class="dropdown-item" href="category.html"
-                    onclick="window.localStorage.setItem('category','hoodies')">Hoodies</a></li>
+                    onclick="window.localStorage.setItem('category','dresses')">Dresses</a></li>
                 <li><a class="dropdown-item" href="category.html"
                     onclick="window.localStorage.setItem('category','jeans')">Jeans</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              <a class="nav-link dropdown-toggle" href="category.html" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Brand
               </a>
@@ -220,22 +220,22 @@
                     <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByCategory('t-shirts')">T-Shirts</a></li>
                     <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByCategory('shorts')" >Shorts</a></li>
                     <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByCategory('shirts')">Shirts</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByCategory('hoodies')">Hoodie</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByCategory('dresses')">Dress</a></li>
                     <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByCategory('jeans')">Jeans</a></li>
                 </ul>
                 <hr>
 
                 <h2 class="fw-bold">Colors</h2>
                 <div class="form-check mb-3">
-                    <input class="form-check-input bg-danger" type="radio" name="color" id="color-red" value="red">
+                    <input class="form-check-input bg-danger" type="radio" name="color" id="color-red" value="orange">
                     <label class="form-check-label" for="color-red">
-                      Red
+                      Orange
                     </label>
                   </div>
                   <div class="form-check mb-3">
-                    <input class="form-check-input bg-primary" type="radio" name="color" id="color-blue" value="blue">
+                    <input class="form-check-input bg-light" type="radio" name="color" id="color-blue" value="grey">
                     <label class="form-check-label" for="color-blue">
-                      Blue
+                      Grey
                     </label>
                   </div>
                   <div class="form-check mb-3">
@@ -245,7 +245,7 @@
                     </label>
                   </div>
                   <div class="form-check mb-3">
-                    <input class="form-check-input bg-light" type="radio" name="color" id="color-white" value="white">
+                    <input class="form-check-input bg-white" type="radio" name="color" id="color-white" value="white">
                     <label class="form-check-label" for="color-white">
                       White
                     </label>
@@ -257,7 +257,7 @@
                   <ul class="list-unstyled">
                     <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByBrand('gucci')">Gucci</a></li>
                     <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByBrand('prada')">Prada</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByBrand('zira')">Zira</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByBrand('zara')">Zara</a></li>
                 </ul>
                 <hr>
 
