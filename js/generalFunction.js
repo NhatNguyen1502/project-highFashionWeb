@@ -7,7 +7,7 @@ fetch(userApi)
     .then(data => {usersData = data});
 function handleUserButton(){
     let isLogin = window.localStorage.getItem('userId');
-    if(isLogin) window.location.href = 'http://127.0.0.1:5500/project-hightFashionWeb/html/userInformation.html';
+    if(isLogin) window.location.href = 'http://127.0.0.1:5500/html/userInformation.html';
 }
 function checkLogIn(){
     let userEmail = document.querySelector('input[id="userEmail-inp"]').value;
