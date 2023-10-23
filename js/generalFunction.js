@@ -7,7 +7,7 @@ fetch(userApi)
     .then(data => {usersData = data});
 function handleUserButton(){
     let isLogin = window.localStorage.getItem('userId');
-    if(isLogin) window.location.href = 'http://127.0.0.1:5500/html/userInformation.html';
+    if(isLogin) window.location.href = 'userInformation.html';
 }
 function checkLogIn(){
     let userEmail = document.querySelector('input[id="userEmail-inp"]').value;
@@ -17,7 +17,7 @@ function checkLogIn(){
         if(password === user.password) {
             window.localStorage.setItem('userId',user.id)
             if(user.role === "admin") {
-                window.location.href = 'http://127.0.0.1:5500/project-hightFashionWeb/html/admin.html'
+                window.location.href = 'admin.html'
             }else $('#modal1').modal('hide');
         } else alert('Wrong password!'); 
     } else alert('User is not exist!')

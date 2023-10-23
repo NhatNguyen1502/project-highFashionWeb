@@ -3,13 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-.menu li{
+.menu-navbar li{
     position: relative;
 }
-.menu li a.active{
+.menu-navbar li a.active{
     color: darkgreen;
 }
-.menu li a.active::after{
+.menu-navbar li a.active::after{
     content: "";
     background: darkgreen;
     position: absolute;
@@ -19,13 +19,13 @@
     left: 20px;
 }
 
-.menu li{
+.menu-navbar li{
     position: relative;
 }
-.menu li a.active{
+.menu-navbar li a.active{
     color: darkgreen;
 }
-.menu li a.active::after{
+.menu-navbar li a.active::after{
     content: "";
     background: darkgreen;
     position: absolute;
@@ -52,6 +52,12 @@
     color: white !important;
     color: white !important;
     border-radius: 62px;
+}
+
+.col-sm-4:hover {
+    /* CSS khi di chuột hover */
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
 }
 .number{
     margin-top: 20px;
@@ -90,10 +96,32 @@
     justify-content: center;
     align-items: center;
 }
-.btn{
+.viewAll{
     display: flex;
     justify-content: center;
     align-items: center; 
+}
+.col-sm-3:hover {
+    /* CSS khi di chuột hover */
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+@keyframes colorAnimation {
+    0% {
+        color: red;
+    }
+
+    50% {
+        color: blue;
+    }
+
+    100% {
+        color: green;
+    }
+}
+
+.fw-bold.text-center {
+    animation: colorAnimation 3s infinite;
 }
 @media screen and (max-width: 575px){
     .button{
