@@ -10,7 +10,6 @@ fetch(productApi)
 
         let sizeOptionsHTML = Array.isArray(product.size) ? product.size.map(size =>
             `<option value="${size}">${size}</option>`).join('') : '';
-        
         let oldPrice = parseInt(product.price);
         let discount = parseInt(product.discountAmount);
         let currentPrice = oldPrice - oldPrice * discount / 100;
@@ -113,7 +112,6 @@ fetch(productApi)
         }
     })
 
-
     function AddToCart() {
         var selectSize = document.getElementById('sizeOptions').value;
         if (selectSize == "empty") {
@@ -193,3 +191,4 @@ fetch(productApi)
         }
 
     }
+
