@@ -7,8 +7,6 @@ function renderCart() {
   let discount = 0;
   let totalPrice = 0;
 
-
-
   localStorage.setItem('cartApi', cartApi);
   localStorage.setItem('productApi', productApi);
 
@@ -46,9 +44,9 @@ function renderCart() {
                     <i class="fas fa-trash trash-icon" style="color:red" onclick="deleteCartItem(${element.productId})"></i>
                   </div>
                   <div class="nut">
-                    <input class="plus is-form" type="button" value="+">
-                    <input aria-label="quantity" class="input-qty" max="Số tối đa" min="Số tối thiểu" name="" type="number" value="${element.quantity}">
-                    <input class="minus is-form" type="button" value="-">
+                    <input class="plus is-form" type="button" value="+" onclick="changeQuantity(this, 1)">
+                    <input aria-label="quantity" class="input-qty" max="Số tối đa" min="Số tối thiểu" name="" type="number" value="${element.quantity}" onchange="updateCartItem(this, ${element.productId})">
+                    <input class="minus is-form" type="button" value="-" onclick="changeQuantity(this, -1)">
                   </div>
                 </div>
               </div>
@@ -66,22 +64,59 @@ function renderCart() {
 }
 
 renderCart();
-function deleteCartItem(id){
+
+function changeQuantity(button, increment) {
+  const quantityInput = button.parentNode.querySelector('.input-qty');
+  let quantity = parseInt(quantityInput.value) + increment;
+  if (quantity >= 0) {
+    quantityInput.value = quantity;
+    updateCartItem(quantityInput, quantityInput.getAttribute('data-productid'));
+  }
+}
+
+function updateCartItem(input, productId) {
+  const userId = localStorage.getItem("userId");
+  const quantity = parseInt(input.value);
+
+  fetch(`${cartApi}/${userId}`)
+    .then(response => response.json())
+    .then(carts => {
+      const updatedCart = carts.find(cart => cart.id == userId);
+      const product = updatedCart.productsCart.find(item => item.productId == productId);
+      product.quantity = quantity;
+
+      const options = {
+        method: "PUT",
+        body: JSON.stringify(updatedCart),
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+      }
+
+      fetch(`${cartApi}/${userId}`, options)
+        .then(res => res.json())
+        .then(data => renderCart());
+    });
+}
+
+function deleteCartItem(id) {
   const userId = localStorage.getItem("userId");
   fetch(`${cartApi}/${userId}`)
-  .then(response => response.json())
-  .then(carts => {
-    const productAfterUpdated = carts.productsCart.filter(e=>e.productId !== id);
-    carts.productsCart = productAfterUpdated;
-    const options ={
-      method:"PUT",
-      body: JSON.stringify(carts),
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-    }
-    fetch(`${cartApi}/${userId}`,options).then(res=>renderCart());
-  });
-
+    .then(response => response.json())
+    .then(carts => {
+      const productAfterUpdated = carts.productsCart.filter(e => e.productId !== id);
+      carts.productsCart = productAfterUpdated;
+      const options = {
+        method: "PUT",
+        body: JSON.stringify(carts),
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+      }
+      fetch(`${cartApi}/${userId}`,options)
+        .then(res => res.json())
+        .then(data => renderCart());
+    });
 }
