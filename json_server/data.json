@@ -407,6 +407,82 @@
         "XXL"
       ],
       "id": 16
+    },
+    {
+      "name": "hoodies",
+      "price": "123",
+      "discountAmount": "10",
+      "stock": "123",
+      "description": "123",
+      "brand": "zara",
+      "category": "t-shirts",
+      "img": {
+        "url": "https://i.ibb.co/yFbhty9/image-1.png",
+        "color": "black",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "S",
+        "M",
+        "XL"
+      ],
+      "status": "Enabled",
+      "id": 17
+    },
+    {
+      "name": "jeans",
+      "price": "12",
+      "discountAmount": "12",
+      "stock": "12",
+      "description": "beautiful clothe",
+      "brand": "zara",
+      "category": "jeans",
+      "status": "Enabled",
+      "img": {
+        "url": "https://i.postimg.cc/Sxwzy5YP/Frame-127.png",
+        "color": "black",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "L",
+        "XXL"
+      ],
+      "id": 18
+    },
+    {
+      "name": "shirt",
+      "price": "12",
+      "discountAmount": "12",
+      "stock": "12",
+      "description": "beautiful clothe",
+      "brand": "zara",
+      "category": "t-shirts",
+      "img": {
+        "url": "https://i.ibb.co/LYMM6cR/Frame-127.png",
+        "color": "",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "M",
+        "XL"
+      ],
+      "status": "Enabled",
+      "id": 19
     }
   ],
   "users": [
@@ -464,9 +540,9 @@
       "userName": "nhat",
       "email": "nhat@gmail.com",
       "address": "123",
-      "phone": "123",
+      "phone": "0647586745",
       "role": "user",
-      "status": "Active",
+      "status": "Unactive",
       "password": "123",
       "id": 6
     }
@@ -486,6 +562,34 @@
           "size": "M",
           "color": "red",
           "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "productsCart": [
+        {
+          "productId": "5",
+          "size": "M",
+          "color": "brown",
+          "quantity": "1"
+        },
+        {
+          "productId": "3",
+          "size": "M",
+          "color": "brown",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "productsCart": [
+        {
+          "productId": "3",
+          "size": "S",
+          "color": "brown",
+          "quantity": "1"
         }
       ]
     }

@@ -48,6 +48,7 @@ function handleTransferToDetail(id) {
     window.location.href = 'product_detail.html';
     window.localStorage.setItem('itemID', id);
 }
+
 function searchFunction() {
     // Lấy giá trị từ khóa tìm kiếm từ phần tử HTML
     var searchInput = document.getElementById('search-inp').value;

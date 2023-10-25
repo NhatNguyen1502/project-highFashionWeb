@@ -61,7 +61,7 @@ function checkSignUp(){
         }
         createUser(user);
         $('#modal1').modal('hide');
-        window.localStorage.setItem('userID',usersData.length+1);
+        window.localStorage.setItem('userId',usersData.length+1);
     }
 }
 function logOut(){
@@ -88,5 +88,9 @@ function updateUser(data){
     body: JSON.stringify(data)
     }
     fetch(userApi+`/${data.id}`,option)
-    .then((response) => response.json())
+        .then((response) => response.json())
+}
+
+function handleSearch(){
+    
 }
