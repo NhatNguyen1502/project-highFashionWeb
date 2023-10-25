@@ -3,7 +3,7 @@ function passInf(){
     fetch(userApi)
     .then(res => res.json())  
     .then(data => {
-        let userId = window.localStorage.getItem('userID');
+        let userId = window.localStorage.getItem('userId');
         let user = data.find(item => item.id == userId);
         document.querySelector(`input[id="name-mod"]`).value = user.userName;
         document.querySelector(`input[id="email-mod"]`).value = user.email;
@@ -20,6 +20,7 @@ function updateUserInf(){
         phone: document.querySelector(`input[id="phone-mod"]`).value,
         address: document.querySelector(`input[id="address-mod"]`).value,
         password: document.querySelector(`input[id="password-mod"]`).value,
+        status: "Active",
         role: 'user',
         id: window.localStorage.getItem('userID')
     }
