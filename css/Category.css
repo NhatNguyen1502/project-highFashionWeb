@@ -10,12 +10,65 @@
   font-size: 20px;
   display: inline-block;
   line-height: 1;
+  justify-content: center;
+  align-items: center;
 }
+
 li a{
   color: rgb(40, 38, 38);
 }
 img{
   width: 230px;
+}
+.font-weight-bold {
+  font-weight: bold;
+  font-size: 25px;
+}
+.title{
+  font-weight: bold;
+  font-size: 15px;
+}
+.item-start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.border-right{
+  border-right: solid rgb(221, 219, 219) 1px;
+}
+.bg-red{
+  background-color: red;
+}
+.bg-brown{
+  background-color: brown;
+}
+.bg-orange{
+  background-color: orange;
+}
+.bg-pink{
+  background-color:pink;
+}
+.bg-grey{
+  background-color: darkgrey;
+}
+
+.price-large {
+  font-size: 1.2em;
+}
+
+ul.list-unstyled {
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+/* Hiệu ứng mặc định khi không hover */
+.col-sm-3 {
+  transition: transform 0.3s ease;
+}
+
+/* Hiệu ứng khi hover */
+.col-sm-3.hover-effect {
+  transform: scale(1.1);
 }
 /* Hover */
 /* .image-animation {

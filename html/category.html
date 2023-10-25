@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CategoryHighFashion</title>
     <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
     <script src="../bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -143,14 +143,14 @@
                       <li><a href="category.html" onclick="window.localStorage.setItem('category','shirts')">Shirts</a>
                       </li>
                       <li><a href="category.html"
-                          onclick="window.localStorage.setItem('category','hoodies')">Hoodies</a></li>
+                          onclick="window.localStorage.setItem('category','dresses')">Dress</a></li>
                       <li><a href="category.html" onclick="window.localStorage.setItem('category','jeans')">Jeans</a>
                       </li>
                     </ul>
                   </li>
-                  <li><a href="#">Brand<span class="arrow">&#129175;</span></a>
+                  <li><a href="category.html">Brand<span class="arrow">&#129175;</span></a>
                     <ul class="sub-menu">
-                      <li><a href="category.html" onclick="window.localStorage.setItem('brand','zira')">Zara</a></li>
+                      <li><a href="category.html" onclick="window.localStorage.setItem('brand','zara')">Zara</a></li>
                       <li><a href="category.html" onclick="window.localStorage.setItem('brand','gucci')">Gucci</a></li>
                       <li><a href="category.html" onclick="window.localStorage.setItem('brand','prada')">Prada</a></li>
                     </ul>
@@ -180,19 +180,19 @@
                 <li><a class="dropdown-item" href="category.html"
                     onclick="window.localStorage.setItem('category','shirts')">Shirts</a></li>
                 <li><a class="dropdown-item" href="category.html"
-                    onclick="window.localStorage.setItem('category','hoodies')">Hoodies</a></li>
+                    onclick="window.localStorage.setItem('category','dresses')">Dresses</a></li>
                 <li><a class="dropdown-item" href="category.html"
                     onclick="window.localStorage.setItem('category','jeans')">Jeans</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              <a class="nav-link dropdown-toggle" href="category.html" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Brand
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="category.html"
-                    onclick="window.localStorage.setItem('brand','zira')">Zara</a></li>
+                    onclick="window.localStorage.setItem('brand','zara')">Zara</a></li>
                 <li><a class="dropdown-item" href="category.html"
                     onclick="window.localStorage.setItem('brand','gucci')">Gucci</a></li>
                 <li><a class="dropdown-item" href="category.html"
@@ -214,78 +214,113 @@
     <div class="container-sm bg-white">
         <div class="row justify-content-center">
             <div class="col-2 d-sm-block d-none">
-                <h2 class="fw-bold mt-3">Filters</h2>
+                <h2 class="fw-bold mt-3 ">Filters</h2>
                 <hr>
                 <ul class="list-unstyled">
-                    <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByCategory('t-shirts')">T-Shirts</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none  " onclick="filterByCategory('t-shirts')">T-Shirts</a></li>
                     <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByCategory('shorts')" >Shorts</a></li>
                     <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByCategory('shirts')">Shirts</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByCategory('hoodies')">Hoodie</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByCategory('dresses')">Dress</a></li>
                     <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByCategory('jeans')">Jeans</a></li>
                 </ul>
                 <hr>
-
-                <h2 class="fw-bold">Colors</h2>
-                <div class="form-check mb-3">
-                    <input class="form-check-input bg-danger" type="radio" name="color" id="color-red" value="red">
-                    <label class="form-check-label" for="color-red">
-                      Red
-                    </label>
-                  </div>
-                  <div class="form-check mb-3">
-                    <input class="form-check-input bg-primary" type="radio" name="color" id="color-blue" value="blue">
-                    <label class="form-check-label" for="color-blue">
-                      Blue
-                    </label>
-                  </div>
-                  <div class="form-check mb-3">
-                    <input class="form-check-input bg-success" type="radio" name="color" id="color-green" value="green">
-                    <label class="form-check-label" for="color-green">
-                      Green
-                    </label>
-                  </div>
-                  <div class="form-check mb-3">
-                    <input class="form-check-input bg-light" type="radio" name="color" id="color-white" value="white">
-                    <label class="form-check-label" for="color-white">
-                      White
-                    </label>
-                  </div>
-                  <hr>
-
-
-                  <h2 class="fw-bold">Brand</h2>
-                  <ul class="list-unstyled">
+  
+                  <h2 class="fw-bold ">Brand</h2>
+                  <ul class="list-unstyled ">
                     <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByBrand('gucci')">Gucci</a></li>
                     <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByBrand('prada')">Prada</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByBrand('zira')">Zira</a></li>
+                    <li class="mb-3"><a href="#" class="text-decoration-none " onclick="filterByBrand('zara')">Zara</a></li>
                 </ul>
                 <hr>
 
-                  <h2 class="fw-bold" >Size</h2>
-                  <div class="form-check mb-3"id="sizes" onclick="filterBySize('S')">
-                    <input class="form-check-input" type="checkbox" name="size" id="size-s" value="S" >
-                    <label class="form-check-label" for="size-xl">S</label>
+                  <h2 class="fw-bold text-center mb-4">Size</h2>
+                  <div class="row">
+                    <div class="col-6 border-right">
+                      <div class="form-check mb-3 "id="sizes" onclick="filterBySize('S')">
+                        <input class="form-check-input" type="checkbox" name="size" id="size-s" value="S" >
+                        <label class="form-check-label" for="size-xl">S</label>
+                      </div>   
+                      <div class="form-check mb-3" onclick="filterBySize('M')">
+                        <input class="form-check-input" type="checkbox" name="size" id="size-m" value="M">
+                        <label class="form-check-label" for="size-xxl">M</label>
+                      </div>
+                      <div class="form-check mb-3" onclick="filterBySize('L')">
+                        <input class="form-check-input" type="checkbox" name="size" id="size-l" value="L">
+                        <label class="form-check-label" for="size-xxl">L</label>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-check mb-3" onclick="filterBySize('XL')">
+                        <input class="form-check-input" type="checkbox" name="size" id="size-xl" value="XL">
+                        <label class="form-check-label" for="size-xxl">XL</label>
+                      </div>
+                      <div class="form-check mb-3" onclick="filterBySize('XXL')">
+                        <input class="form-check-input" type="checkbox" name="size" id="size-xxl" value="XXL">
+                        <label class="form-check-label" for="size-xxl">XXL</label>
+                      </div>
+                    </div>
                   </div>
-                  
-                  <div class="form-check mb-3" onclick="filterBySize('M')">
-                    <input class="form-check-input" type="checkbox" name="size" id="size-m" value="M">
-                    <label class="form-check-label" for="size-xxl">M</label>
-                  </div>
-                  <div class="form-check mb-3" onclick="filterBySize('L')">
-                    <input class="form-check-input" type="checkbox" name="size" id="size-l" value="L">
-                    <label class="form-check-label" for="size-xxl">L</label>
-                  </div>
-                  <div class="form-check mb-3" onclick="filterBySize('XL')">
-                    <input class="form-check-input" type="checkbox" name="size" id="size-xl" value="XL">
-                    <label class="form-check-label" for="size-xxl">XL</label>
-                  </div>
-                  <div class="form-check mb-3" onclick="filterBySize('XXL')">
-                    <input class="form-check-input" type="checkbox" name="size" id="size-xxl" value="XXL">
-                    <label class="form-check-label" for="size-xxl">XXL</label>
-                  </div>
+                  <hr>
+
                   <!-- <div>
                     <button type="button" class="btn btn-primary" >Submit</button>
                   </div> -->
+
+                  <h2 class="fw-bold text-center mb-4">Colors</h2>
+                  <div class="row">
+                    <div class="col-6 border-right">
+                      <div class="form-check mb-3">
+                        <input class="form-check-input bg-orange" type="radio" name="color" id="color-orange" value="orange">
+                        <label class="form-check-label" for="color-orange">
+                          Orange
+                        </label>
+                      </div>
+                      <div class="form-check mb-3">
+                        <input class="form-check-input bg-grey" type="radio" name="color" id="color-grey" value="grey">
+                        <label class="form-check-label" for="color-grey">
+                          Grey
+                        </label>
+                      </div>
+                      <div class="form-check mb-3">
+                        <input class="form-check-input bg-success" type="radio" name="color" id="color-green" value="green">
+                        <label class="form-check-label" for="color-green">
+                          Green
+                        </label>
+                      </div>
+                      <div class="form-check mb-3">
+                        <input class="form-check-input bg-white" type="radio" name="color" id="color-white" value="white">
+                        <label class="form-check-label" for="color-white">
+                          White
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="form-check mb-3">
+                        <input class="form-check-input bg-red" type="radio" name="color" id="color-red" value="red">
+                        <label class="form-check-label" for="color-red">
+                          Red
+                        </label>
+                      </div>
+                      <div class="form-check mb-3">
+                        <input class="form-check-input bg-black" type="radio" name="color" id="color-black" value="black">
+                        <label class="form-check-label" for="color-black">
+                          Black
+                        </label>
+                      </div>
+                      <div class="form-check mb-3">
+                        <input class="form-check-input bg-brown" type="radio" name="color" id="color-brown" value="brown">
+                        <label class="form-check-label" for="color-brown">
+                          Brown
+                        </label>
+                      </div>
+                      <div class="form-check mb-3">
+                        <input class="form-check-input bg-pink" type="radio" name="color" id="color-pink" value="pink">
+                        <label class="form-check-label" for="color-pink">
+                          Pink
+                        </label>
+                      </div>
+                    </div>
+                  </div>
 
             </div>
             <div class="col-10 ">
