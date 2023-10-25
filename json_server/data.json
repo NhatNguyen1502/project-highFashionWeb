@@ -135,8 +135,9 @@
       "discountAmount": "20",
       "stock": "10",
       "description": "Stay comfortable and stylish with this casual shirt. The soft fabric and relaxed fit make it ideal for everyday wear.",
-      "brand": "zira",
+      "brand": "zara",
       "category": "t-shirts",
+      "status": "Enabled",
       "img": {
         "url": "https://i.postimg.cc/mDVxSvQp/Frame-33-1.png",
         "color": "blue",
@@ -152,7 +153,6 @@
         "M",
         "XL"
       ],
-      "status": "Enabled",
       "id": 6
     },
     {
@@ -187,7 +187,7 @@
       "discountAmount": "5",
       "stock": "10",
       "description": "Our collection features a variety of shorts, each designed with attention to detail and quality materials for a comfortable and stylish fit.",
-      "brand": "",
+      "brand": "zara",
       "category": "shorts",
       "status": "Enabled",
       "img": {
@@ -407,6 +407,82 @@
         "XXL"
       ],
       "id": 16
+    },
+    {
+      "name": "hoodies",
+      "price": "123",
+      "discountAmount": "10",
+      "stock": "123",
+      "description": "123",
+      "brand": "zara",
+      "category": "t-shirts",
+      "img": {
+        "url": "https://i.ibb.co/yFbhty9/image-1.png",
+        "color": "black",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "S",
+        "M",
+        "XL"
+      ],
+      "status": "Enabled",
+      "id": 17
+    },
+    {
+      "name": "jeans",
+      "price": "12",
+      "discountAmount": "12",
+      "stock": "12",
+      "description": "beautiful clothe",
+      "brand": "zara",
+      "category": "jeans",
+      "status": "Enabled",
+      "img": {
+        "url": "https://i.postimg.cc/Sxwzy5YP/Frame-127.png",
+        "color": "black",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "L",
+        "XXL"
+      ],
+      "id": 18
+    },
+    {
+      "name": "shirt",
+      "price": "12",
+      "discountAmount": "12",
+      "stock": "12",
+      "description": "beautiful clothe",
+      "brand": "zara",
+      "category": "t-shirts",
+      "img": {
+        "url": "https://i.ibb.co/LYMM6cR/Frame-127.png",
+        "color": "",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "M",
+        "XL"
+      ],
+      "status": "Enabled",
+      "id": 19
     }
   ],
   "users": [
@@ -427,7 +503,8 @@
       "address": "Texas, USA",
       "password": "123456",
       "role": "user",
-      "id": 2
+      "id": 2,
+      "status": "Unactive"
     },
     {
       "userName": "Quyen",
@@ -463,9 +540,9 @@
       "userName": "nhat",
       "email": "nhat@gmail.com",
       "address": "123",
-      "phone": "123",
+      "phone": "0647586745",
       "role": "user",
-      "status": "Active",
+      "status": "Unactive",
       "password": "123",
       "id": 6
     }
