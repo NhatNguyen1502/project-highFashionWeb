@@ -7,15 +7,17 @@ fetch(productApi)
         var htmls = '';
         var newArrival = products.slice(0,8);
         newArrival.forEach(e => {
-            htmls += `
-                <div class="col-sm-3 col-12" onclick="handleTransferToDetail(${e.id})">
-                    <div class="container-image">
-                        <img class="image" src="${e.img["url"]}" alt="image">
-                    </div>
-                    <p class="fw-bold mt-2">${e.name}</p>
-                    <img src="../image/Frame 35.png" alt="image">
-                    <p class="fw-bold fs-4">${e.price}$</p>
-                </div>`;
+            if (e.status == "Enabled") {
+                htmls += `
+                    <div class="col-sm-3 col-12" onclick="handleTransferToDetail(${e.id})">
+                        <div class="container-image">
+                            <img class="image" src="${e.img["url"]}" alt="image">
+                        </div>
+                        <p class="fw-bold mt-2">${e.name}</p>
+                        <img src="../image/Frame 35.png" alt="image">
+                        <p class="fw-bold fs-4">${e.price}$</p>
+                    </div>`;
+            }
         })
         listNew.innerHTML = htmls;
     })
@@ -27,17 +29,18 @@ function showAll() {
     // productContainer.style.display = 'block';  // Hiển thị khung chứa sản phẩm
     var html = '';
     let products = productsData.slice(8);
-    products.forEach(element => {
-        html += `
-                <div class="col-sm-3 col-12" onclick="handleTransferToDetail(${element.id})">
-                    <div class="container-image">
-                        <img class="image" src="${element.img["url"]}" alt="image">
-                    </div>
-                    <p class="fw-bold mt-2">${element.name}</p>
-                    <img src="../image/Frame 35.png" alt="image">
-                    <p class="fw-bold fs-4">${element.price}$</p>
-                </div>
-        `;
+    products.forEach(e => {
+        if (e.status == "Enabled") {
+            html += `
+                    <div class="col-sm-3 col-12" onclick="handleTransferToDetail(${e.id})">
+                        <div class="container-image">
+                            <img class="image" src="${e.img["url"]}" alt="image">
+                        </div>
+                        <p class="fw-bold mt-2">${e.name}</p>
+                        <img src="../image/Frame 35.png" alt="image">
+                        <p class="fw-bold fs-4">${e.price}$</p>
+                    </div>`;
+        }
     });
     productContainer.innerHTML += html;
 };
@@ -48,6 +51,7 @@ function handleTransferToDetail(id) {
     window.location.href = 'product_detail.html';
     window.localStorage.setItem('itemID', id);
 }
+
 function searchFunction() {
     // Lấy giá trị từ khóa tìm kiếm từ phần tử HTML
     var searchInput = document.getElementById('search-inp').value;
