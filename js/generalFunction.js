@@ -24,13 +24,15 @@ function checkLogIn(){
     let password = document.querySelector('input[id="pword-inp"]').value;
     let user = usersData.find(item => item.email === userEmail)
     if(user){
-        if(password === user.password) {
-            window.localStorage.setItem('userId',user.id)
-            if(user.role === "admin") {
-                window.location.href = 'admin.html'
-            }else $('#modal1').modal('hide');
-        } else alert('Wrong password!'); 
-    } else alert('User is not exist!')
+        if (user.status === "Unactive") {
+            alert("Your account is locked!")
+        } else if(password === user.password) {
+                window.localStorage.setItem('userId',user.id)
+                if(user.role === "admin") {
+                    window.location.href = 'html/admin.html'
+                } else $('#modal1').modal('hide');
+            } else alert('Wrong password!'); 
+        } else alert('User is not exist!')
 }
 function checkSignUp(){
     let user;
@@ -69,7 +71,7 @@ function checkSignUp(){
         }
         createUser(user);
         $('#modal1').modal('hide');
-        window.localStorage.setItem('userID',usersData.length+1);
+        window.localStorage.setItem('userId',usersData.length+1);
     }
 }
 function logOut(){
@@ -88,7 +90,6 @@ function createUser(data){
         .then((response) => response.json())
 }
 function updateUser(data){
-    console.log(data.id);
     let option ={
     method: 'PUT',
     headers: {
