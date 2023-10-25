@@ -130,7 +130,8 @@ function filterBySize() {
       var htmls = '';
 
       // Lọc sản phẩm dựa trên kích thước đã chọn hoặc hiển thị tất cả sản phẩm nếu không chọn kích thước
-      var filteredProducts = selectedSizes.length > 0 ? products.filter((element) =>element.size.join('').includes(selectedSizes.join(''))) : products;
+      var filteredProducts = selectedSizes.length > 0 ? products.filter((element) =>
+        element.size.join('').includes(selectedSizes.join(''))) : products;
       console.log(products[0].size.includes(["S"]));
       // console.log(products[0].size,[""]);
       // Tạo HTML cho các sản phẩm được lọc
@@ -152,7 +153,7 @@ function filterBySize() {
 
 // Show product_detail
 function transferPage(id) {
-    window.location.href = 'http://127.0.0.1:5500/project-hightFashionWeb/html/product_detail.html'
+    window.location.href = 'product_detail.html'
     window.localStorage.setItem('itemID', id);
 }
 
