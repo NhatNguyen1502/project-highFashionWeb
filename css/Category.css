@@ -70,6 +70,29 @@ ul.list-unstyled {
 .col-sm-3.hover-effect {
   transform: scale(1.1);
 }
+/* Hover */
+/* .image-animation {
+  animation: moveImage 1s linear infinite;
+}
+
+.price-large {
+  font-size: 1.2em;
+}
+
+ul.list-unstyled {
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+/* Hiệu ứng mặc định khi không hover */
+.col-sm-3 {
+  transition: transform 0.3s ease;
+}
+
+/* Hiệu ứng khi hover */
+.col-sm-3.hover-effect {
+  transform: scale(1.1);
+}
 
 
 /* @media screen and (max-width:575px) {

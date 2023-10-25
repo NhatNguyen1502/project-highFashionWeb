@@ -9,13 +9,13 @@ fetch(productApi)
     products.forEach((element) => {
       if ((element.status = "Enabled")) {
         htmls += `
-        <div class="col-sm-3 col-6" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
-            <img class="mb-3 responsive-image" src="${element.img.url}" alt="">
-            <p class="mb-1 font-weight-bold title text-center">${element.name} </p>
-            <span class="star item-start">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <p class="font-weight-bold text-center">${element.price} $</p>
-        </div>
-    `;
+              <div class="col-sm-3" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
+              <img class="mb-3" src="${element.img.url}" alt="">
+              <p class="mb-1 font-weight-bold title text-center">${element.name} </p>
+              <span class="star item-start">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <p class="font-weight-bold text-center">${element.price} $</p>
+            </div>
+          `;
       }
     });
     container.innerHTML = htmls;
@@ -38,38 +38,37 @@ function checkBrand() {
   }
 }
 
-checkSearching();
-// Hàm checkSearching
-function checkSearching() {
-  fetch(productApi)
-    .then((response) => response.json())
-    .then((products) => {
-      let searchingData = localStorage.getItem('searching');
-      if (searchingData) {
-        var container = document.getElementById('body');
-        var htmls = '';
-        var filteredProducts = products.filter((element) =>
-          element.name.toLowerCase().indexOf(searchingData.toLowerCase()) >= 0
-        );
-
-        filteredProducts.forEach((element) => {
-          if (element.status === 'Enabled') {
-            htmls += `
-              <div class="col-sm-3 col-6" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
-                <img class="mb-3" src="${element.img.url}" alt="">
-                <p class="mb-1 font-weight-bold title text-center">${element.name}</p>
-                <span class="star item-start">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                <p class="font-weight-bold text-center">${element.price}</p>
-              </div>
-            `;
-          }
-        });
-        container.innerHTML = htmls;
-        localStorage.removeItem("searching");
-      }
-    });
-    
-}
+// checkSearching();
+// function checkSearching() {
+//   fetch(productApi)
+//     .then((response) => response.json())
+//     .then((products) => {
+//       let searchingData = localStorage.getItem("searching");
+//       if (searchingData) {
+//         var container = document.getElementById("body");
+//         var htmls = "";
+//         var filteredProducts = products.filter((element) =>
+//           element.name.toLowerCase().indexOf(searchingData.toLowerCase())>=0
+//         );
+//         console.log("1",filteredProducts);
+//         console.log("2",products);
+//         filteredProducts.forEach((element) => {
+//           if ((element.status = "Enabled")) {
+//             htmls += `
+//         <div class="col-sm-3" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
+//         <img class="mb-3" src="${element.img.url}" alt="">
+//         <p class="mb-1 font-weight-bold">${element.name}</p>
+//         <span class="star">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+//         <p class="font-weight-bold">${element.price}</p>
+//       </div>
+//         `;
+//           }
+//         });
+//         container.innerHTML = htmls;
+//         console.log(1);
+//       }
+//     });
+// }
 
 // Lọc sản phẩm
 function filterByCategory(categoryName) {
@@ -83,7 +82,7 @@ function filterByCategory(categoryName) {
         .forEach((element) => {
           if ((element.status = "Enabled")) {
             htmls += `
-            <div class="col-sm-3 col-6" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
+            <div class="col-sm-3" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
             <img class="mb-3" src="${element.img.url}" alt="">
             <p class="mb-1 font-weight-bold title text-center">${element.name }</p>
             <span class="star item-start">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
@@ -109,7 +108,7 @@ function filterByBrand(categoryBrand) {
         .forEach((element) => {
           if ((element.status = "Enabled")) {
             htmls += `
-            <div class="col-sm-3 col-6" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
+            <div class="col-sm-3" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
             <img class="mb-3" src="${element.img.url}" alt="">
             <p class="mb-1 font-weight-bold title text-center">${element.name}</p>
             <span class="star item-start">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
@@ -121,19 +120,6 @@ function filterByBrand(categoryBrand) {
       localStorage.removeItem("brand");
       container.innerHTML = htmls;
     });
-}
-function highlightBrand(event, brand) {
-  // Xóa lớp 'fw-bold' khỏi tất cả các phần tử <a> trong danh sách
-  var links = document.querySelectorAll('.list-unstyled a');
-  links.forEach(function (link) {
-    link.classList.remove('fw-bold');
-  });
-
-  // Thêm lớp 'fw-bold' cho phần tử được nhấn
-  var target = event.target;
-  target.classList.add('fw-bold');
-  // Thực hiện các hành động khác tại đây, ví dụ: lọc dữ liệu theo brand
-  filterByBrand(brand);
 }
 
 // Lọc màu
@@ -151,7 +137,7 @@ colorRadios.forEach((radio) => {
           .forEach((element) => {
             if ((element.status = "Enabled")) {
               htmls += `
-            <div class="col-sm-3 col-6" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
+            <div class="col-sm-3" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
             <img class="mb-3" src="${element.img.url}" alt="">
             <p class="mb-1 font-weight-bold title text-center">${element.name}</p>
             <span class="star item-start">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
@@ -186,18 +172,15 @@ function filterBySize() {
       // Lọc sản phẩm dựa trên kích thước đã chọn hoặc hiển thị tất cả sản phẩm nếu không chọn kích thước
       var filteredProducts =
         selectedSizes.length > 0
-          ? products.filter((element) => 
-            selectedSizes.every((size) => element.size.includes(size))
-              // element.size.join("").includes(selectedSizes.join(""))
+          ? products.filter((element) =>
+              element.size.join("").includes(selectedSizes.join(""))
             )
           : products;
-          console.log(filteredProducts);
-          console.log(selectedSizes);
       // Tạo HTML cho các sản phẩm được lọc
       filteredProducts.forEach((element) => {
         if ((element.status = "Enabled")) {
           htmls += `
-          <div class="col-sm-3 col-6" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
+          <div class="col-sm-3" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
           <img class="mb-3" src="${element.img.url}" alt="">
           <p class="mb-1 font-weight-bold title text-center">${element.name}</p>
           <span class="star item-start">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
