@@ -478,6 +478,32 @@
           "productId": "12",
           "size": "L",
           "color": "blue",
+          "productId": 1,
+          "size": "M",
+          "color": "red",
+          "quantity": 1
+        },
+        {
+          "productId": 2,
+          "size": "M",
+          "color": "red",
+          "quantity": 2
+        },
+        {
+          "productId": "3",
+          "size": "M",
+          "color": "brown",
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "productsCart": [
+        {
+          "productId": "5",
+          "size": "M",
+          "color": "brown",
           "quantity": "1"
         },
         {
