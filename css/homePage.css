@@ -3,37 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-.menu-navbar li{
-    position: relative;
-}
-.menu-navbar li a.active{
-    color: darkgreen;
-}
-.menu-navbar li a.active::after{
-    content: "";
-    background: darkgreen;
-    position: absolute;
-    width: 40%;
-    height: 2px;
-    bottom: -4px;
-    left: 20px;
-}
-
-.menu-navbar li{
-    position: relative;
-}
-.menu-navbar li a.active{
-    color: darkgreen;
-}
-.menu-navbar li a.active::after{
-    content: "";
-    background: darkgreen;
-    position: absolute;
-    width: 40%;
-    height: 2px;
-    bottom: -4px;
-    left: 20px;
-}
 
 .heading{
     margin-top: 70px;
@@ -54,7 +23,7 @@
     border-radius: 62px;
 }
 
-.col-sm-4:hover {
+.hoverProducts:hover {
     /* CSS khi di chuột hover */
     transition: transform 0.3s ease;
     transform: scale(1.1);
@@ -82,10 +51,6 @@
 .image{
     width: 236px;
     height: 238px;
-    /* width: 95%; */
-    width: 236px;
-    height: 238px;
-    /* width: 95%; */
 }
 .dis{
     color: darkgray;
@@ -122,6 +87,12 @@
 
 .fw-bold.text-center {
     animation: colorAnimation 3s infinite;
+}
+.star {
+    color: #FFD700;
+    font-size: 20px;
+    display: inline-block;
+    line-height: 1;
 }
 @media screen and (max-width: 575px){
     .button{
