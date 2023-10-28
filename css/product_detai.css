@@ -123,6 +123,16 @@
     margin-left: 10px;
     margin-top: 10px;
 }
+.star {
+    color: #FFD700;
+    font-size: 20px;
+    display: inline-block;
+    line-height: 1;
+}
+.image_product{
+     width: 236px;
+    height: 238px;   
+}
 
 @media screen and (max-width: 575px) {
     .image-container {

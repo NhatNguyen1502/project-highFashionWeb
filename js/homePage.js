@@ -14,7 +14,7 @@ fetch(productApi)
                             <img class="image" src="${e.img["url"]}" alt="image">
                         </div>
                         <p class="fw-bold mt-2">${e.name}</p>
-                        <img src="../image/Frame 35.png" alt="image">
+                        <span class="star">${e.vote}</span>
                         <p class="fw-bold fs-4">${e.price}$</p>
                     </div>`;
             }
@@ -37,7 +37,7 @@ function showAll() {
                             <img class="image" src="${e.img["url"]}" alt="image">
                         </div>
                         <p class="fw-bold mt-2">${e.name}</p>
-                        <img src="../image/Frame 35.png" alt="image">
+                        <span class="star">${e.vote}</span>
                         <p class="fw-bold fs-4">${e.price}$</p>
                     </div>`;
         }
@@ -52,10 +52,5 @@ function handleTransferToDetail(id) {
     window.localStorage.setItem('itemID', id);
 }
 
-function searchFunction() {
-    // Lấy giá trị từ khóa tìm kiếm từ phần tử HTML
-    var searchInput = document.getElementById('search-inp').value;
 
-    // Chuyển hướng đến trang danh mục (category) với tham số tìm kiếm
-    window.location.href = 'category.html?search=' + encodeURIComponent(searchInput);
-}
+
