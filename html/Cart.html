@@ -120,7 +120,7 @@
               </div>
               <div class="col-3 d-flex align-content-center justify-content-center">
                 <button type="button" class="btn me-3 p-0" data-bs-toggle="modal" data-bs-target="#modal1"
-                  onclick="handleUserButton()"><i class="fa-regular fa-circle-user fs-2 m-0"
+                  onclick="handleUserButton()"><i class="fa-regular fa-circle-user fs-2 m-0"J
                     id="user-icon"></i></button>
                 <a href="Cart.html" class="text-dark ms-5"><i class="fa-solid fa-bag-shopping fs-2 ms-3"
                     id="cart-icon"></i></a>
@@ -207,60 +207,56 @@
     </nav>
   </header>
 
+<div class="container-fluid bg-light">
+  <h1>Your Cart</h1>
+  <div class="row">
+    <div class="col-lg-7 col-md-12 border rounded" id="product-body">
 
-
-
-    <div class="container-fluid bg-light">
-        <h1>Your Cart</h1>
+    </div>
+    <div class="col-lg-5 col-md-12 border rounded">
+      <h4 class="title-card">Order Summary</h4>
+      <form>
         <div class="row">
-          <div class="col-7 border rounded" id="product-body">
-        
-
-          </div>  
-          <!-- <div class="row p-2"></div> -->
-          <div class="col-5 border rounded">
-            <h4>Order Summary</h4>
-            <form>
-              <div class="row">
-                <div class="col-8">
-                  <span>Subtotal:</span>
-                </div>
-                <div class="col-2"></div>
-                <div class="col-2">
-                  <span id="subtotal"></span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-8">
-                  <span>Discount(-20%):</span>
-                </div>
-                <div class="col-2"></div>
-                <div class="col-2">
-                  <span id="discount"></span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-8">
-                  <span>Delivery Fee:</span>
-                </div>
-                <div class="col-2"></div>
-                <div class="col-2">
-                  <span id="deliveryFee">Free</span>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-8">
-                  <span>Total:</span>
-                </div>
-                <div class="col-2"></div>
-                <div class="col-2">
-                  <span id="totalPrice"></span>
-                </div>
-              </div>
-              <a href="Checkout.html" class="btn btn-primary btn-block">Go to Checkout</a>             
+          <div class="col-8">
+            <span>Subtotal:</span>
+          </div>
+          <div class="col-4 text-right">
+            <span id="subtotal"></span>
           </div>
         </div>
-    </div>   
+        <div class="row">
+          <div class="col-8">
+            <span>Discount(-20%):</span>
+          </div>
+          <div class="col-4 text-right">
+            <span id="discount"></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8">
+            <span>Delivery Fee:</span>
+          </div>
+          <div class="col-4 text-right">
+            <span id="deliveryFee">Free</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8">
+            <span>Total:</span>
+          </div>
+          <div class="col-4 text-right">
+            <span id="totalPrice"></span>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12">
+            <a href="Checkout.html" class="btn btn-primary btn-block">Go to Checkout</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
     <footer class="footer pt-5 position-relative">
       <div class="container-fluid pb-5">

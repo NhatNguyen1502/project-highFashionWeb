@@ -3,7 +3,6 @@ var testCart = document.getElementById('testCart');
 
 renderDetail();
 
-//In ra chi tiết sản phẩm
 function renderDetail() {
     fetch(productApi)
         .then(res => res.json())
@@ -169,7 +168,6 @@ function handleStransferToProductDetail(id) {
         if (selectSize == "empty") {
             alert("Please select size before adding to cart!")
         }
-        
         else {
             fetch(cartsApi)
                 .then(res => res.json())

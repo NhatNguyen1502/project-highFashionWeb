@@ -68,7 +68,7 @@
       "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "img": {
         "url": "https://i.ibb.co/yFbhty9/image-1.png",
-        "color": "black",
+        "color": "green",
         "url2": "",
         "color2": "green",
         "url3": "",
@@ -91,12 +91,12 @@
       "title": "FLORAL SUMMER DRESS",
       "description": "This elegant skirt is suitable for any event. Made from a lightweight and flowy fabric, it ensures both comfort and style.",
       "brand": "gucci",
-      "category": "dresses",
+      "category": "",
       "status": "Enabled",
       "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "img": {
         "url": "https://i.postimg.cc/TwMpnDRY/2.png",
-        "color": "blue",
+        "color": "grey",
         "url2": "",
         "color2": "black",
         "url3": "",
@@ -146,8 +146,9 @@
       "stock": "10",
       "title": "TRENDY OFF-SHOULDER CROP TOP",
       "description": "Stay comfortable and stylish with this casual shirt. The soft fabric and relaxed fit make it ideal for everyday wear.",
-      "brand": "zira",
+      "brand": "zara",
       "category": "t-shirts",
+      "status": "Enabled",
       "img": {
         "url": "https://i.postimg.cc/mDVxSvQp/Frame-33-1.png",
         "color": "blue",
@@ -174,8 +175,9 @@
       "stock": "10",
       "title": "MODERN DENIM BUTTON-UP SHIRT",
       "description": "Our collection features a wide range of t-shirts, each crafted with attention to detail and quality materials for a superior fit and style.",
-      "brand": "zira",
+      "brand": "",
       "category": "t-shirts",
+      "status": "Enabled",
       "img": {
         "url": "https://i.postimg.cc/Sx4wwQD1/Frame-38.png",
         "color": "black",
@@ -202,8 +204,9 @@
       "stock": "10",
       "title": "STYLISH HIGH-WAISTED SHORTS",
       "description": "Our collection features a variety of shorts, each designed with attention to detail and quality materials for a comfortable and stylish fit.",
-      "brand": "zira",
+      "brand": "zara",
       "category": "shorts",
+      "status": "Enabled",
       "img": {
         "url": "https://i.postimg.cc/7ZPK35B4/Frame-126.png",
         "color": "white",
@@ -236,7 +239,7 @@
       "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "img": {
         "url": "https://i.postimg.cc/Sxwzy5YP/Frame-127.png",
-        "color": "blue",
+        "color": "grey",
         "url2": "",
         "color2": "black",
         "url3": "",
@@ -320,7 +323,7 @@
       "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "img": {
         "url": "https://i.postimg.cc/5937653g/image-9.png",
-        "color": "blue",
+        "color": "white",
         "url2": "",
         "color2": "white",
         "url3": "",
@@ -340,11 +343,12 @@
       "stock": "121",
       "title": "SPORTY ATHLETIC SHORTS",
       "description": "Whether you're going for a run or running errands, these versatile shorts are perfect for any active lifestyle. Their durable construction and functional pockets make them a practical choice",
-      "brand": "zira",
+      "brand": "",
       "category": "shorts",
+      "status": "Enabled",
       "img": {
         "url": "https://i.postimg.cc/3x0LNgDw/short1.png",
-        "color": "blue",
+        "color": "grey",
         "url2": "",
         "color2": "black",
         "url3": "",
@@ -373,7 +377,7 @@
       "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "img": {
         "url": "https://i.postimg.cc/fW8yTPXM/image-9.png",
-        "color": "red",
+        "color": "black",
         "url2": "",
         "color2": "",
         "url3": "",
@@ -399,7 +403,7 @@
       "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "img": {
         "url": "https://i.postimg.cc/prYBzZJf/shirt1.png",
-        "color": "red",
+        "color": "orange",
         "url2": "",
         "color2": "",
         "url3": "",
@@ -426,7 +430,7 @@
       "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "img": {
         "url": "https://i.postimg.cc/CxXwfTLV/image-12.png",
-        "color": "red",
+        "color": "pink",
         "url2": "",
         "color2": "",
         "url3": "",
@@ -439,6 +443,82 @@
         "XXL"
       ],
       "id": 16
+    },
+    {
+      "name": "hoodies",
+      "price": "123",
+      "discountAmount": "10",
+      "stock": "123",
+      "description": "123",
+      "brand": "zara",
+      "category": "t-shirts",
+      "img": {
+        "url": "https://i.ibb.co/yFbhty9/image-1.png",
+        "color": "black",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "S",
+        "M",
+        "XL"
+      ],
+      "status": "Enabled",
+      "id": 17
+    },
+    {
+      "name": "jeans",
+      "price": "12",
+      "discountAmount": "12",
+      "stock": "12",
+      "description": "beautiful clothe",
+      "brand": "zara",
+      "category": "jeans",
+      "status": "Enabled",
+      "img": {
+        "url": "https://i.postimg.cc/Sxwzy5YP/Frame-127.png",
+        "color": "black",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "L",
+        "XXL"
+      ],
+      "id": 18
+    },
+    {
+      "name": "shirt",
+      "price": "12",
+      "discountAmount": "12",
+      "stock": "12",
+      "description": "beautiful clothe",
+      "brand": "zara",
+      "category": "t-shirts",
+      "img": {
+        "url": "https://i.ibb.co/LYMM6cR/Frame-127.png",
+        "color": "",
+        "url2": "",
+        "color2": "",
+        "url3": "",
+        "color3": "",
+        "url4": "",
+        "color4": ""
+      },
+      "size": [
+        "M",
+        "XL"
+      ],
+      "status": "Enabled",
+      "id": 19
     }
   ],
   "users": [
@@ -459,7 +539,8 @@
       "address": "Texas, USA",
       "password": "123456",
       "role": "user",
-      "id": 2
+      "id": 2,
+      "status": "Unactive"
     },
     {
       "userName": "Quyen",
@@ -495,9 +576,9 @@
       "userName": "nhat",
       "email": "nhat@gmail.com",
       "address": "123",
-      "phone": "123",
+      "phone": "0647586745",
       "role": "user",
-      "status": "Active",
+      "status": "Unactive",
       "password": "123",
       "id": 6
     },
@@ -517,6 +598,9 @@
       "id": 5,
       "productsCart": [
         {
+          "productId": "12",
+          "size": "L",
+          "color": "blue",
           "productId": 1,
           "size": "M",
           "color": "red",
@@ -546,8 +630,8 @@
           "quantity": "1"
         },
         {
-          "productId": "3",
-          "size": "M",
+          "productId": "7",
+          "size": "S",
           "color": "brown",
           "quantity": "1"
         },
