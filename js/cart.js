@@ -34,14 +34,14 @@ function renderCart() {
                   <img src="${product.img.url}" alt="T-shirt">
                 </div>
                 <div class="col-4">
-                  <h3>${product.name}</h3>
-                  <p>${element.size}</p>
-                  <p>${element.color}</p>
-                  <p>${product.price}</p>
+                <h3>${product.name}</h3> 
+                  <p> Size: ${element.size}</p>                  
+                  <p>Color: ${element.color}</p>                  
+                  <p>$: ${product.price}</p>
                 </div>
                 <div class="col-3 flex-column">
                   <div class="icon-cart">
-                    <i class="fas fa-trash trash-icon" style="color:red" onclick="deleteCartItem(${element.productId})"></i>
+                    <i class="fa fa-trash" style="color:red" onclick="deleteCartItem(${element.productId})"></i>
                   </div>
                   <div class="nut">
                     <input class="plus is-form" type="button" value="+" onclick="changeQuantity(this, 1)">
@@ -105,7 +105,8 @@ function deleteCartItem(id) {
   fetch(`${cartApi}/${userId}`)
     .then(response => response.json())
     .then(carts => {
-      const productAfterUpdated = carts.productsCart.filter(e => e.productId !== id);
+      const productAfterUpdated = carts.productsCart.filter(e => e.productId != id );
+  
       carts.productsCart = productAfterUpdated;
       const options = {
         method: "PUT",
@@ -115,7 +116,7 @@ function deleteCartItem(id) {
           'Content-Type': 'application/json'
         },
       }
-      fetch(`${cartApi}/${userId}`,options)
+      fetch(`${cartApi}/${userId}`,options) 
         .then(res => res.json())
         .then(data => renderCart());
     });
