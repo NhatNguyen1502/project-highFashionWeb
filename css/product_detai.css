@@ -133,6 +133,11 @@
      width: 236px;
     height: 238px;   
 }
+.hoverProducts:hover {
+    /* CSS khi di chuột hover */
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
 
 @media screen and (max-width: 575px) {
     .image-container {

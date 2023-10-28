@@ -139,7 +139,7 @@ function filterByCategory(categoryName) {
                     check = true;
                     htmls +=
                         `
-                   <div class="col-sm-3 text-center" id="item-${e.id}" onclick="handleStransferToProductDetail(${e.id})">
+                   <div class="col-sm-3 text-center hoverProducts" id="item-${e.id}" onclick="handleStransferToProductDetail(${e.id})">
                         <img class="mb-3 image_product" src="${e.img.url}" alt="">
                         <p class="mb-1 fw-bold">${e.name}</p>
                         <span class="star">${e.vote}</span>
@@ -244,3 +244,4 @@ function handleStransferToProductDetail(id) {
         }
 
     }
+

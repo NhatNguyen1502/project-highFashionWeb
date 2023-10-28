@@ -9,7 +9,7 @@ fetch(productApi)
         newArrival.forEach(e => {
             if (e.status == "Enabled") {
                 htmls += `
-                    <div class="col-sm-3 col-12" onclick="handleTransferToDetail(${e.id})">
+                    <div class="col-sm-3 col-12 hoverProducts" onclick="handleTransferToDetail(${e.id})">
                         <div class="container-image">
                             <img class="image" src="${e.img["url"]}" alt="image">
                         </div>
