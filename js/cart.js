@@ -106,7 +106,7 @@ function deleteCartItem(id) {
     .then(response => response.json())
     .then(carts => {
       const productAfterUpdated = carts.productsCart.filter(e => e.productId != id );
-  
+
       carts.productsCart = productAfterUpdated;
       const options = {
         method: "PUT",
@@ -117,6 +117,7 @@ function deleteCartItem(id) {
         },
       }
       fetch(`${cartApi}/${userId}`,options) 
+
         .then(res => res.json())
         .then(data => renderCart());
     });
