@@ -22,7 +22,7 @@ function updateUserInf(){
         password: document.querySelector(`input[id="password-mod"]`).value,
         status: "Active",
         role: 'user',
-        id: window.localStorage.getItem('userID')
+        id: window.localStorage.getItem('userId')
     }
     updateUser(user);
 }
