@@ -123,6 +123,21 @@
     margin-left: 10px;
     margin-top: 10px;
 }
+.star {
+    color: #FFD700;
+    font-size: 20px;
+    display: inline-block;
+    line-height: 1;
+}
+.image_product{
+     width: 236px;
+    height: 238px;   
+}
+.hoverProducts:hover {
+    /* CSS khi di chuột hover */
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
 
 @media screen and (max-width: 575px) {
     .image-container {
