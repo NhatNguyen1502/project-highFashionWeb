@@ -164,7 +164,6 @@
         "M",
         "XL"
       ],
-      "status": "Enabled",
       "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "id": 6
     },
@@ -193,7 +192,6 @@
         "M",
         "XL"
       ],
-      "status": "Enabled",
       "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "id": 7
     },
@@ -222,7 +220,6 @@
         "M",
         "XL"
       ],
-      "status": "Enabled",
       "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "id": 8
     },
@@ -360,7 +357,6 @@
         "M",
         "XL"
       ],
-      "status": "Enabled",
       "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "id": 13
     },
@@ -535,12 +531,12 @@
     {
       "userName": "Nhat",
       "email": "sun@gmail.com",
-      "phone": "09999999",
+      "phone": "09999998",
       "address": "Texas, USA",
       "password": "123456",
+      "status": "Active",
       "role": "user",
-      "id": 2,
-      "status": "Unactive"
+      "id": 2
     },
     {
       "userName": "Quyen",
@@ -575,11 +571,11 @@
     {
       "userName": "nhat",
       "email": "nhat@gmail.com",
+      "phone": "06475867",
       "address": "123",
-      "phone": "0647586745",
+      "password": "123456",
+      "status": "Active",
       "role": "user",
-      "status": "Unactive",
-      "password": "123",
       "id": 6
     },
     {
@@ -596,29 +592,7 @@
   "carts": [
     {
       "id": 5,
-      "productsCart": [
-        {
-          "productId": "12",
-          "size": "L",
-          "color": "blue",
-          "productId": 1,
-          "size": "M",
-          "color": "red",
-          "quantity": 1
-        },
-        {
-          "productId": 2,
-          "size": "M",
-          "color": "red",
-          "quantity": 2
-        },
-        {
-          "productId": "3",
-          "size": "M",
-          "color": "brown",
-          "quantity": "1"
-        }
-      ]
+      "productsCart": []
     },
     {
       "id": "3",
@@ -673,25 +647,111 @@
     },
     {
       "id": "2",
-      "productsCart": [
-        {
-          "productId": "8",
-          "size": "XL",
-          "color": "brown",
-          "quantity": "1"
-        }
-      ]
-    },
+      "productsCart": []
+    }
+  ],
+  "orders": [
     {
-      "id": 8,
-      "productsCart": [
+      "name": "Quyen",
+      "phone": "03971826823",
+      "address": "BinhDinh",
+      "userId": "3",
+      "products": [
         {
           "productId": "1",
           "size": "S",
           "color": "orange",
           "quantity": "1"
+        },
+        {
+          "productId": "3",
+          "size": "M",
+          "color": "brown",
+          "quantity": "1"
+        },
+        {
+          "productId": "1",
+          "size": "M",
+          "color": "brown",
+          "quantity": "1"
+        },
+        {
+          "productId": "1",
+          "size": "S",
+          "color": "brown",
+          "quantity": "1"
+        },
+        {
+          "productId": "1",
+          "size": "S",
+          "color": "brown",
+          "quantity": "1"
         }
-      ]
+      ],
+      "total": 550,
+      "id": 1
+    },
+    {
+      "name": "Nhat",
+      "phone": "09999998",
+      "address": "Texas, USA",
+      "userId": "2",
+      "products": [
+        {
+          "productId": "8",
+          "size": "XL",
+          "color": "brown",
+          "quantity": "1"
+        },
+        {
+          "productId": "13",
+          "size": "M",
+          "color": "white",
+          "quantity": "1"
+        },
+        {
+          "productId": "3",
+          "size": "M",
+          "color": "orange",
+          "quantity": "1"
+        }
+      ],
+      "total": 400,
+      "id": 2
+    },
+    {
+      "name": "Le",
+      "phone": "095934872397",
+      "address": "quangtri",
+      "userId": "5",
+      "products": [
+        {
+          "productId": 1,
+          "size": "M",
+          "color": "red",
+          "quantity": 1
+        },
+        {
+          "productId": 2,
+          "size": "M",
+          "color": "red",
+          "quantity": 2
+        },
+        {
+          "productId": "3",
+          "size": "M",
+          "color": "brown",
+          "quantity": "1"
+        },
+        {
+          "productId": "18",
+          "size": "L",
+          "color": "black",
+          "quantity": "1"
+        }
+      ],
+      "total": 472,
+      "id": 3
     }
   ]
 }
