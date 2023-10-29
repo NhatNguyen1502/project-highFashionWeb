@@ -143,6 +143,7 @@ fetch(productApi)
                     productId = productElement.dataset.productId;
 
                     let userCart = carts.find(user => user.id == userID);
+                    console.log(carts,userID);
                     if (userCart) {
                         const newProductCart = {
                             productId: productId,
@@ -163,7 +164,6 @@ fetch(productApi)
                         fetch(cartsApi + '/' + userID, option)
                             .then((response) => response.json())
                     } else {
-                        console.log('arg', carts)
                         const newCart = {
                             id: userID,
                             productsCart: [{

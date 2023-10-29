@@ -718,15 +718,6 @@ function checkAndHandleProductData(itemId) {
     }
 }
 
-function validateEmailAndTel(email, phone){
-    var pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    var telPattern = /^0[0-9]{9,10}$/;
-    if (!pattern.test(email)) {
-        return false;
-    } else if (!telPattern.test(phone)){
-        return false;
-    } else return true
-}
 
 function checkAndHandleUserData(itemId) {
     let item = usersData.find(element => element.id ==  itemId);

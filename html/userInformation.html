@@ -207,65 +207,67 @@
         </nav>
     </header>
 
-    <div class="container user position-relative">
-        <button type="button" class="btn position-absolute top-0 end-0 mt-3" title="Log out" onclick="logOut()"><i
-                class="fa-solid fa-right-from-bracket fs-3"></i></button>
-        <div class="row mt-4 text-center">
-            <div class="col-12">
-                <h1>Edit profile</h1>
+    <form action="">
+        <div class="container user position-relative">
+            <button type="button" class="btn position-absolute top-0 end-0 mt-3" title="Log out" onclick="logOut()"><i
+                    class="fa-solid fa-right-from-bracket fs-3"></i></button>
+            <div class="row mt-4 text-center">
+                <div class="col-12">
+                    <h1>Edit profile</h1>
+                </div>
+            </div>
+            <div class="row mt-4 col-sm-6 col-12">
+                <span class="title">User name</span>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="name-mod">
+                    <button class="btn btn-outline-secondary" type="button" onclick="document.getElementById('name-mod').focus();">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="row mt-2 col-sm-6 col-12">
+                <span class="title">Email</span>
+                <div class="input-group mb-3">
+                    <input type="email" class="form-control" id="email-mod" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                    <button class="btn btn-outline-secondary" type="button" onclick="document.getElementById('email-mod').focus();">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="row mt-2 col-sm-6 col-12">
+                <span class="title">Address</span>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="address-mod">
+                    <button class="btn btn-outline-secondary" type="button" onclick="document.getElementById('address-mod').focus();">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="row mt-2 col-sm-6 col-12">
+                <span class="title">Phone number</span>
+                <div class="input-group mb-3">
+                    <input type="tel" class="form-control" id="phone-mod" pattern="^0[0-9]{9,10}$">
+                    <button class="btn btn-outline-secondary" type="button" onclick="document.getElementById('phone-mod').focus();">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="row mt-2 col-sm-6 col-12">
+                <span class="title">Password</span>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="password-mod">
+                    <button class="btn btn-outline-secondary" type="button" onclick="document.getElementById('password-mod').focus();">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col">
+                    <button type="submit" class="button btn btn-success" onclick="updateUserInf()">Save</button>
+                </div>
             </div>
         </div>
-        <div class="row mt-4 col-sm-6 col-12">
-            <span class="title">User name</span>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" id="name-mod">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">
-                    <i class="fa-solid fa-pen"></i>
-                </button>
-            </div>
-        </div>
-        <div class="row mt-2 col-sm-6 col-12">
-            <span class="title">Email</span>
-            <div class="input-group mb-3">
-                <input type="email" class="form-control" id="email-mod">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">
-                    <i class="fa-solid fa-pen"></i>
-                </button>
-            </div>
-        </div>
-        <div class="row mt-2 col-sm-6 col-12">
-            <span class="title">Address</span>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" id="address-mod">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">
-                    <i class="fa-solid fa-pen"></i>
-                </button>
-            </div>
-        </div>
-        <div class="row mt-2 col-sm-6 col-12">
-            <span class="title">Phone number</span>
-            <div class="input-group mb-3">
-                <input type="tel" class="form-control" id="phone-mod">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">
-                    <i class="fa-solid fa-pen"></i>
-                </button>
-            </div>
-        </div>
-        <div class="row mt-2 col-sm-6 col-12">
-            <span class="title">Password</span>
-            <div class="input-group mb-3">
-                <input type="password" class="form-control" id="password-mod">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">
-                    <i class="fa-solid fa-pen"></i>
-                </button>
-            </div>
-        </div>
-        <div class="row mt-4">
-            <div class="col">
-                <button type="button" class="button btn btn-success" onclick="updateUserInf()">Save</button>
-            </div>
-        </div>
-    </div>
+    </form>
 
     <!-- footer -->
     <footer class="footer pt-5 position-relative">
