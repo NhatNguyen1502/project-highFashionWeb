@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
-    <script src="../bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/e1aaf64c7e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/hearder-footer.css">
-    <link rel="stylesheet" href="../css/AboutUs.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/hearder-footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script src="https://kit.fontawesome.com/e1aaf64c7e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/hearder-footer.css">
+  <link rel="stylesheet" href="../css/AboutUs.css">
+  <title>Fashion Shop</title>
 </head>
+
+
 <body>
   <div class="row on-top bg-dark text-center p-2">
     <span class="text-white">Sign up and get 20% off to your first order. <a
@@ -207,22 +210,89 @@
     </nav>
   </header>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6 col-12">
-          <h1 class="fw-bold heading">Who we are?</h1>
-          <p class="content">We create pathways to connect millions of sellers and buyers in more than 190 markets around the world. Our technology empowers our customers, providing everyone the opportunity to grow and thrive.</p>
+
+  <section class="container my-5">
+    <div class="row p-50">
+      <div class="col-md-6">
+            <div class="carousel-item active">
+              <img src="../image/Team.jpg" alt="Team 1" class="img-fluid">
+            </div>
+      </div>
+      <div class="col-md-6">
+        <h2 class="mb-4">My Team</h2>
+        <p>My team is a dedicated and diverse group that works together towards a common goal. We value collaboration, communication, and excellence. We support and motivate each other, celebrating successes and learning from challenges. Our professional synergy is complemented by strong personal connections, creating a positive and supportive work environment.</p>
+        <p>We trust and respect one another, fostering a sense of camaraderie. Through teamwork, we overcome obstacles, achieve our objectives, and make a positive impact.</p>
+      </div>
+    </div>
+  
+  <!-- </section> -->
+
+
+  <h2 class="text-center m-5">Team members</h2>
+  <!-- <section class="container my-5"> -->
+    <div class="row">
+      <div class="col-md-3">
+        <div class="member-card">
+          <img src="../image/Nhat.jpg" alt="Member 1" class="img-fluid">
+          <h3 class="member-name">Lâm Nhật</h3>
+          <p class="member-description">I am the team leader and I am ready to assist when team members encounter difficulties.</p>
         </div>
-        <div class="col-sm-6 col-12">
-          <img src="../image/aboutUs.png" id="img-about" alt="Description of the image">
+      </div>
+      <div class="col-md-3">
+        <div class="member-card">
+          <img src="../image/Quyen.jpg" alt="Member 2" class="img-fluid">
+          <h3 class="member-name">Bích Quyên</h3>
+          <p class="member-description">I am very passionate about creativity and I am thrilled that we have created this website.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="member-card">
+          <img src="../image/ti.jpg" alt="Member 3" class="img-fluid">
+          <h3 class="member-name">Thị Hỉ</h3>
+          <p class="member-description">I am delighted to have this website because I enjoy shopping for items.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="member-card">
+          <img src="../image/Le.jpg" alt="Member 4" class="img-fluid">
+          <h3 class="member-name">Thị Lệ</h3>
+          <p class="member-description">It useful to be able to browse the website and make purchases from the website we have created.</p>
         </div>
       </div>
     </div>
+    <p></p>
+  <!-- </section> -->
+
+  <!-- <section class="container my-5"> -->
+    <h2 class="mb-4 text-center mt-5">What Clients Say</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="testimonial-card">
+          <img src="../image/Jonh.jpg" alt="Client 1" class="img-fluid">
+          <h3 class="client-name">John Smith</h3>
+          <p class="client-quote">"Outstanding clothing website. User-friendly, attractive design, diverse high-quality products. Highly recommended!"</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial-card">
+          <img src="../image/Nath.jpg" alt="Client 2" class="img-fluid">
+          <h3 class="client-name">Jane Doe</h3>
+          <p class="client-quote">"Amazing online clothing store. Stylish designs, great variety, and excellent quality. Fast shipping and friendly customer service."</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="testimonial-card">
+          <img src="../image/Mish.jpg" alt="Client 2" class="img-fluid">
+          <h3 class="client-name">Jane Doe</h3>
+          <p class="client-quote">"The product quality is excellent, and the customer service is professional. I am extremely satisfied with my shopping experience on this website."</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
 
-    <!-- footer -->
   <footer class="footer pt-5 position-relative">
     <div class="container-fluid pb-5">
       <div
@@ -302,5 +372,8 @@
       <p>&copy; 2023 HighFashion.com</p>
     </div>
   </footer>
+  <script src="../bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/generalFunction.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </body>
 </html>
