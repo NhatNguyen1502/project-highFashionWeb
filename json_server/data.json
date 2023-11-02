@@ -88,15 +88,13 @@
       "price": "70",
       "discountAmount": "5",
       "stock": "10",
-      "title": "FLORAL SUMMER DRESS",
       "description": "This elegant skirt is suitable for any event. Made from a lightweight and flowy fabric, it ensures both comfort and style.",
       "brand": "gucci",
-      "category": "",
+      "category": "others",
       "status": "Enabled",
-      "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "img": {
         "url": "https://i.postimg.cc/TwMpnDRY/2.png",
-        "color": "grey",
+        "color": "green",
         "url2": "",
         "color2": "black",
         "url3": "",
@@ -172,9 +170,8 @@
       "price": "70",
       "discountAmount": "5",
       "stock": "10",
-      "title": "MODERN DENIM BUTTON-UP SHIRT",
       "description": "Our collection features a wide range of t-shirts, each crafted with attention to detail and quality materials for a superior fit and style.",
-      "brand": "",
+      "brand": "gucci",
       "category": "t-shirts",
       "status": "Enabled",
       "img": {
@@ -192,7 +189,6 @@
         "M",
         "XL"
       ],
-      "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "id": 7
     },
     {
@@ -338,14 +334,13 @@
       "price": "210",
       "discountAmount": "15",
       "stock": "121",
-      "title": "SPORTY ATHLETIC SHORTS",
       "description": "Whether you're going for a run or running errands, these versatile shorts are perfect for any active lifestyle. Their durable construction and functional pockets make them a practical choice",
-      "brand": "",
+      "brand": "prada",
       "category": "shorts",
       "status": "Enabled",
       "img": {
         "url": "https://i.postimg.cc/3x0LNgDw/short1.png",
-        "color": "grey",
+        "color": "black",
         "url2": "",
         "color2": "black",
         "url3": "",
@@ -357,7 +352,6 @@
         "M",
         "XL"
       ],
-      "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "id": 13
     },
     {
@@ -365,12 +359,10 @@
       "price": "30",
       "discountAmount": "3",
       "stock": "12",
-      "title": "STYLISH HIGH-WAISTED SHORTS",
       "description": "Make a fashion statement with these high-waisted jeans. Their figure-flattering silhouette and modern design are sure to turn heads.",
       "brand": "zara",
       "category": "shorts",
-      "status": "Disabled",
-      "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
+      "status": "Enabled",
       "img": {
         "url": "https://i.postimg.cc/fW8yTPXM/image-9.png",
         "color": "black",
@@ -391,12 +383,10 @@
       "price": "25",
       "discountAmount": "4",
       "stock": "12",
-      "title": "SOPHISTICATED STRIPED OXFORD SHIRT",
       "description": "Elevate your outfit with this versatile shirt. Its impeccable tailoring and refined details bring sophistication to any ensemble.",
       "brand": "gucci",
       "category": "shirts",
-      "status": "Disabled",
-      "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
+      "status": "Enabled",
       "img": {
         "url": "https://i.postimg.cc/prYBzZJf/shirt1.png",
         "color": "orange",
@@ -418,12 +408,10 @@
       "price": "120",
       "discountAmount": "5",
       "stock": "1",
-      "title": "EFFORTLESSLY CHIC CHAMBRAY SHIRT",
       "description": "This classic shirt is a wardrobe staple. Constructed from a premium cotton blend, it offers a timeless style and exceptional durability.",
       "brand": "prada",
       "category": "shirts",
-      "status": "Disabled",
-      "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
+      "status": "Enabled",
       "img": {
         "url": "https://i.postimg.cc/CxXwfTLV/image-12.png",
         "color": "pink",
@@ -781,120 +769,6 @@
       ],
       "total": 340,
       "id": 4
-    },
-    {
-      "name": "Nhat",
-      "phone": "09999998",
-      "address": "Texas, USA",
-      "userId": "2",
-      "products": [],
-      "total": 0,
-      "id": 5
-    },
-    {
-      "name": "Nhat",
-      "phone": "09999998",
-      "address": "Texas, USA",
-      "userId": "2",
-      "products": [],
-      "total": 0,
-      "id": 6
-    },
-    {
-      "name": "Nhat",
-      "phone": "09999998",
-      "address": "Texas, USA",
-      "userId": "2",
-      "products": [
-        {
-          "productId": "1",
-          "size": "M",
-          "color": "green",
-          "quantity": "1"
-        }
-      ],
-      "total": 120,
-      "id": 7
-    },
-    {
-      "name": "Nhat",
-      "phone": "09999998",
-      "address": "Texas, USA",
-      "userId": "2",
-      "products": [
-        {
-          "productId": "2",
-          "size": "XL",
-          "color": "black",
-          "quantity": "1"
-        }
-      ],
-      "total": 220,
-      "id": 8
-    },
-    {
-      "name": "Nhat",
-      "phone": "09999998",
-      "address": "Texas, USA",
-      "userId": "2",
-      "products": [
-        {
-          "productId": "2",
-          "size": "XL",
-          "color": "black",
-          "quantity": "1"
-        }
-      ],
-      "total": 220,
-      "id": 9
-    },
-    {
-      "name": "Nhat",
-      "phone": "09999998",
-      "address": "Texas, USA",
-      "userId": "2",
-      "products": [
-        {
-          "productId": "2",
-          "size": "XL",
-          "color": "green",
-          "quantity": "1"
-        }
-      ],
-      "total": 220,
-      "id": 10
-    },
-    {
-      "name": "nhat",
-      "phone": "06475867",
-      "address": "123",
-      "userId": "6",
-      "products": [
-        {
-          "productId": "3",
-          "size": "S",
-          "color": "brown",
-          "quantity": "1"
-        }
-      ],
-      "total": 120,
-      "id": 11
-    },
-    {
-      "name": "nhat",
-      "phone": "06475867",
-      "address": "123",
-      "userId": "6",
-      "products": [
-        {
-          "productId": "3",
-          "size": "M",
-          "color": "white",
-          "quantity": "1"
-        }
-      ],
-      "total": 120,
-      "id": 12
     }
   ]
 }

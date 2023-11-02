@@ -1,18 +1,23 @@
 const tbody = document.querySelector('#tbody');
 let productOption = document.getElementById("product-option");
 let userOption = document.getElementById("user-option");
+let orderOption = document.getElementById("order-option");
+let orderApi = 'http://localhost:3000/orders';
 start();
 function start() {
-    // Gắn sự kiện click cho các input radio 
     productOption.addEventListener("click", handleCheckboxManagementClick);
     userOption.addEventListener("click", handleCheckboxManagementClick);
+    orderOption.addEventListener("click", handleCheckboxManagementClick);
     let option = localStorage.getItem('option');
     if (option === "user") {
         getUsers(renderUserManagement);
         userOption.checked = true;
-    } else {
+    } else if (option === "product") {
         getProducts(renderProductManagement);
         productOption.checked = true;
+    } else {
+        getOrders(renderOrderManagement);
+        orderOption.checked = true;
     }
 }
 
@@ -28,15 +33,24 @@ function getUsers(callback) {
         .then(callback)
 }
 
+function getOrders(callback) {
+    fetch(orderApi)
+        .then((response) => response.json())
+        .then(callback)
+}
+
 function handleCheckboxManagementClick(event) {
     if (event.target === productOption) {
         getProducts(renderProductManagement) 
     } else if (event.target === userOption) {
         getUsers(renderUserManagement);
+    } if (event.target === orderOption) {
+        getOrders(renderOrderManagement);
     }
 }
 
 function renderProductManagement(products) {
+    document.querySelector('#addButton').style.display = 'block';
     localStorage.setItem('option','product');
     productsData = products;
     document.querySelector('h1').innerHTML = 'Product Management';
@@ -223,7 +237,7 @@ function renderProductManagement(products) {
                                         <h1 class="modal-title fs-5" id="exampleModalLabel">Update product</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
-                                    <form>
+                                    <form action="#">
                                         <div class="modal-body">
                                             <div class="mb-3">
                                                 <label for="pName-update-${item.id}" class="col-form-label">Product name: <span class="text-danger">*</span></label>
@@ -358,12 +372,11 @@ function renderProductManagement(products) {
                                                 </div>
                                             </div>
                                             <div class="mb-3">
-                                                Status: <span class="text-danger">*</span><br>
+                                                Status:<span class="text-danger">*</span>
                                                 <div class="btn-group">
-                                                    <input type="checkbox" class="btn-check" name="status-update-${item.id}" id="Enabled-update-${item.id}" value="Enabled">
+                                                    <input type="radio" class="btn-check" name="status-update-${item.id}" id="Enabled-update-${item.id}" value="Enabled">
                                                     <label class="btn btn-outline-primary" for="Enabled-update-${item.id}">Enabled</label>
-                                                
-                                                    <input type="checkbox" class="btn-check" name="status-update-${item.id}" id="Disabled-update-${item.id}" value="Disabled">
+                                                    <input type="radio" class="btn-check" name="status-update-${item.id}" id="Disabled-update-${item.id}" value="Disabled">
                                                     <label class="btn btn-outline-primary" for="Disabled-update-${item.id}">Disabled</label>
                                                 </div>
                                             </div>
@@ -385,6 +398,7 @@ function renderProductManagement(products) {
 }
 
 function renderUserManagement(users) {
+    document.querySelector('#addButton').style.display = 'block';
     localStorage.setItem('option','user');
     usersData = users;
     document.querySelector('h1').innerHTML = 'User Management';
@@ -509,6 +523,41 @@ function renderUserManagement(users) {
     })
     tbody.innerHTML = items;
     handleCreatUser();
+}
+
+function renderOrderManagement(orders) {
+    localStorage.setItem('option','order');
+    document.querySelector('#addButton').style.display = 'none';
+    ordersData =orders;
+    document.querySelector('h1').innerHTML = 'Order Management';
+    document.querySelector('thead').innerHTML = `
+        <tr class="table-dark text-content">
+            <th>ID</th>
+            <th>User Name</th>
+            <th>User ID</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Products</th>
+            <th>Total</th>
+        </tr>`;
+    let items ='';
+    orders.forEach((item) => {
+        let products = '';
+        item.products.forEach(e => products += `Id: ${e.productId}; Size: ${e.size}; Color: ${e.color}; Quantity: ${e.quantity} <br>` );
+        items += `
+                <tr class="item-id-${item.id}">
+                    <td>${item.id}</td>
+                    <td>${item.name}</td>
+                    <td>${item.userId}</td>
+                    <td>${item.address}</td>
+                    <td>${item.phone}</td>
+                    <td>${products}</td>
+                    <td>$${item.total}</td>
+                </tr>
+        `;
+    })
+    tbody.innerHTML = items;
+    console.log(1);
 }
 
 function handleCreatProduct(){
@@ -663,7 +712,7 @@ function passDataUsersBeforeUpdate(itemId) {
     if(item.role === "admin") {
         role[0].checked = true;
     } else role[1].checked = true;
-    if(item.status === "active") {
+    if(item.status === "Active") {
         status[0].checked = true;
     } else status[1].checked = true;
 }
@@ -678,18 +727,19 @@ function checkAndHandleProductData(itemId) {
     let category = document.querySelector(`#category-update-${itemId}`).value;
     let url = document.querySelector(`#img1-update-${itemId}`).value;
     let color = document.querySelector(`#color1-update-${itemId}`).value;
-    let status = document.querySelector(`#status-update-${itemId}`).value;
+    let statusRadio = document.querySelectorAll(`input[name="status-update-${itemId}"]`);
     let sizeItem = [];
+    let status = '';
     let checkboxes = document.querySelectorAll(`input[name="size-update-${itemId}"]`);
     for (let i=0 ; i<checkboxes.length; i++){
         if (checkboxes[i].checked) sizeItem.push(checkboxes[i].value);
     }
+    if(statusRadio[0].checked == true) {status = statusRadio[0].value}
+        else {status = statusRadio[1].value} 
     if (!brand || !category || !color) {
         return
     } else if (sizeItem.length == 0) {
         alert("Please choose sizes!");
-    } else if (validateEmailAndTel(email, phone)){
-        return
     } else {
         product = {
             name: name,
