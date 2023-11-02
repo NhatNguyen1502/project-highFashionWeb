@@ -17,7 +17,6 @@ fetch(cartApi)
         let orderTable = document.querySelector('#orderTable');
         let htmls = '';
         let total = 0;
-
         let qrProductsData = '';
         fetch(productApi)
             .then(res => res.json())
