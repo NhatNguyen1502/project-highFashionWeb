@@ -73,6 +73,7 @@ function checkSearching() {
 
 // Lọc sản phẩm
 function filterByCategory(categoryName) {
+
   fetch(productApi)
     .then((response) => response.json())
     .then((products) => {
@@ -135,7 +136,6 @@ function highlightBrand(event, brand) {
   // Thực hiện các hành động khác tại đây, ví dụ: lọc dữ liệu theo brand
   filterByBrand(brand);
 }
-
 // Lọc màu
 var colorRadios = document.querySelectorAll('input[name="color"]');
 colorRadios.forEach((radio) => {

@@ -91,12 +91,12 @@
       "title": "FLORAL SUMMER DRESS",
       "description": "This elegant skirt is suitable for any event. Made from a lightweight and flowy fabric, it ensures both comfort and style.",
       "brand": "gucci",
-      "category": "",
+      "category": "others",
       "status": "Enabled",
       "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "img": {
         "url": "https://i.postimg.cc/TwMpnDRY/2.png",
-        "color": "grey",
+        "color": "green",
         "url2": "",
         "color2": "black",
         "url3": "",
@@ -149,22 +149,22 @@
       "brand": "zara",
       "category": "t-shirts",
       "status": "Enabled",
+      "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "img": {
         "url": "https://i.postimg.cc/mDVxSvQp/Frame-33-1.png",
-        "color": "blue",
+        "color": "pink",
         "url2": "",
-        "color2": "pink",
+        "color2": "black",
         "url3": "",
-        "color3": "red",
+        "color3": "white",
         "url4": "",
-        "color4": "orange"
+        "color4": "brown"
       },
       "size": [
         "S",
         "M",
         "XL"
       ],
-      "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "id": 6
     },
     {
@@ -174,7 +174,7 @@
       "stock": "10",
       "title": "MODERN DENIM BUTTON-UP SHIRT",
       "description": "Our collection features a wide range of t-shirts, each crafted with attention to detail and quality materials for a superior fit and style.",
-      "brand": "",
+      "brand": "gucci",
       "category": "t-shirts",
       "status": "Enabled",
       "img": {
@@ -340,7 +340,7 @@
       "stock": "121",
       "title": "SPORTY ATHLETIC SHORTS",
       "description": "Whether you're going for a run or running errands, these versatile shorts are perfect for any active lifestyle. Their durable construction and functional pockets make them a practical choice",
-      "brand": "",
+      "brand": "prada",
       "category": "shorts",
       "status": "Enabled",
       "img": {
@@ -369,7 +369,7 @@
       "description": "Make a fashion statement with these high-waisted jeans. Their figure-flattering silhouette and modern design are sure to turn heads.",
       "brand": "zara",
       "category": "shorts",
-      "status": "Disabled",
+      "status": "Enabled",
       "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "img": {
         "url": "https://i.postimg.cc/fW8yTPXM/image-9.png",
@@ -536,7 +536,8 @@
       "password": "123456",
       "status": "Active",
       "role": "user",
-      "id": 2
+      "id": 2,
+      "code": 75790
     },
     {
       "userName": "Quyen",
@@ -576,7 +577,8 @@
       "password": "123456",
       "status": "Active",
       "role": "user",
-      "id": 6
+      "id": 6,
+      "code": 76399
     },
     {
       "userName": "quyen",
@@ -587,12 +589,30 @@
       "status": "Active",
       "password": "quyen1234",
       "id": 7
+    },
+    {
+      "userName": "nhat",
+      "email": "zznhatphilong@gmail.com",
+      "address": "Sơn Trà, Đà Nẵng",
+      "phone": "0396139324",
+      "role": "user",
+      "status": "Active",
+      "password": "000",
+      "id": 8,
+      "code": 21692
     }
   ],
   "carts": [
     {
       "id": 5,
-      "productsCart": []
+      "productsCart": [
+        {
+          "productId": 1,
+          "size": "M",
+          "color": "red",
+          "quantity": 1
+        }
+      ]
     },
     {
       "id": "3",
@@ -628,8 +648,8 @@
       "productsCart": [
         {
           "productId": "3",
-          "size": "S",
-          "color": "brown",
+          "size": "M",
+          "color": "orange",
           "quantity": "1"
         }
       ]
@@ -650,8 +670,58 @@
       "productsCart": []
     },
     {
-      "id": 8,
-      "productsCart": [
+
+      "id": "8",
+      "productsCart": []
+    }
+  ],
+  "orders": [
+    {
+      "name": "Quyen",
+      "phone": "03971826823",
+      "address": "BinhDinh",
+      "userId": "3",
+      "products": [
+        {
+          "productId": "1",
+          "size": "S",
+          "color": "orange",
+          "quantity": "1"
+        },
+        {
+          "productId": "3",
+          "size": "M",
+          "color": "brown",
+          "quantity": "1"
+        },
+        {
+          "productId": "1",
+          "size": "M",
+          "color": "brown",
+          "quantity": "1"
+        },
+        {
+          "productId": "1",
+          "size": "S",
+          "color": "brown",
+          "quantity": "1"
+        },
+        {
+          "productId": "1",
+          "size": "S",
+          "color": "brown",
+          "quantity": "1"
+        }
+      ],
+      "total": 550,
+      "id": 1
+    },
+    {
+      "name": "Nhat",
+      "phone": "09999998",
+      "address": "Texas, USA",
+      "userId": "2",
+      "products": [
         {
           "productId": "5",
           "size": "S",
@@ -769,81 +839,26 @@
       "id": 3
     },
     {
-      "name": "Hi",
-      "phone": "095934872397",
-      "address": "quangngai",
-      "userId": "4",
+      "name": "Nhat",
+      "phone": "09999998",
+      "address": "Texas, USA",
+      "userId": "2",
       "products": [
+        {
+          "productId": "1",
+          "size": "M",
+          "color": "orange",
+          "quantity": "1"
+        },
         {
           "productId": "2",
           "size": "XL",
-          "color": "white",
+          "color": "black",
           "quantity": "1"
         }
       ],
-      "total": 220,
+      "total": 340,
       "id": 4
-    },
-    {
-      "name": "Hi",
-      "phone": "095934872397",
-      "address": "quangngai",
-      "userId": "4",
-      "products": [
-        {
-          "productId": "4",
-          "size": "M",
-          "color": "brown",
-          "quantity": "1"
-        }
-      ],
-      "total": 70,
-      "id": 5
-    },
-    {
-      "name": "Hi",
-      "phone": "095934872397",
-      "address": "quangngai",
-      "userId": "4",
-      "products": [],
-      "total": 0,
-      "id": 6
-    },
-    {
-      "name": "Hi",
-      "phone": "095934872397",
-      "address": "quangngai",
-      "userId": "4",
-      "products": [],
-      "total": 0,
-      "id": 7
-    },
-    {
-      "name": "Hi",
-      "phone": "095934872397",
-      "address": "quangngai",
-      "userId": "4",
-      "products": [],
-      "total": 0,
-      "id": 8
-    },
-    {
-      "name": "Hi",
-      "phone": "095934872397",
-      "address": "quangngai",
-      "userId": "4",
-      "products": [],
-      "total": 0,
-      "id": 9
-    },
-    {
-      "name": "Hi",
-      "phone": "095934872397",
-      "address": "quangngai",
-      "userId": "4",
-      "products": [],
-      "total": 0,
-      "id": 10
     }
   ]
 }

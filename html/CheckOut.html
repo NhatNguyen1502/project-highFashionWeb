@@ -237,7 +237,6 @@
                     <tr>
                       <th scope="col">Product</th>
                       <th scope="col">Size</th>
-
                       <th scope="col">Quantity</th>
                       <th scope="col">Price</th>
                     </tr>
@@ -249,12 +248,18 @@
               <h4 id="total">Total: </h4>
               <button type="submit" class="btn btn-success" id="checkout">Checkout</button>
             </form>
+            <form class="d-none" id="form">
+              <div class="field">
+                <input type="text" name="contentOrder" id="contentOrder">
+              </div>
+              <div class="field">
+                <input type="text" name="email" id="email">
+              </div>
+            </form>
         </div>
     </div>
   </div>
-
-
-    
+ <!-- footer-->
   <footer class="footer pt-5 position-relative">
     <div class="container-fluid pb-5">
       <div
@@ -338,6 +343,8 @@
   <script src="../js/generalFunction.js"></script>
   <script src="../js/checkout.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">emailjs.init('jo_blC2BLU3XA-97k')</script>
 </body>
 
 </html>
