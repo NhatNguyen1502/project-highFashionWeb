@@ -13,9 +13,7 @@
 </head>
 
 <body>
-  <div class="row on-top bg-dark text-center p-2">
-    <span class="text-white">Sign up and get 20% off to your first order. <a
-        class=" text-white text-decoration-underline" href="">Sign Up Now</a></span>
+      <div class="alert text-center bg-success text-light rounded-3" id="message" role="alert" style="display: none;">
   </div>
   <!-- modal login -->
   <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
@@ -36,8 +34,10 @@
               <input type="password" class="form-control" id="pword-inp" required>
             </div>
             <button type="submit" class="btn btn-primary" onclick="checkLogIn()">Log in</button>
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal"
+            <button type="button" class="btn btn-info" data-bs-dismiss="modal" data-bs-toggle="modal"
               data-bs-target="#modal2">Sign up</button>
+            <button type="button" class="btn btn-warning" data-bs-dismiss="modal" data-bs-toggle="modal"
+              data-bs-target="#modal3" onclick="showEmailModal()">Forget password</button>
           </div>
         </form>
       </div>
@@ -62,8 +62,10 @@
               <input type="email" class="form-control" id="email-reg" required>
             </div>
             <div class="mb-3">
-              <label for="email-confirm" class="col-form-label">confirm email: <span class="text-danger">*</span></label>
-              <input type="email" class="form-control" id="email-confirm" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+              <label for="email-confirm" class="col-form-label">confirm email: <span
+                  class="text-danger">*</span></label>
+              <input type="email" class="form-control" id="email-confirm" required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
             </div>
             <div class="mb-3">
               <label for="pword-reg" class="col-form-label">Password: <span class="text-danger">*</span></label>
@@ -82,9 +84,39 @@
               <label for="address-reg" class="col-form-label">Address: <span class="text-danger">*</span></label>
               <input type="text" class="form-control" id="address-reg" required>
             </div>
-            <button type="submit" class="btn btn-primary" onclick="checkSignUp()">Sign up</button>
+            <button type="submit" class="btn btn-info" onclick="checkSignUp()">Sign up</button>
             <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal"
               data-bs-target="#modal1">Log in</button>
+            <button type="button" class="btn btn-warning" data-bs-dismiss="modal" data-bs-toggle="modal"
+              data-bs-target="#modal3" onclick="showEmailModal()">Forget password</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- model mail -->
+  <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal3Label">Reset your password</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="form">
+          <div class="modal-body" id="resetPasswordForm">
+            <div class="mb-3">
+              <label for="email-conf" class="col-form-label">Your email:</label>
+              <input type="email" name="email" class="form-control" id="email-conf" required>
+            </div>
+            <div class="mb-3 d-none" id="confirmCode">
+              <label for="code-conf" class="col-form-label">code:</label>
+              <input type="number" name="code" class="form-control" id="code-conf" required>
+            </div>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal"
+              data-bs-target="#modal1">Log in</button>
+            <button type="button" class="btn btn-info" data-bs-dismiss="modal" data-bs-toggle="modal"
+              data-bs-target="#modal2">Sign up</button>
+            <button type="submit" id="requestButton" class="btn btn-warning" onclick="sentEmail('submit')">Request password reset</button>
           </div>
         </form>
       </div>
@@ -125,7 +157,8 @@
                 </div>
               </div>
               <div class="col-3 d-flex align-content-center justify-content-center">
-                <button type="button" class="btn me-3 p-0" data-bs-toggle="modal" data-bs-target="#modal1">
+                <button type="button" class="btn me-3 p-0" data-bs-toggle="modal" data-bs-target="#modal1"
+                  onclick="handleUserButton()">
                   <i class="fa-regular fa-circle-user fs-2 m-0" id="user-icon"></i></button>
                 <a href="Cart.html" class="text-dark ms-5"><i class="fa-solid fa-bag-shopping fs-2 ms-3"
                     id="cart-icon"></i></a>
@@ -313,6 +346,10 @@
   <script src="../bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../js/generalFunction.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    emailjs.init('jo_blC2BLU3XA-97k')
+  </script>
 </body>
 
 </html>
