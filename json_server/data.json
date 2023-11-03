@@ -551,11 +551,11 @@
     {
       "userName": "Hi",
       "email": "hipham@gmail.com",
-      "address": "quangngai",
       "phone": "095934872397",
-      "role": "user",
-      "status": "Active",
+      "address": "quangngai",
       "password": "123123",
+      "status": "Active",
+      "role": "user",
       "id": 4
     },
     {
@@ -647,6 +647,21 @@
     },
     {
       "id": "2",
+      "productsCart": []
+    },
+    {
+      "id": 8,
+      "productsCart": [
+        {
+          "productId": "5",
+          "size": "S",
+          "color": "pink",
+          "quantity": "2"
+        }
+      ]
+    },
+    {
+      "id": "4",
       "productsCart": []
     }
   ],
@@ -752,6 +767,83 @@
       ],
       "total": 472,
       "id": 3
+    },
+    {
+      "name": "Hi",
+      "phone": "095934872397",
+      "address": "quangngai",
+      "userId": "4",
+      "products": [
+        {
+          "productId": "2",
+          "size": "XL",
+          "color": "white",
+          "quantity": "1"
+        }
+      ],
+      "total": 220,
+      "id": 4
+    },
+    {
+      "name": "Hi",
+      "phone": "095934872397",
+      "address": "quangngai",
+      "userId": "4",
+      "products": [
+        {
+          "productId": "4",
+          "size": "M",
+          "color": "brown",
+          "quantity": "1"
+        }
+      ],
+      "total": 70,
+      "id": 5
+    },
+    {
+      "name": "Hi",
+      "phone": "095934872397",
+      "address": "quangngai",
+      "userId": "4",
+      "products": [],
+      "total": 0,
+      "id": 6
+    },
+    {
+      "name": "Hi",
+      "phone": "095934872397",
+      "address": "quangngai",
+      "userId": "4",
+      "products": [],
+      "total": 0,
+      "id": 7
+    },
+    {
+      "name": "Hi",
+      "phone": "095934872397",
+      "address": "quangngai",
+      "userId": "4",
+      "products": [],
+      "total": 0,
+      "id": 8
+    },
+    {
+      "name": "Hi",
+      "phone": "095934872397",
+      "address": "quangngai",
+      "userId": "4",
+      "products": [],
+      "total": 0,
+      "id": 9
+    },
+    {
+      "name": "Hi",
+      "phone": "095934872397",
+      "address": "quangngai",
+      "userId": "4",
+      "products": [],
+      "total": 0,
+      "id": 10
     }
   ]
 }

@@ -2,7 +2,6 @@ var cartsApi = 'http://localhost:3000/carts';
 var testCart = document.getElementById('testCart');
 
 renderDetail();
-
 function renderDetail() {
     fetch(productApi)
         .then(res => res.json())
