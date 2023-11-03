@@ -557,7 +557,6 @@ function renderOrderManagement(orders) {
         `;
     })
     tbody.innerHTML = items;
-    console.log(1);
 }
 
 function handleCreatProduct(){
