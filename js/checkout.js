@@ -48,6 +48,10 @@ fetch(cartApi)
                 products: cart.productsCart,
                 total: total
             };
+            $('#contentOrder').val(qr.replace(/%0A/g, '\n'));
+            $('#email').val(user.email);
+
+            sentEmail();
             document.querySelector('#checkoutBody').innerHTML = `<p class="text-bg-success fs-3 col-sm-6 text-center ms-auto me-auto">Payment success!</p>
                 <div class="text-center m-5">
                     <img id='barcode' src="https://api.qrserver.com/v1/create-qr-code/?data=HelloWorld&amp;size=100x100" alt="QR payment information" title="QR payment information" width="200" height="200"/>
