@@ -70,7 +70,7 @@
         "url": "https://i.ibb.co/yFbhty9/image-1.png",
         "color": "green",
         "url2": "",
-        "color2": "green",
+        "color2": "black",
         "url3": "",
         "color3": "orange",
         "url4": "",
@@ -91,7 +91,7 @@
       "title": "FLORAL SUMMER DRESS",
       "description": "This elegant skirt is suitable for any event. Made from a lightweight and flowy fabric, it ensures both comfort and style.",
       "brand": "gucci",
-      "category": "others",
+      "category": "dresses",
       "status": "Enabled",
       "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "img": {
@@ -172,7 +172,7 @@
       "price": "70",
       "discountAmount": "5",
       "stock": "10",
-      "title": "MODERN DENIM BUTTON-UP SHIRT",
+      "title": "EFFORTLESSLY CHIC CHAMBRAY SHIRT",
       "description": "Our collection features a wide range of t-shirts, each crafted with attention to detail and quality materials for a superior fit and style.",
       "brand": "gucci",
       "category": "t-shirts",
@@ -254,7 +254,7 @@
     {
       "name": "T-shirt",
       "price": "40",
-      "discountAmount": "0",
+      "discountAmount": "2",
       "stock": "10",
       "title": "VINTAGE INSPIRED LOGO T-SHIRT",
       "description": "Make a bold statement with this graphic t-shirt. Its vibrant print and bold typography make it a standout piece for expressing your individuality.",
@@ -320,7 +320,7 @@
       "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "img": {
         "url": "https://i.postimg.cc/5937653g/image-9.png",
-        "color": "white",
+        "color": "pink",
         "url2": "",
         "color2": "white",
         "url3": "",
@@ -391,11 +391,11 @@
       "price": "25",
       "discountAmount": "4",
       "stock": "12",
-      "title": "SOPHISTICATED STRIPED OXFORD SHIRT",
+      "title": "EFFORTLESSLY CHIC CHAMBRAY SHIRT",
       "description": "Elevate your outfit with this versatile shirt. Its impeccable tailoring and refined details bring sophistication to any ensemble.",
       "brand": "gucci",
       "category": "shirts",
-      "status": "Disabled",
+      "status": "Enabled",
       "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "img": {
         "url": "https://i.postimg.cc/prYBzZJf/shirt1.png",
@@ -418,11 +418,11 @@
       "price": "120",
       "discountAmount": "5",
       "stock": "1",
-      "title": "EFFORTLESSLY CHIC CHAMBRAY SHIRT",
+      "title": "COMFORTABLE SHIRT",
       "description": "This classic shirt is a wardrobe staple. Constructed from a premium cotton blend, it offers a timeless style and exceptional durability.",
       "brand": "prada",
       "category": "shirts",
-      "status": "Disabled",
+      "status": "Enabled",
       "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "img": {
         "url": "https://i.postimg.cc/CxXwfTLV/image-12.png",
@@ -439,82 +439,6 @@
         "XXL"
       ],
       "id": 16
-    },
-    {
-      "name": "hoodies",
-      "price": "123",
-      "discountAmount": "10",
-      "stock": "123",
-      "description": "123",
-      "brand": "zara",
-      "category": "t-shirts",
-      "img": {
-        "url": "https://i.ibb.co/yFbhty9/image-1.png",
-        "color": "black",
-        "url2": "",
-        "color2": "",
-        "url3": "",
-        "color3": "",
-        "url4": "",
-        "color4": ""
-      },
-      "size": [
-        "S",
-        "M",
-        "XL"
-      ],
-      "status": "Enabled",
-      "id": 17
-    },
-    {
-      "name": "jeans",
-      "price": "12",
-      "discountAmount": "12",
-      "stock": "12",
-      "description": "beautiful clothe",
-      "brand": "zara",
-      "category": "jeans",
-      "status": "Enabled",
-      "img": {
-        "url": "https://i.postimg.cc/Sxwzy5YP/Frame-127.png",
-        "color": "black",
-        "url2": "",
-        "color2": "",
-        "url3": "",
-        "color3": "",
-        "url4": "",
-        "color4": ""
-      },
-      "size": [
-        "L",
-        "XXL"
-      ],
-      "id": 18
-    },
-    {
-      "name": "shirt",
-      "price": "12",
-      "discountAmount": "12",
-      "stock": "12",
-      "description": "beautiful clothe",
-      "brand": "zara",
-      "category": "t-shirts",
-      "img": {
-        "url": "https://i.ibb.co/LYMM6cR/Frame-127.png",
-        "color": "",
-        "url2": "",
-        "color2": "",
-        "url3": "",
-        "color3": "",
-        "url4": "",
-        "color4": ""
-      },
-      "size": [
-        "M",
-        "XL"
-      ],
-      "status": "Enabled",
-      "id": 19
     }
   ],
   "users": [
@@ -672,66 +596,6 @@
     {
 
       "id": "8",
-      "productsCart": []
-    }
-  ],
-  "orders": [
-    {
-      "name": "Quyen",
-      "phone": "03971826823",
-      "address": "BinhDinh",
-      "userId": "3",
-      "products": [
-        {
-          "productId": "1",
-          "size": "S",
-          "color": "orange",
-          "quantity": "1"
-        },
-        {
-          "productId": "3",
-          "size": "M",
-          "color": "brown",
-          "quantity": "1"
-        },
-        {
-          "productId": "1",
-          "size": "M",
-          "color": "brown",
-          "quantity": "1"
-        },
-        {
-          "productId": "1",
-          "size": "S",
-          "color": "brown",
-          "quantity": "1"
-        },
-        {
-          "productId": "1",
-          "size": "S",
-          "color": "brown",
-          "quantity": "1"
-        }
-      ],
-      "total": 550,
-      "id": 1
-    },
-    {
-      "name": "Nhat",
-      "phone": "09999998",
-      "address": "Texas, USA",
-      "userId": "2",
-      "products": [
-        {
-          "productId": "5",
-          "size": "S",
-          "color": "pink",
-          "quantity": "2"
-        }
-      ]
-    },
-    {
-      "id": "4",
       "productsCart": []
     }
   ],
