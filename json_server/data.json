@@ -87,11 +87,11 @@
       "name": "Jean skirt",
       "price": "70",
       "discountAmount": "5",
-      "title": "EFFORTLESSLY CHIC CHAMBRAY JEAN",
       "stock": "10",
+      "title": "FLORAL SUMMER DRESS",
       "description": "This elegant skirt is suitable for any event. Made from a lightweight and flowy fabric, it ensures both comfort and style.",
       "brand": "gucci",
-      "category": "others",
+      "category": "dresses",
       "status": "Enabled",
       "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "img": {
@@ -338,14 +338,14 @@
       "price": "210",
       "discountAmount": "15",
       "stock": "121",
+      "title": "SPORTY ATHLETIC SHORTS",
       "description": "Whether you're going for a run or running errands, these versatile shorts are perfect for any active lifestyle. Their durable construction and functional pockets make them a practical choice",
       "brand": "prada",
-      "title": "EFFORTLESSLY CHIC CHAMBRAY SHORTS",
       "category": "shorts",
       "status": "Enabled",
       "img": {
         "url": "https://i.postimg.cc/3x0LNgDw/short1.png",
-        "color": "black",
+        "color": "grey",
         "url2": "",
         "color2": "black",
         "url3": "",
@@ -365,7 +365,7 @@
       "price": "30",
       "discountAmount": "3",
       "stock": "12",
-      "title": "TRENDY SHORTS",
+      "title": "STYLISH HIGH-WAISTED SHORTS",
       "description": "Make a fashion statement with these high-waisted jeans. Their figure-flattering silhouette and modern design are sure to turn heads.",
       "brand": "zara",
       "category": "shorts",
@@ -476,11 +476,11 @@
     {
       "userName": "Hi",
       "email": "hipham@gmail.com",
-      "address": "quangngai",
       "phone": "095934872397",
-      "role": "user",
-      "status": "Active",
+      "address": "quangngai",
       "password": "123123",
+      "status": "Active",
+      "role": "user",
       "id": 4
     },
     {
@@ -594,6 +594,7 @@
       "productsCart": []
     },
     {
+
       "id": "8",
       "productsCart": []
     }
@@ -722,134 +723,6 @@
       ],
       "total": 340,
       "id": 4
-    },
-    {
-      "name": "nhat",
-      "phone": "0396139324",
-      "address": "Sơn Trà, Đà Nẵng",
-      "userId": "8",
-      "products": [
-        {
-          "productId": "2",
-          "size": "XL",
-          "color": "green",
-          "quantity": "1"
-        }
-      ],
-      "total": 220,
-      "id": 5
-    },
-    {
-      "name": "nhat",
-      "phone": "0396139324",
-      "address": "Sơn Trà, Đà Nẵng",
-      "userId": "8",
-      "products": [
-        {
-          "productId": "2",
-          "size": "XL",
-          "color": "black",
-          "quantity": "1"
-        }
-      ],
-      "total": 220,
-      "id": 6
-    },
-    {
-      "name": "nhat",
-      "phone": "0396139324",
-      "address": "Sơn Trà, Đà Nẵng",
-      "userId": "8",
-      "products": [
-        {
-          "productId": "2",
-          "size": "XL",
-          "color": "black",
-          "quantity": "1"
-        }
-      ],
-      "total": 220,
-      "id": 7
-    },
-    {
-      "name": "nhat",
-      "phone": "0396139324",
-      "address": "Sơn Trà, Đà Nẵng",
-      "userId": "8",
-      "products": [
-        {
-          "productId": "2",
-          "size": "XXL",
-          "color": "black",
-          "quantity": "1"
-        }
-      ],
-      "total": 220,
-      "id": 8
-    },
-    {
-      "name": "nhat",
-      "phone": "0396139324",
-      "address": "Sơn Trà, Đà Nẵng",
-      "userId": "8",
-      "products": [
-        {
-          "productId": "2",
-          "size": "XXL",
-          "color": "white",
-          "quantity": "1"
-        }
-      ],
-      "total": 220,
-      "id": 9
-    },
-    {
-      "name": "nhat",
-      "phone": "0396139324",
-      "address": "Sơn Trà, Đà Nẵng",
-      "userId": "8",
-      "products": [
-        {
-          "productId": "2",
-          "size": "XXL",
-          "color": "black",
-          "quantity": "1"
-        }
-      ],
-      "total": 220,
-      "id": 10
-    },
-    {
-      "name": "nhat",
-      "phone": "0396139324",
-      "address": "Sơn Trà, Đà Nẵng",
-      "userId": "8",
-      "products": [
-        {
-          "productId": "2",
-          "size": "XL",
-          "color": "black",
-          "quantity": "1"
-        }
-      ],
-      "total": 220,
-      "id": 11
-    },
-    {
-      "name": "nhat",
-      "phone": "0396139324",
-      "address": "Sơn Trà, Đà Nẵng",
-      "userId": "8",
-      "products": [
-        {
-          "productId": "2",
-          "size": "XL",
-          "color": "black",
-          "quantity": "1"
-        }
-      ],
-      "total": 220,
-      "id": 12
     }
   ]
 }
