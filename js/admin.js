@@ -733,6 +733,7 @@ function checkAndHandleProductData(itemId) {
     for (let i=0 ; i<checkboxes.length; i++){
         if (checkboxes[i].checked) sizeItem.push(checkboxes[i].value);
     }
+
     if(statusRadio[0].checked == true) {status = statusRadio[0].value}
         else {status = statusRadio[1].value} 
     if (!brand || !category || !color) {

@@ -70,7 +70,7 @@
         "url": "https://i.ibb.co/yFbhty9/image-1.png",
         "color": "green",
         "url2": "",
-        "color2": "green",
+        "color2": "black",
         "url3": "",
         "color3": "orange",
         "url4": "",
@@ -88,10 +88,12 @@
       "price": "70",
       "discountAmount": "5",
       "stock": "10",
+      "title": "FLORAL SUMMER DRESS",
       "description": "This elegant skirt is suitable for any event. Made from a lightweight and flowy fabric, it ensures both comfort and style.",
       "brand": "gucci",
-      "category": "others",
+      "category": "dresses",
       "status": "Enabled",
+      "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "img": {
         "url": "https://i.postimg.cc/TwMpnDRY/2.png",
         "color": "green",
@@ -170,6 +172,7 @@
       "price": "70",
       "discountAmount": "5",
       "stock": "10",
+      "title": "EFFORTLESSLY CHIC CHAMBRAY SHIRT",
       "description": "Our collection features a wide range of t-shirts, each crafted with attention to detail and quality materials for a superior fit and style.",
       "brand": "gucci",
       "category": "t-shirts",
@@ -251,7 +254,7 @@
     {
       "name": "T-shirt",
       "price": "40",
-      "discountAmount": "0",
+      "discountAmount": "2",
       "stock": "10",
       "title": "VINTAGE INSPIRED LOGO T-SHIRT",
       "description": "Make a bold statement with this graphic t-shirt. Its vibrant print and bold typography make it a standout piece for expressing your individuality.",
@@ -317,7 +320,7 @@
       "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "img": {
         "url": "https://i.postimg.cc/5937653g/image-9.png",
-        "color": "white",
+        "color": "pink",
         "url2": "",
         "color2": "white",
         "url3": "",
@@ -335,13 +338,14 @@
       "price": "210",
       "discountAmount": "15",
       "stock": "121",
+      "title": "SPORTY ATHLETIC SHORTS",
       "description": "Whether you're going for a run or running errands, these versatile shorts are perfect for any active lifestyle. Their durable construction and functional pockets make them a practical choice",
       "brand": "prada",
       "category": "shorts",
       "status": "Enabled",
       "img": {
         "url": "https://i.postimg.cc/3x0LNgDw/short1.png",
-        "color": "black",
+        "color": "grey",
         "url2": "",
         "color2": "black",
         "url3": "",
@@ -361,6 +365,7 @@
       "price": "30",
       "discountAmount": "3",
       "stock": "12",
+      "title": "STYLISH HIGH-WAISTED SHORTS",
       "description": "Make a fashion statement with these high-waisted jeans. Their figure-flattering silhouette and modern design are sure to turn heads.",
       "brand": "zara",
       "category": "shorts",
@@ -386,10 +391,12 @@
       "price": "25",
       "discountAmount": "4",
       "stock": "12",
+      "title": "EFFORTLESSLY CHIC CHAMBRAY SHIRT",
       "description": "Elevate your outfit with this versatile shirt. Its impeccable tailoring and refined details bring sophistication to any ensemble.",
       "brand": "gucci",
       "category": "shirts",
       "status": "Enabled",
+      "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "img": {
         "url": "https://i.postimg.cc/prYBzZJf/shirt1.png",
         "color": "orange",
@@ -411,10 +418,12 @@
       "price": "120",
       "discountAmount": "5",
       "stock": "1",
+      "title": "COMFORTABLE SHIRT",
       "description": "This classic shirt is a wardrobe staple. Constructed from a premium cotton blend, it offers a timeless style and exceptional durability.",
       "brand": "prada",
       "category": "shirts",
       "status": "Enabled",
+      "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "img": {
         "url": "https://i.postimg.cc/CxXwfTLV/image-12.png",
         "color": "pink",
@@ -430,82 +439,6 @@
         "XXL"
       ],
       "id": 16
-    },
-    {
-      "name": "hoodies",
-      "price": "123",
-      "discountAmount": "10",
-      "stock": "123",
-      "description": "123",
-      "brand": "zara",
-      "category": "t-shirts",
-      "img": {
-        "url": "https://i.ibb.co/yFbhty9/image-1.png",
-        "color": "black",
-        "url2": "",
-        "color2": "",
-        "url3": "",
-        "color3": "",
-        "url4": "",
-        "color4": ""
-      },
-      "size": [
-        "S",
-        "M",
-        "XL"
-      ],
-      "status": "Enabled",
-      "id": 17
-    },
-    {
-      "name": "jeans",
-      "price": "12",
-      "discountAmount": "12",
-      "stock": "12",
-      "description": "beautiful clothe",
-      "brand": "zara",
-      "category": "jeans",
-      "status": "Enabled",
-      "img": {
-        "url": "https://i.postimg.cc/Sxwzy5YP/Frame-127.png",
-        "color": "black",
-        "url2": "",
-        "color2": "",
-        "url3": "",
-        "color3": "",
-        "url4": "",
-        "color4": ""
-      },
-      "size": [
-        "L",
-        "XXL"
-      ],
-      "id": 18
-    },
-    {
-      "name": "shirt",
-      "price": "12",
-      "discountAmount": "12",
-      "stock": "12",
-      "description": "beautiful clothe",
-      "brand": "zara",
-      "category": "t-shirts",
-      "img": {
-        "url": "https://i.ibb.co/LYMM6cR/Frame-127.png",
-        "color": "",
-        "url2": "",
-        "color2": "",
-        "url3": "",
-        "color3": "",
-        "url4": "",
-        "color4": ""
-      },
-      "size": [
-        "M",
-        "XL"
-      ],
-      "status": "Enabled",
-      "id": 19
     }
   ],
   "users": [
@@ -543,11 +476,11 @@
     {
       "userName": "Hi",
       "email": "hipham@gmail.com",
-      "address": "quangngai",
       "phone": "095934872397",
-      "role": "user",
-      "status": "Active",
+      "address": "quangngai",
       "password": "123123",
+      "status": "Active",
+      "role": "user",
       "id": 4
     },
     {
@@ -661,6 +594,7 @@
       "productsCart": []
     },
     {
+
       "id": "8",
       "productsCart": []
     }
@@ -789,134 +723,6 @@
       ],
       "total": 340,
       "id": 4
-    },
-    {
-      "name": "nhat",
-      "phone": "0396139324",
-      "address": "Sơn Trà, Đà Nẵng",
-      "userId": "8",
-      "products": [
-        {
-          "productId": "2",
-          "size": "XL",
-          "color": "green",
-          "quantity": "1"
-        }
-      ],
-      "total": 220,
-      "id": 5
-    },
-    {
-      "name": "nhat",
-      "phone": "0396139324",
-      "address": "Sơn Trà, Đà Nẵng",
-      "userId": "8",
-      "products": [
-        {
-          "productId": "2",
-          "size": "XL",
-          "color": "black",
-          "quantity": "1"
-        }
-      ],
-      "total": 220,
-      "id": 6
-    },
-    {
-      "name": "nhat",
-      "phone": "0396139324",
-      "address": "Sơn Trà, Đà Nẵng",
-      "userId": "8",
-      "products": [
-        {
-          "productId": "2",
-          "size": "XL",
-          "color": "black",
-          "quantity": "1"
-        }
-      ],
-      "total": 220,
-      "id": 7
-    },
-    {
-      "name": "nhat",
-      "phone": "0396139324",
-      "address": "Sơn Trà, Đà Nẵng",
-      "userId": "8",
-      "products": [
-        {
-          "productId": "2",
-          "size": "XXL",
-          "color": "black",
-          "quantity": "1"
-        }
-      ],
-      "total": 220,
-      "id": 8
-    },
-    {
-      "name": "nhat",
-      "phone": "0396139324",
-      "address": "Sơn Trà, Đà Nẵng",
-      "userId": "8",
-      "products": [
-        {
-          "productId": "2",
-          "size": "XXL",
-          "color": "white",
-          "quantity": "1"
-        }
-      ],
-      "total": 220,
-      "id": 9
-    },
-    {
-      "name": "nhat",
-      "phone": "0396139324",
-      "address": "Sơn Trà, Đà Nẵng",
-      "userId": "8",
-      "products": [
-        {
-          "productId": "2",
-          "size": "XXL",
-          "color": "black",
-          "quantity": "1"
-        }
-      ],
-      "total": 220,
-      "id": 10
-    },
-    {
-      "name": "nhat",
-      "phone": "0396139324",
-      "address": "Sơn Trà, Đà Nẵng",
-      "userId": "8",
-      "products": [
-        {
-          "productId": "2",
-          "size": "XL",
-          "color": "black",
-          "quantity": "1"
-        }
-      ],
-      "total": 220,
-      "id": 11
-    },
-    {
-      "name": "nhat",
-      "phone": "0396139324",
-      "address": "Sơn Trà, Đà Nẵng",
-      "userId": "8",
-      "products": [
-        {
-          "productId": "2",
-          "size": "XL",
-          "color": "black",
-          "quantity": "1"
-        }
-      ],
-      "total": 220,
-      "id": 12
     }
   ]
 }

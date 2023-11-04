@@ -3,12 +3,19 @@ const userApi = 'http://localhost:3000/users';
 let usersData = [];
 let productsData = [];
 fetch(userApi)
-    .then(res => res.json())
-    .then(data => { usersData = data });
+    .then(res => res.json())  
+    .then(data => {usersData = data});
 
+const searchInput = document.getElementById('search-inp');
+const searchButton = document.getElementById('button-addon2');
 
-
-function handleUserButton() {
+// Xử lý sự kiện khi nhấn nút tìm kiếm
+searchButton.addEventListener('click', function() {
+    localStorage.setItem('searching', searchInput.value);
+    window.location.href = 'category.html';
+    // Gọi hàm checkSearching để hiển thị sản phẩm tìm kiếm
+});
+function handleUserButton(){
     let isLogin = window.localStorage.getItem('userId');
     if (isLogin) window.location.href = 'userInformation.html';
 }
@@ -41,6 +48,7 @@ function checkSignUp() {
     let passwordConfirm = document.querySelector('input[id="pword-confirm"]').value;
     let address = document.querySelector('input[id="address-reg"]').value;
     let phone = document.querySelector('input[id="phone-reg"]').value;
+
     if (usersData.find(item => item.email === email)) {
         alert('Email is exist!');
     } else if (email != emailConfirm) {
