@@ -70,6 +70,10 @@ function renderProductManagement(products) {
                     <input type="number" class="form-control" min="0" id="price-inp" required>
                 </div>
                 <div class="mb-3">
+                    <label for="title-inp" class="col-form-label">title: <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="title-inp" required>
+                </div>
+                <div class="mb-3">
                     <label for="discountAmount-inp" class="col-form-label">Discount amount: <span class="text-danger">*</span></label>
                     <input type="number" class="form-control" min="0" max="100" id="discountAmount-inp" required>
                 </div>
@@ -203,6 +207,7 @@ function renderProductManagement(products) {
         <tr class="table-dark">
             <th>ID</th>
             <th>Name</th>
+            <th>Title</th>
             <th>Category</th>
             <th>Price</th>
             <th>Discount</th>
@@ -219,6 +224,7 @@ function renderProductManagement(products) {
                 <tr class="item-id-${item.id}">
                     <td>${item.id}</td>
                     <td>${item.name}</td>
+                    <td>${item.title}</td>
                     <td>${item.category}</td>
                     <td>${item.price}</td>
                     <td>${item.discountAmount}</td>
@@ -246,6 +252,10 @@ function renderProductManagement(products) {
                                             <div class="mb-3">
                                                 <label for="price-update-${item.id}" class="col-form-label">Price: <span class="text-danger">*</span></label>
                                                 <input type="number" class="form-control" id="price-update-${item.id}" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="title-update-${item.id}" class="col-form-label">Title: <span class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="title-update-${item.id}" required>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="discountAmount-update-${item.id}" class="col-form-label">Discount amount: <span class="text-danger">*</span></label>
@@ -564,6 +574,7 @@ function handleCreatProduct() {
     let item;
     createbtn.onclick = () => {
         let name = document.querySelector('input[id="pName-inp"]').value;
+        let title = document.querySelector('input[id="title-inp"]').value.toUpperCase();
         let price = document.querySelector('input[id="price-inp"]').value;
         let discountAmount = document.querySelector('input[id="discountAmount-inp"]').value;
         let stock = document.querySelector('input[id="stock-inp"]').value;
@@ -585,11 +596,13 @@ function handleCreatProduct() {
             item = {
                 name: name,
                 price: price,
+                title: title,
                 discountAmount: discountAmount,
                 stock: stock,
                 description: description,
                 brand: brand,
                 category: category,
+                vote: "&#9733;&#9733;&#9733;&#9733;&#9733;",
                 img: {
                     url: url,
                     color: color,
@@ -608,6 +621,7 @@ function handleCreatProduct() {
                     <td>${productsData.length + 1}</td>
                     <td>${item.name}</td>
                     <td>${item.price}</td>
+                    <td>${item.title}</td>
                     <td>${item.discountAmount}</td>
                     <td>${item.stock}</td>
                     <td>${item.stock}</td>
@@ -615,7 +629,7 @@ function handleCreatProduct() {
                     <td><img src="${item.img.url}" alt="img" width="50px"></td>
                     <td>${item.status}</td>
                     <td>
-                        <button type="button" class="btn btn-outline-success" id="update">Update</button>
+                    <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#update${id}" onclick="passDataProductsBeforeUpdate(${productsData.length + 1})">Update</button>
                     </td>
                 </tr>
             `;
@@ -677,6 +691,7 @@ function passDataProductsBeforeUpdate(itemId) {
     let item = productsData.find(element => element.id === itemId);
     document.querySelector(`input[id="pName-update-${itemId}"]`).value = item.name;
     document.querySelector(`input[id="price-update-${itemId}"]`).value = item.price;
+    document.querySelector(`input[id="title-update-${itemId}"]`).value = item.title;
     document.querySelector(`input[id="discountAmount-update-${itemId}"]`).value = item.discountAmount;
     document.querySelector(`input[id="stock-update-${itemId}"]`).value = item.stock;
     document.querySelector(`input[id="description-update-${itemId}"]`).value = item.description;
@@ -719,6 +734,7 @@ function passDataUsersBeforeUpdate(itemId) {
 function checkAndHandleProductData(itemId) {
     let name = document.querySelector(`input[id="pName-update-${itemId}"]`).value;
     let price = document.querySelector(`input[id="price-update-${itemId}"]`).value;
+    let title = document.querySelector(`input[id="title-update-${itemId}"]`).value.toUpperCase();
     let discountAmount = document.querySelector(`input[id="discountAmount-update-${itemId}"]`).value;
     let stock = document.querySelector(`input[id="stock-update-${itemId}"]`).value;
     let description = document.querySelector(`input[id="description-update-${itemId}"]`).value;
@@ -744,11 +760,13 @@ function checkAndHandleProductData(itemId) {
         product = {
             name: name,
             price: price,
+            title: title,
             discountAmount: discountAmount,
             stock: stock,
             description: description,
             brand: brand,
             category: category,
+            vote: "&#9733;&#9733;&#9733;&#9733;&#9733;",
             status: status,
             img: {
                 url: url,
