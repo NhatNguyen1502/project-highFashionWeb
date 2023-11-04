@@ -18,6 +18,7 @@ function renderDetail() {
             let discount = parseInt(product.discountAmount);
             let currentPrice = oldPrice - oldPrice * discount / 100;
             let roundedPrice = Math.round(currentPrice);
+            console.log(products);
             htmls += `
         <div class="container">
             <div class="row mt-5">

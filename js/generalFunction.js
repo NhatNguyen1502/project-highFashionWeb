@@ -1,4 +1,4 @@
-const productApi = 'http://172.104.57.29:3000/products';
+const productApi = 'http://localhost:3000/products';
 const userApi = 'http://172.104.57.29:3000/users';
 const cartApi = 'http://172.104.57.29:3000/carts'
 let usersData = [];
