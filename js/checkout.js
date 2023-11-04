@@ -1,4 +1,4 @@
-const orderApi = 'http://localhost:3000/orders';
+const orderApi = 'http://172.104.57.29:3000/orders';
 const userId = localStorage.getItem('userId')
 fetch(userApi)
     .then(res => res.json())

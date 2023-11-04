@@ -2,7 +2,7 @@ const tbody = document.querySelector('#tbody');
 let productOption = document.getElementById("product-option");
 let userOption = document.getElementById("user-option");
 let orderOption = document.getElementById("order-option");
-let orderApi = 'http://localhost:3000/orders';
+let orderApi = 'http://172.104.57.29:3000/orders';
 start();
 function start() {
     productOption.addEventListener("click", handleCheckboxManagementClick);

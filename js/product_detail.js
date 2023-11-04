@@ -1,4 +1,4 @@
-var cartsApi = 'http://localhost:3000/carts';
+var cartsApi = 'http://172.104.57.29:3000/carts';
 var testCart = document.getElementById('testCart');
 
 renderDetail();
