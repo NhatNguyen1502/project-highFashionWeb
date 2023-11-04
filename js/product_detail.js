@@ -10,7 +10,7 @@ function renderDetail() {
             var productDetail = document.getElementById('productDetail');
             let id = window.localStorage.getItem('itemID');
             let product = products.find(item => item.id == id);
-    
+
             let sizeOptionsHTML = Array.isArray(product.size) ? product.size.map(size =>
                 `<option value="${size}">${size}</option>`).join('') : '';
             var htmls = '';
@@ -65,17 +65,17 @@ function renderDetail() {
                 </div>
             </div>
         </div>`;
-        productDetail.innerHTML = htmls; 
-    
+            productDetail.innerHTML = htmls;
+
             // Lấy các phần tử cần thiết từ DOM
             const colorOptionsContainer = document.querySelector('.colorOptions');
-    
+
             // Lấy thông tin về màu sắc từ dữ liệu JSON
             const color1 = product.img.color;
             const color2 = product.img.color2;
             const color3 = product.img.color3;
             const color4 = product.img.color4;
-    
+
             // Tạo checkbox cho từng màu sắc và thêm vào container
             if (color1) {
                 const label1 = createColorCheckbox(color1);
@@ -93,13 +93,13 @@ function renderDetail() {
                 const label4 = createColorCheckbox(color4);
                 colorOptionsContainer.appendChild(label4);
             }
-    
+
             // Hàm tạo checkbox cho một màu sắc
             function createColorCheckbox(color) {
                 const label = document.createElement('label');
                 label.classList.add('radio', color);
                 label.setAttribute('for', color);
-    
+
                 const input = document.createElement('input');
                 input.type = 'radio';
                 input.classList.add('option');
@@ -111,7 +111,7 @@ function renderDetail() {
                 return label;
             }
             const colors = ['brown', 'green', 'pink', 'red', 'blue', 'white', 'orange', 'black'];
-    
+
             for (let i = 0; i < product.length; i++) {
                 const label = createColorCheckbox(colors[i]);
                 colorOptionsContainer.appendChild(label);
@@ -144,14 +144,13 @@ function filterByCategory(categoryName) {
                         <span class="star">${e.vote}</span>
                         <p class="fw-bold fs-4">${e.price}$</p>
                     </div>`;
-                }              
+                }
             });
-            console.log(htmls);
             if (check) {
                 container.innerHTML = htmls;
             }
         }
-    );
+        );
 }
 // Show product_detail
 function handleStransferToProductDetail(id) {
@@ -159,27 +158,29 @@ function handleStransferToProductDetail(id) {
     renderDetail();
 }
 
-    function AddToCart() {
-        var selectSize = document.getElementById('sizeOptions').value;
-        const selectedColor = document.querySelector('input[name="option"]:checked');
+function AddToCart() {
+    var selectSize = document.getElementById('sizeOptions').value;
+    const selectedColor = document.querySelector('input[name="option"]:checked');
+    if ('userId' in localStorage) {
         if (!selectedColor) {
             alert('Please select a color before adding to cart!!');
         }
-        if (selectSize == "empty") {
+        else if (selectSize == "empty") {
             alert("Please select size before adding to cart!")
+        }
+        else if (document.querySelector('.input-qty').value <= 0) {
+            alert("Please enter a minimum quantity of 1!")
         }
         else {
             fetch(cartsApi)
                 .then(res => res.json())
                 .then(data => {
                     let carts = data;
-
                     const userID = window.localStorage.getItem('userId');
                     let productId;
                     let size = '';
                     let color = '';
                     let quantity = '';
-
                     // Lấy thông tin từ các phần tử HTML tương ứng trên trang
                     let selectedSizeOption = document.getElementById('sizeOptions');
                     size = selectedSizeOption.value;
@@ -194,7 +195,6 @@ function handleStransferToProductDetail(id) {
                     productId = productElement.dataset.productId;
 
                     let userCart = carts.find(user => user.id == userID);
-                    console.log(carts,userID);
                     if (userCart) {
                         const newProductCart = {
                             productId: productId,
@@ -203,8 +203,8 @@ function handleStransferToProductDetail(id) {
                             quantity: quantity
                         }
                         let arr = userCart.productsCart;
-                        console.log('param', arr);
                         arr.push(newProductCart);
+                        changeNumberItem(arr.length);
                         let option = {
                             method: 'PUT',
                             headers: {
@@ -224,7 +224,6 @@ function handleStransferToProductDetail(id) {
                                 quantity: quantity
                             }]
                         }
-
                         carts.push(newCart);
                         let option = {
                             method: 'POST',
@@ -236,10 +235,13 @@ function handleStransferToProductDetail(id) {
                         fetch(cartsApi, option)
                             .then((response) => response.json())
                     }
-                    console.log(carts);
-                    alert('Add to cart successful!');
+                    notify("Add to cart successfully!")
                 });
         }
-
+    } else {
+        $('#modal1').modal('show');
+        alert("Please log in before add!");
     }
+}
+
 

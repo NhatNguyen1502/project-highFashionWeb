@@ -7,7 +7,7 @@ fetch(productApi)
     var container = document.getElementById("body");
     var htmls = "";
     products.forEach((element) => {
-      if ((element.status = "Enabled")) {
+      if ((element.status == "Enabled")) {
         htmls += `
         <div class="col-sm-3 col-6" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
             <img class="mb-3 responsive-image" src="${element.img.url}" alt="">
@@ -39,7 +39,6 @@ function checkBrand() {
 }
 
 checkSearching();
-// Hàm checkSearching
 function checkSearching() {
   fetch(productApi)
     .then((response) => response.json())
@@ -68,7 +67,7 @@ function checkSearching() {
         localStorage.removeItem("searching");
       }
     });
-    
+
 }
 
 // Lọc sản phẩm
@@ -82,11 +81,11 @@ function filterByCategory(categoryName) {
       products
         .filter((element) => element.category === categoryName)
         .forEach((element) => {
-          if ((element.status = "Enabled")) {
+          if ((element.status == "Enabled")) {
             htmls += `
             <div class="col-sm-3 col-6" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
             <img class="mb-3" src="${element.img.url}" alt="">
-            <p class="mb-1 font-weight-bold title text-center">${element.name }</p>
+            <p class="mb-1 font-weight-bold title text-center">${element.name}</p>
             <span class="start item-start">${element.vote}</span>
             <p class="font-weight-bold text-center">${element.price} $</p>
           </div>
@@ -108,7 +107,7 @@ function filterByBrand(categoryBrand) {
       products
         .filter((element) => element.brand === categoryBrand)
         .forEach((element) => {
-          if ((element.status = "Enabled")) {
+          if ((element.status == "Enabled")) {
             htmls += `
             <div class="col-sm-3 col-6" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
             <img class="mb-3" src="${element.img.url}" alt="">
@@ -149,7 +148,7 @@ colorRadios.forEach((radio) => {
         products
           .filter((element) => element.img.color === selectedColor)
           .forEach((element) => {
-            if ((element.status = "Enabled")) {
+            if ((element.status == "Enabled")) {
               htmls += `
             <div class="col-sm-3 col-6" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
             <img class="mb-3" src="${element.img.url}" alt="">
@@ -186,16 +185,16 @@ function filterBySize() {
       // Lọc sản phẩm dựa trên kích thước đã chọn hoặc hiển thị tất cả sản phẩm nếu không chọn kích thước
       var filteredProducts =
         selectedSizes.length > 0
-          ? products.filter((element) => 
+          ? products.filter((element) =>
             selectedSizes.every((size) => element.size.includes(size))
-              // element.size.join("").includes(selectedSizes.join(""))
-            )
+            // element.size.join("").includes(selectedSizes.join(""))
+          )
           : products;
-          console.log(filteredProducts);
-          console.log(selectedSizes);
+      console.log(filteredProducts);
+      console.log(selectedSizes);
       // Tạo HTML cho các sản phẩm được lọc
       filteredProducts.forEach((element) => {
-        if ((element.status = "Enabled")) {
+        if ((element.status == "Enabled")) {
           htmls += `
           <div class="col-sm-3 col-6" id="item-${element.id}" onmouseover="addHoverEffect(this)" onmouseout="removeHoverEffect(this)" onclick="transferPage(${element.id})">
           <img class="mb-3" src="${element.img.url}" alt="">

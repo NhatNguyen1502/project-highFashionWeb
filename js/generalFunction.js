@@ -1,21 +1,29 @@
 const productApi = 'http://localhost:3000/products';
 const userApi = 'http://localhost:3000/users';
+const cartApi = 'http://localhost:3000/carts'
 let usersData = [];
 let productsData = [];
 fetch(userApi)
-    .then(res => res.json())  
-    .then(data => {usersData = data});
+    .then(res => res.json())
+    .then(data => { 
+        usersData = data; 
+    });
+
+fetch(cartApi)
+    .then(res => res.json())
+    .then(data => {
+        showNumberOfItemInCart(data);
+    })
 
 const searchInput = document.getElementById('search-inp');
-const searchButton = document.getElementById('button-addon2');
 
 // Xử lý sự kiện khi nhấn nút tìm kiếm
-searchButton.addEventListener('click', function() {
+function handleSearch() {
     localStorage.setItem('searching', searchInput.value);
     window.location.href = 'category.html';
-    // Gọi hàm checkSearching để hiển thị sản phẩm tìm kiếm
-});
-function handleUserButton(){
+}
+
+function handleUserButton() {
     let isLogin = window.localStorage.getItem('userId');
     if (isLogin) window.location.href = 'userInformation.html';
 }
@@ -31,7 +39,7 @@ function checkLogIn() {
             alert("Your account is locked!")
         } else if (password === user.password) {
             window.localStorage.setItem('userId', user.id);
-            notify('Logged in successfully!');  
+            notify('Logged in successfully!');
             if (user.role === "admin") {
                 window.location.href = 'admin.html'
             } else $('#modal1').modal('hide');
@@ -111,7 +119,7 @@ function handleSentEmail(event) {
         document.querySelector('input[name="code"]').value = user.code;
         updateUser(user);
         // event.preventDefault();
-        sentEmail();
+        sentEmail('template_1c7ixo2','form');
         document.querySelector('#resetPasswordForm').innerHTML = `
             <div class="mb-3">
                 <label for="email-conf" class="col-form-label">Your email:</label>
@@ -126,15 +134,16 @@ function handleSentEmail(event) {
     }
 }
 
-function sentEmail() {
+function sentEmail(templateId,formId) {
     const serviceID = 'default_service';
-    const templateID = 'template_1c7ixo2';
-    emailjs.sendForm(serviceID, templateID, document.getElementById('form'))
+    const templateID = templateId;
+    emailjs.sendForm(serviceID, templateID, document.getElementById(formId))
         .then(() => {
             notify("Sent!");
         }, (err) => {
             notify(JSON.stringify(err));
-    });
+            alert(JSON.stringify(err))
+        });
 }
 
 function checkResetPassword() {
@@ -182,7 +191,7 @@ function validateEmailAndTel(email, phone) {
 
 function logOut() {
     localStorage.removeItem('userId');
-    window.location.href = 'homePage.html';
+    window.location.href = 'index.html';
 }
 function createUser(data) {
     let option = {
@@ -196,6 +205,24 @@ function createUser(data) {
         .then((response) => response.json())
 }
 
+function showNumberOfItemInCart(carts) {
+    let elements = $('.cart');
+    if('userId' in localStorage) {
+        let cart = carts.find(e => e.id == localStorage.getItem('userId'));
+        let quantity = cart.productsCart.length;
+        if(quantity) {
+            changeNumberItem(quantity)
+        }
+    }
+}
+
+function changeNumberItem(number) {
+    let elements = $('.cart');
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].innerHTML = number;
+    }
+}
+
 function notify(content) {
     const message = document.getElementById('message');
     message.innerHTML = content;
@@ -205,8 +232,8 @@ function notify(content) {
         setTimeout(function () {
             message.style.display = 'none';
             message.style.opacity = 1;
-        }, 1500);
-    }, 1500);
+        }, 2000);
+    }, 2000);
 }
 
 function updateUser(data) {

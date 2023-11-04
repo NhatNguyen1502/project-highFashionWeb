@@ -41,7 +41,7 @@ function getOrders(callback) {
 
 function handleCheckboxManagementClick(event) {
     if (event.target === productOption) {
-        getProducts(renderProductManagement) 
+        getProducts(renderProductManagement)
     } else if (event.target === userOption) {
         getUsers(renderUserManagement);
     } if (event.target === orderOption) {
@@ -51,7 +51,7 @@ function handleCheckboxManagementClick(event) {
 
 function renderProductManagement(products) {
     document.querySelector('#addButton').style.display = 'block';
-    localStorage.setItem('option','product');
+    localStorage.setItem('option', 'product');
     productsData = products;
     document.querySelector('h1').innerHTML = 'Product Management';
     document.querySelector('.modal-content').innerHTML = `
@@ -212,7 +212,7 @@ function renderProductManagement(products) {
             <th>Status</th>
             <th>Action</th>
         </tr>`;
-    let items ='';
+    let items = '';
     products.forEach((item) => {
         let id = item.id;
         items += `
@@ -399,7 +399,7 @@ function renderProductManagement(products) {
 
 function renderUserManagement(users) {
     document.querySelector('#addButton').style.display = 'block';
-    localStorage.setItem('option','user');
+    localStorage.setItem('option', 'user');
     usersData = users;
     document.querySelector('h1').innerHTML = 'User Management';
     document.querySelector('.modal-content').innerHTML = `
@@ -452,7 +452,7 @@ function renderUserManagement(users) {
             <th>Status</th>
             <th>Action</th>
         </tr>`;
-    let items ='';
+    let items = '';
     users.forEach((item) => {
         items += `
                 <tr class="item-id-${item.id}">
@@ -526,9 +526,9 @@ function renderUserManagement(users) {
 }
 
 function renderOrderManagement(orders) {
-    localStorage.setItem('option','order');
+    localStorage.setItem('option', 'order');
     document.querySelector('#addButton').style.display = 'none';
-    ordersData =orders;
+    ordersData = orders;
     document.querySelector('h1').innerHTML = 'Order Management';
     document.querySelector('thead').innerHTML = `
         <tr class="table-dark text-content">
@@ -540,10 +540,10 @@ function renderOrderManagement(orders) {
             <th>Products</th>
             <th>Total</th>
         </tr>`;
-    let items ='';
+    let items = '';
     orders.forEach((item) => {
         let products = '';
-        item.products.forEach(e => products += `Id: ${e.productId}; Size: ${e.size}; Color: ${e.color}; Quantity: ${e.quantity} <br>` );
+        item.products.forEach(e => products += `Id: ${e.productId}; Size: ${e.size}; Color: ${e.color}; Quantity: ${e.quantity} <br>`);
         items += `
                 <tr class="item-id-${item.id}">
                     <td>${item.id}</td>
@@ -559,7 +559,7 @@ function renderOrderManagement(orders) {
     tbody.innerHTML = items;
 }
 
-function handleCreatProduct(){
+function handleCreatProduct() {
     let createbtn = document.getElementById("addProduct");
     let item;
     createbtn.onclick = () => {
@@ -573,10 +573,10 @@ function handleCreatProduct(){
         let url = document.querySelector('#img1-inp').value;
         let color = document.querySelector('#color1-inp').value;
         let sizeItem = [];
-            let checkboxes = document.querySelectorAll('.size-inp');
-            for (let i=0 ; i<checkboxes.length; i++){
-                if (checkboxes[i].checked) sizeItem.push(checkboxes[i].value);
-            }
+        let checkboxes = document.querySelectorAll('.size-inp');
+        for (let i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked) sizeItem.push(checkboxes[i].value);
+        }
         if (!brand || !category || !color) {
             return
         } else if (sizeItem.length == 0) {
@@ -600,12 +600,12 @@ function handleCreatProduct(){
                     url4: document.querySelector('#img4-inp').value,
                     color4: document.querySelector('#color4-inp').value,
                 },
-                size:sizeItem,
+                size: sizeItem,
                 status: "Enabled"
             }
             document.querySelector('tbody').innerHTML += `
-                <tr class="item-id-${productsData.length+1}">
-                    <td>${productsData.length+1}</td>
+                <tr class="item-id-${productsData.length + 1}">
+                    <td>${productsData.length + 1}</td>
                     <td>${item.name}</td>
                     <td>${item.price}</td>
                     <td>${item.discountAmount}</td>
@@ -625,7 +625,7 @@ function handleCreatProduct(){
     }
 }
 
-function handleCreatUser(){
+function handleCreatUser() {
     let createbtn = document.getElementById("addUser");
     let user;
     createbtn.onclick = () => {
@@ -635,17 +635,17 @@ function handleCreatUser(){
         let phone = document.querySelector('input[id="phone-inp"]').value;
         let roleRadio = document.querySelectorAll(`input[name="role-inp"]`);
         let role = '';
-        if (!validateEmailAndTel(email, phone)){
+        if (!validateEmailAndTel(email, phone)) {
             alert("Please enter correctly email!");
             return
         }
-        if(
+        if (
             (roleRadio[0].checked == false && roleRadio[1].checked == false)
         ) {
             alert("Please choose role!");
         } else {
-            if(roleRadio[0].checked == true) {role = roleRadio[0].value}
-                else {role = roleRadio[1].value}
+            if (roleRadio[0].checked == true) { role = roleRadio[0].value }
+            else { role = roleRadio[1].value }
             user = {
                 userName: userName,
                 email: email,
@@ -661,20 +661,20 @@ function handleCreatUser(){
     }
 }
 
-function createProduct(data){
-    let option ={
+function createProduct(data) {
+    let option = {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(data)
     }
-    fetch(productApi,option)
+    fetch(productApi, option)
         .then((response) => response.json())
 }
 
 function passDataProductsBeforeUpdate(itemId) {
-    let item = productsData.find(element => element.id ===  itemId);
+    let item = productsData.find(element => element.id === itemId);
     document.querySelector(`input[id="pName-update-${itemId}"]`).value = item.name;
     document.querySelector(`input[id="price-update-${itemId}"]`).value = item.price;
     document.querySelector(`input[id="discountAmount-update-${itemId}"]`).value = item.discountAmount;
@@ -693,25 +693,25 @@ function passDataProductsBeforeUpdate(itemId) {
     let size = document.querySelectorAll(`input[name="size-update-${itemId}"]`);
     let status = document.querySelectorAll(`input[name="status-update-${itemId}"]`);
     size.forEach(attribute => {
-        if (item.size.some(element => element === attribute.value)){attribute.checked = true};
+        if (item.size.some(element => element === attribute.value)) { attribute.checked = true };
     });
-    if(item.status === "Enabled") {
+    if (item.status === "Enabled") {
         status[0].checked = true;
     } else status[1].checked = true;
 }
 
 function passDataUsersBeforeUpdate(itemId) {
-    let item = usersData.find(element => element.id ==  itemId);
+    let item = usersData.find(element => element.id == itemId);
     document.querySelector(`input[id="uName-update-${itemId}"]`).value = item.userName;
     document.querySelector(`input[id="email-update-${itemId}"]`).value = item.email;
     document.querySelector(`input[id="phone-update-${itemId}"]`).value = item.phone;
     document.querySelector(`input[id="address-update-${itemId}"]`).value = item.address;
     let role = document.querySelectorAll(`input[name="role-update-${itemId}"]`);
     let status = document.querySelectorAll(`input[name="status-update-${itemId}"]`);
-    if(item.role === "admin") {
+    if (item.role === "admin") {
         role[0].checked = true;
     } else role[1].checked = true;
-    if(item.status === "Active") {
+    if (item.status === "Active") {
         status[0].checked = true;
     } else status[1].checked = true;
 }
@@ -730,12 +730,12 @@ function checkAndHandleProductData(itemId) {
     let sizeItem = [];
     let status = '';
     let checkboxes = document.querySelectorAll(`input[name="size-update-${itemId}"]`);
-    for (let i=0 ; i<checkboxes.length; i++){
+    for (let i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].checked) sizeItem.push(checkboxes[i].value);
     }
 
-    if(statusRadio[0].checked == true) {status = statusRadio[0].value}
-        else {status = statusRadio[1].value} 
+    if (statusRadio[0].checked == true) { status = statusRadio[0].value }
+    else { status = statusRadio[1].value }
     if (!brand || !category || !color) {
         return
     } else if (sizeItem.length == 0) {
@@ -760,7 +760,7 @@ function checkAndHandleProductData(itemId) {
                 url4: document.querySelector(`#img4-update-${itemId}`).value,
                 color4: document.querySelector(`#color4-update-${itemId}`).value,
             },
-            size:sizeItem,
+            size: sizeItem,
             id: itemId
         }
         updateProduct(product);
@@ -770,20 +770,20 @@ function checkAndHandleProductData(itemId) {
 
 
 function checkAndHandleUserData(itemId) {
-    let item = usersData.find(element => element.id ==  itemId);
+    let item = usersData.find(element => element.id == itemId);
     let name = document.querySelector(`input[id="uName-update-${itemId}"]`).value;
     let email = document.querySelector(`input[id="email-update-${itemId}"]`).value;
     let address = document.querySelector(`input[id="address-update-${itemId}"]`).value;
     let phone = document.querySelector(`input[id="phone-update-${itemId}"]`).value;
     let roleRadio = document.querySelectorAll(`input[name="role-update-${itemId}"]`);
     let statusRadio = document.querySelectorAll(`input[name="status-update-${itemId}"]`);
-    let role='';
-    let status='';
-    if(roleRadio[0].checked == true) {role = roleRadio[0].value}
-        else {role = roleRadio[1].value};
-    if(statusRadio[0].checked == true) {status = statusRadio[0].value}
-        else {status = statusRadio[1].value}
-    if (!validateEmailAndTel(email, phone)){
+    let role = '';
+    let status = '';
+    if (roleRadio[0].checked == true) { role = roleRadio[0].value }
+    else { role = roleRadio[1].value };
+    if (statusRadio[0].checked == true) { status = statusRadio[0].value }
+    else { status = statusRadio[1].value }
+    if (!validateEmailAndTel(email, phone)) {
         return
     } else {
         item.userName = name;
@@ -797,16 +797,16 @@ function checkAndHandleUserData(itemId) {
     }
 }
 
-function updateProduct(data){
-    let option ={
-    method: 'PUT',
-    headers: {
-        "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data)
+function updateProduct(data) {
+    let option = {
+        method: 'PUT',
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data)
     }
-    fetch(productApi+`/${data.id}`,option)
-    .then((response) => response.json())
+    fetch(productApi + `/${data.id}`, option)
+        .then((response) => response.json())
 }
 
 

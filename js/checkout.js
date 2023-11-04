@@ -1,4 +1,3 @@
-const cartApi = 'http://localhost:3000/carts';
 const orderApi = 'http://localhost:3000/orders';
 const userId = localStorage.getItem('userId')
 fetch(userApi)
@@ -27,11 +26,12 @@ fetch(cartApi)
                         <tr>
                             <td><img src="${product.img.url}" alt="img" width="50px"> ${product.name}</td>
                             <td>${e.size}</td>
+                            <td>${e.color}</td>
                             <td>${e.quantity}</td>
                             <td>$${product.price}</td>
                         </tr>`;
-                    qrProductsData += `%0AName: ${product.name}; Size: ${e.size}; Quantity: ${e.quantity}; Price: $${product.price} `
-                    total += parseFloat(product.price);
+                    qrProductsData += `%0AName: ${product.name}; Size: ${e.size}; Color: ${e.color};Quantity: ${e.quantity}; Price: $${product.price} `
+                    total += parseFloat(product.price) * e.quantity;
                 });
                 orderTable.innerHTML = htmls;
                 document.querySelector('#total').innerHTML += `$${total}`
@@ -50,17 +50,17 @@ fetch(cartApi)
             };
             $('#contentOrder').val(qr.replace(/%0A/g, '\n'));
             $('#email').val(user.email);
-
-            sentEmail();
+            sentEmail('template_mc3yiqr','formEmail');
             document.querySelector('#checkoutBody').innerHTML = `<p class="text-bg-success fs-3 col-sm-6 text-center ms-auto me-auto">Payment success!</p>
                 <div class="text-center m-5">
                     <img id='barcode' src="https://api.qrserver.com/v1/create-qr-code/?data=HelloWorld&amp;size=100x100" alt="QR payment information" title="QR payment information" width="200" height="200"/>
                 </div>`;
             createOrder(order);
+            changeNumberItem(null);
             updateCart({ id: userId, productsCart: [] });
             generateBarCode(qr, total);
         });
-    }); 
+    });
 
 function generateBarCode(qr, total) {
     var url = 'https://api.qrserver.com/v1/create-qr-code/?data=' + qr + `%0ATotal price: $${total}` + '&amp;size=200x200';

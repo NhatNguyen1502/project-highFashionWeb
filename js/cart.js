@@ -1,6 +1,3 @@
-const cartApi = 'http://localhost:3000/carts';
-// const productApi = 'http://localhost:3000/products';
-
 function renderCart() {
   const userId = JSON.parse(localStorage.getItem("userId"));
   let subtotal = 0;
@@ -44,9 +41,9 @@ function renderCart() {
                     <i class="fa fa-trash" style="color:red" onclick="deleteCartItem(${element.productId})"></i>
                   </div>
                   <div class="nut">
-                    <input class="plus is-form" type="button" value="+" onclick="changeQuantity(this, 1)">
-                    <input aria-label="quantity" class="input-qty" max="Số tối đa" min="Số tối thiểu" name="" type="number" value="${element.quantity}" onchange="updateCartItem(this, ${element.productId})">
-                    <input class="minus is-form" type="button" value="-" onclick="changeQuantity(this, -1)">
+                  <input class="minus is-form" type="button" value="-" onclick="changeQuantity(${element.productId},-1)">
+                  <input aria-label="quantity" class="input-qty" max="Số tối đa" min="1" name="" type="number" value="${element.quantity}" onchange="updateCartItem(this, ${element.productId})">
+                  <input class="plus is-form" type="button" value="+" onclick="changeQuantity(${element.productId},1)">
                   </div>
                 </div>
               </div>
@@ -56,7 +53,6 @@ function renderCart() {
           discount = subtotal * 0.2;
           totalPrice = subtotal - discount;
           document.getElementById('subtotal').innerHTML = `$${subtotal}`;
-          document.getElementById('discount').innerHTML = `$${discount}`;
           document.getElementById('totalPrice').innerHTML = `$${totalPrice}`;
           tbody.innerHTML = htmls.join('');
         });
@@ -65,35 +61,24 @@ function renderCart() {
 
 renderCart();
 
-function changeQuantity(button, increment) {
-  const quantityInput = button.parentNode.querySelector('.input-qty');
-  let quantity = parseInt(quantityInput.value) + increment;
-  if (quantity >= 0) {
-    quantityInput.value = quantity;
-    updateCartItem(quantityInput, quantityInput.getAttribute('data-productid'));
-  }
-}
 
-function updateCartItem(input, productId) {
+function changeQuantity(productId, increment) {
   const userId = localStorage.getItem("userId");
-  const quantity = parseInt(input.value);
 
   fetch(`${cartApi}/${userId}`)
     .then(response => response.json())
-    .then(carts => {
-      const updatedCart = carts.find(cart => cart.id == userId);
-      const product = updatedCart.productsCart.find(item => item.productId == productId);
-      product.quantity = quantity;
-
+    .then(cart => {
+      const product = cart.productsCart.find(item => item.productId == productId);
+      console.log(product,productId);
+      product.quantity = parseInt(product.quantity) + parseInt(increment);
       const options = {
         method: "PUT",
-        body: JSON.stringify(updatedCart),
+        body: JSON.stringify(cart),
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json'
         },
       }
-
       fetch(`${cartApi}/${userId}`, options)
         .then(res => res.json())
         .then(data => renderCart());
@@ -105,7 +90,7 @@ function deleteCartItem(id) {
   fetch(`${cartApi}/${userId}`)
     .then(response => response.json())
     .then(carts => {
-      const productAfterUpdated = carts.productsCart.filter(e => e.productId != id );
+      const productAfterUpdated = carts.productsCart.filter(e => e.productId != id);
 
       carts.productsCart = productAfterUpdated;
       const options = {
@@ -116,7 +101,7 @@ function deleteCartItem(id) {
           'Content-Type': 'application/json'
         },
       }
-      fetch(`${cartApi}/${userId}`,options) 
+      fetch(`${cartApi}/${userId}`, options)
 
         .then(res => res.json())
         .then(data => renderCart());

@@ -5,7 +5,7 @@ fetch(productApi)
     .then(products => {
         productsData = products;
         var htmls = '';
-        var newArrival = products.slice(0,8);
+        var newArrival = products.slice(0, 8);
         newArrival.forEach(e => {
             if (e.status == "Enabled") {
                 htmls += `

@@ -224,19 +224,17 @@
       "id": 8
     },
     {
-      "name": "Jeans",
+      "name": "Gucci Jeans",
       "price": "150",
       "discountAmount": "10",
       "stock": "13",
-      "title": "CLASSIC BLUE DENIM JEANS",
       "description": "Stay comfortable and on-trend with these trendy jeans. Their flattering cut and stretchy fabric provide both style and ease of movement.",
       "brand": "gucci",
       "category": "jeans",
       "status": "Enabled",
-      "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
       "img": {
         "url": "https://i.postimg.cc/Sxwzy5YP/Frame-127.png",
-        "color": "grey",
+        "color": "blue",
         "url2": "",
         "color2": "black",
         "url3": "",
@@ -256,12 +254,10 @@
       "price": "40",
       "discountAmount": "2",
       "stock": "10",
-      "title": "VINTAGE INSPIRED LOGO T-SHIRT",
       "description": "Make a bold statement with this graphic t-shirt. Its vibrant print and bold typography make it a standout piece for expressing your individuality.",
       "brand": "gucci",
       "category": "t-shirts",
-      "status": "Enabled",
-      "vote": "&#9733;&#9733;&#9733;&#9733;&#9733;",
+      "status": "Disabled",
       "img": {
         "url": "https://i.postimg.cc/tTLXPQp0/image-1.png",
         "color": "green",
@@ -486,11 +482,11 @@
     {
       "userName": "Le",
       "email": "leho@gmail.com",
-      "address": "quangtri",
-      "phone": "095934872397",
-      "role": "user",
-      "status": "Active",
+      "phone": "0959348723972",
+      "address": "quang tri",
       "password": "123123",
+      "status": "Active",
+      "role": "user",
       "id": 5
     },
     {
@@ -517,26 +513,18 @@
     {
       "userName": "nhat",
       "email": "zznhatphilong@gmail.com",
-      "address": "Sơn Trà, Đà Nẵng",
       "phone": "0396139324",
-      "role": "user",
+      "address": "Sơn Trà, Đà Nẵng",
+      "password": "111111",
       "status": "Active",
-      "password": "000",
-      "id": 8,
-      "code": 21692
+      "role": "user",
+      "id": 8
     }
   ],
   "carts": [
     {
       "id": 5,
-      "productsCart": [
-        {
-          "productId": 1,
-          "size": "M",
-          "color": "red",
-          "quantity": 1
-        }
-      ]
+      "productsCart": []
     },
     {
       "id": "3",
@@ -594,9 +582,21 @@
       "productsCart": []
     },
     {
-
       "id": "8",
-      "productsCart": []
+      "productsCart": [
+        {
+          "productId": "3",
+          "size": "M",
+          "color": "black",
+          "quantity": 3
+        },
+        {
+          "productId": "2",
+          "size": "XL",
+          "color": "brown",
+          "quantity": "1"
+        }
+      ]
     }
   ],
   "orders": [
@@ -723,6 +723,315 @@
       ],
       "total": 340,
       "id": 4
+    },
+    {
+      "name": "nhat",
+      "phone": "0396139324",
+      "address": "Sơn Trà, Đà Nẵng",
+      "userId": "8",
+      "products": [
+        {
+          "productId": "2",
+          "size": "XL",
+          "color": "black",
+          "quantity": "1"
+        },
+        {
+          "productId": "2",
+          "size": "XL",
+          "color": "green",
+          "quantity": "1"
+        },
+        {
+          "productId": "2",
+          "size": "XL",
+          "color": "brown",
+          "quantity": "1"
+        }
+      ],
+      "total": 660,
+      "id": 5
+    },
+    {
+      "name": "nhat",
+      "phone": "0396139324",
+      "address": "Sơn Trà, Đà Nẵng",
+      "userId": "8",
+      "products": [
+        {
+          "productId": "3",
+          "size": "M",
+          "color": "green",
+          "quantity": "1"
+        }
+      ],
+      "total": 120,
+      "id": 6
+    },
+    {
+      "name": "nhat",
+      "phone": "0396139324",
+      "address": "Sơn Trà, Đà Nẵng",
+      "userId": "8",
+      "products": [
+        {
+          "productId": "2",
+          "size": "XL",
+          "color": "brown",
+          "quantity": "1"
+        }
+      ],
+      "total": 220,
+      "id": 7
+    },
+    {
+      "name": "nhat",
+      "phone": "0396139324",
+      "address": "Sơn Trà, Đà Nẵng",
+      "userId": "8",
+      "products": [
+        {
+          "productId": "2",
+          "size": "XXL",
+          "color": "green",
+          "quantity": "1"
+        }
+      ],
+      "total": 220,
+      "id": 8
+    },
+    {
+      "name": "nhat",
+      "phone": "0396139324",
+      "address": "Sơn Trà, Đà Nẵng",
+      "userId": "8",
+      "products": [
+        {
+          "productId": "2",
+          "size": "XL",
+          "color": "green",
+          "quantity": "1"
+        }
+      ],
+      "total": 220,
+      "id": 9
+    },
+    {
+      "name": "nhat",
+      "phone": "0396139324",
+      "address": "Sơn Trà, Đà Nẵng",
+      "userId": "8",
+      "products": [],
+      "total": 0,
+      "id": 10
+    },
+    {
+      "name": "nhat",
+      "phone": "0396139324",
+      "address": "Sơn Trà, Đà Nẵng",
+      "userId": "8",
+      "products": [
+        {
+          "productId": "2",
+          "size": "XL",
+          "color": "green",
+          "quantity": "3"
+        }
+      ],
+      "total": 660,
+      "id": 11
+    },
+    {
+      "name": "nhat",
+      "phone": "0396139324",
+      "address": "Sơn Trà, Đà Nẵng",
+      "userId": "8",
+      "products": [
+        {
+          "productId": "2",
+          "size": "XXL",
+          "color": "brown",
+          "quantity": "1"
+        }
+      ],
+      "total": 220,
+      "id": 12
+    },
+    {
+      "name": "nhat",
+      "phone": "0396139324",
+      "address": "Sơn Trà, Đà Nẵng",
+      "userId": "8",
+      "products": [
+        {
+          "productId": "1",
+          "size": "M",
+          "color": "green",
+          "quantity": "1"
+        }
+      ],
+      "total": 120,
+      "id": 13
+    },
+    {
+      "name": "nhat",
+      "phone": "0396139324",
+      "address": "Sơn Trà, Đà Nẵng",
+      "userId": "8",
+      "products": [],
+      "total": 0,
+      "id": 14
+    },
+    {
+      "name": "nhat",
+      "phone": "0396139324",
+      "address": "Sơn Trà, Đà Nẵng",
+      "userId": "8",
+      "products": [],
+      "total": 0,
+      "id": 15
+    },
+    {
+      "name": "nhat",
+      "phone": "0396139324",
+      "address": "Sơn Trà, Đà Nẵng",
+      "userId": "8",
+      "products": [],
+      "total": 0,
+      "id": 16
+    },
+    {
+      "name": "nhat",
+      "phone": "0396139324",
+      "address": "Sơn Trà, Đà Nẵng",
+      "userId": "8",
+      "products": [],
+      "total": 0,
+      "id": 17
+    },
+    {
+      "name": "nhat",
+      "phone": "0396139324",
+      "address": "Sơn Trà, Đà Nẵng",
+      "userId": "8",
+      "products": [],
+      "total": 0,
+      "id": 18
+    },
+    {
+      "name": "nhat",
+      "phone": "0396139324",
+      "address": "Sơn Trà, Đà Nẵng",
+      "userId": "8",
+      "products": [
+        {
+          "productId": "1",
+          "size": "S",
+          "color": "brown",
+          "quantity": "12"
+        }
+      ],
+      "total": 1440,
+      "id": 19
+    },
+    {
+      "name": "nhat",
+      "phone": "0396139324",
+      "address": "Sơn Trà, Đà Nẵng",
+      "userId": "8",
+      "products": [
+        {
+          "productId": "1",
+          "size": "S",
+          "color": "black",
+          "quantity": "1"
+        },
+        {
+          "productId": "2",
+          "size": "XL",
+          "color": "brown",
+          "quantity": "1"
+        },
+        {
+          "productId": "2",
+          "size": "XL",
+          "color": "brown",
+          "quantity": "1"
+        }
+      ],
+      "total": 560,
+      "id": 20
+    },
+    {
+      "name": "nhat",
+      "phone": "0396139324",
+      "address": "Sơn Trà, Đà Nẵng",
+      "userId": "8",
+      "products": [
+        {
+          "productId": "2",
+          "size": "XXL",
+          "color": "white",
+          "quantity": "1"
+        },
+        {
+          "productId": "2",
+          "size": "XXL",
+          "color": "green",
+          "quantity": "1"
+        },
+        {
+          "productId": "2",
+          "size": "XL",
+          "color": "black",
+          "quantity": "1"
+        },
+        {
+          "productId": "2",
+          "size": "XL",
+          "color": "white",
+          "quantity": "1"
+        },
+        {
+          "productId": "2",
+          "size": "XXL",
+          "color": "green",
+          "quantity": "1"
+        },
+        {
+          "productId": "2",
+          "size": "XL",
+          "color": "black",
+          "quantity": "1"
+        }
+      ],
+      "total": 1320,
+      "id": 21
+    },
+    {
+      "name": "nhat",
+      "phone": "0396139324",
+      "address": "Sơn Trà, Đà Nẵng",
+      "userId": "8",
+      "products": [],
+      "total": 0,
+      "id": 22
+    },
+    {
+      "name": "nhat",
+      "phone": "0396139324",
+      "address": "Sơn Trà, Đà Nẵng",
+      "userId": "8",
+      "products": [
+        {
+          "productId": "2",
+          "size": "XL",
+          "color": "brown",
+          "quantity": "1"
+        }
+      ],
+      "total": 220,
+      "id": 23
     }
   ]
 }
